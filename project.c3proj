@@ -128,6 +128,22 @@
 					"script-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "main.js",
+					"type": "text/javascript",
+					"sid": 182029573631235,
+					"script-info": {
+						"purpose": "main"
+					}
+				},
+				{
+					"name": "potManager.js",
+					"type": "text/javascript",
+					"sid": 186521755436113,
+					"script-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []

@@ -1,5 +1,3 @@
-// Test to see if this updates in Construct 3
-
 export function getDistance(x1, y1, x2, y2) {
 	// return Math.sqrt((x2 - x1) * (x2 - x1) + ((y2 - y1) * (y2 - y1)));
 	return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
