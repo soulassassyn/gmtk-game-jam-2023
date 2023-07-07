@@ -5,10 +5,66 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "lid9fr024ul",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Keyboard",
+			"Mouse",
+			"Audio",
+			"Browser",
+			"Camera"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
@@ -19,19 +75,29 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Main",
+			"Assets"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"MainES"
 		],
 		"subfolders": []
 	},
 	"rootFileFolders": {
 		"script": {
-			"items": [],
+			"items": [
+				{
+					"name": "utility.js",
+					"type": "text/javascript",
+					"sid": 117633092663903,
+					"script-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"sound": {
