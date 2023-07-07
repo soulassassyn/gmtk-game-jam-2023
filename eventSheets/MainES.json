@@ -1,5 +1,10 @@
 {
 	"name": "MainES",
-	"events": [],
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "FXES"
+		}
+	],
 	"sid": 115018507732469
 }

@@ -1,0 +1,899 @@
+{
+	"name": "FXES",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "FX_MISC",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 456529050832315
+						}
+					],
+					"actions": [],
+					"sid": 137914887670762,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 265740547072618,
+									"parameters": {
+										"object": "FX_Family"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 435904265763729,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "FX_Family",
+											"sid": 986062338074240,
+											"parameters": {
+												"mode": "disable",
+												"effect": "\"AdjustHSL\""
+											}
+										},
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "FX_Family",
+											"sid": 322848662729743,
+											"parameters": {
+												"mode": "disable",
+												"effect": "\"WarpObjectMask\""
+											}
+										},
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "FX_Family",
+											"sid": 721027699230983,
+											"parameters": {
+												"mode": "disable",
+												"effect": "\"Burn\""
+											}
+										},
+										{
+											"id": "set-effect-enabled",
+											"objectClass": "FX_Family",
+											"sid": 489194429845710,
+											"parameters": {
+												"mode": "disable",
+												"effect": "\"Overlay\""
+											}
+										}
+									],
+									"sid": 647845844704476
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-animation-finished",
+							"objectClass": "FX_Family",
+							"sid": 556287273293432
+						}
+					],
+					"actions": [],
+					"sid": 101902890536011,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "FX_Family",
+									"sid": 311481209570875
+								}
+							],
+							"sid": 601864224778630
+						}
+					]
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "TESTING_CONTROLS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 688077808926809,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 961796114195207,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"type": "script",
+											"script": "const mouseX = runtime.objects.Mouse.getMouseX();\nconst mouseY = runtime.objects.Mouse.getMouseY();\nconst fx = [\n\t'FX_Misc'// 0\n]\n\nruntime.callFunction(fx[11], mouseX, mouseY);"
+										}
+									],
+									"sid": 845915608631485
+								}
+							]
+						}
+					],
+					"sid": 296514908378306
+				}
+			],
+			"sid": 481770181414187
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "FX_CustomActions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"aceType": "action",
+					"aceName": "Change Scale/Angle",
+					"objectClass": "FX_Family",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "changeScale",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"sid": 942407657464077
+						},
+						{
+							"name": "minScale",
+							"type": "number",
+							"initialValue": "0.75",
+							"comment": "",
+							"sid": 179005745488078
+						},
+						{
+							"name": "maxScale",
+							"type": "number",
+							"initialValue": "1.25",
+							"comment": "",
+							"sid": 221779060407787
+						},
+						{
+							"name": "changeAngle",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"sid": 932668935931260
+						},
+						{
+							"name": "minAngle",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 882739034605240
+						},
+						{
+							"name": "maxAngle",
+							"type": "number",
+							"initialValue": "360",
+							"comment": "",
+							"sid": 657901269774793
+						}
+					],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 687803736645841,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 724651269645927,
+									"parameters": {
+										"variable": "changeScale"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "FX_Family",
+									"sid": 727517767031243,
+									"parameters": {
+										"scale": "random(minScale,maxScale)"
+									}
+								}
+							],
+							"sid": 710979268384425
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 316837224768371,
+									"parameters": {
+										"variable": "changeAngle"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "FX_Family",
+									"sid": 987675366030095,
+									"parameters": {
+										"angle": "random(minAngle,maxAngle)"
+									}
+								}
+							],
+							"sid": 930632281047036
+						}
+					]
+				},
+				{
+					"aceType": "action",
+					"aceName": "Height/Width/Scalar",
+					"objectClass": "FX_Family",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "scaleHeight",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"sid": 750766255157908
+						},
+						{
+							"name": "minHeightScalar",
+							"type": "number",
+							"initialValue": "0.5",
+							"comment": "",
+							"sid": 480908994772282
+						},
+						{
+							"name": "maxHeightScalar",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"sid": 796933064425029
+						},
+						{
+							"name": "scaleWidth",
+							"type": "boolean",
+							"initialValue": "false",
+							"comment": "",
+							"sid": 674528707744608
+						},
+						{
+							"name": "minWidthScalar",
+							"type": "number",
+							"initialValue": "0.5",
+							"comment": "",
+							"sid": 956312304546981
+						},
+						{
+							"name": "maxWidthScalar",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"sid": 561878127300376
+						}
+					],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 343758812271376,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 918721097526056,
+									"parameters": {
+										"variable": "scaleHeight"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-height",
+									"objectClass": "FX_Family",
+									"sid": 220405593664448,
+									"parameters": {
+										"height": "Self.Height * random(minHeightScalar,maxHeightScalar)"
+									}
+								}
+							],
+							"sid": 951132522895465
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 385589338515235,
+									"parameters": {
+										"variable": "scaleWidth"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "FX_Family",
+									"sid": 936700996643108,
+									"parameters": {
+										"width": "Self.Width*random(minWidthScalar,maxWidthScalar)"
+									}
+								}
+							],
+							"sid": 172584388904808
+						}
+					]
+				},
+				{
+					"aceType": "action",
+					"aceName": "AdjustHSL",
+					"objectClass": "FX_Family",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Hue",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 102043686282771
+						},
+						{
+							"name": "Saturation",
+							"type": "number",
+							"initialValue": "100",
+							"comment": "",
+							"sid": 524570212438731
+						},
+						{
+							"name": "Luminosity",
+							"type": "number",
+							"initialValue": "100",
+							"comment": "",
+							"sid": 726822379607798
+						}
+					],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 121192962624093,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "FX_Family",
+									"sid": 622616031548505,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"AdjustHSL\""
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 283120347114973,
+									"parameters": {
+										"effect": "\"AdjustHSL\"",
+										"parameter-index": "0",
+										"value": "Hue"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 750183044850249,
+									"parameters": {
+										"effect": "\"AdjustHSL\"",
+										"parameter-index": "1",
+										"value": "Saturation"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 414086162859758,
+									"parameters": {
+										"effect": "\"AdjustHSL\"",
+										"parameter-index": "2",
+										"value": "Luminosity"
+									}
+								}
+							],
+							"sid": 527120732623215
+						}
+					]
+				},
+				{
+					"aceType": "action",
+					"aceName": "Set Bulge",
+					"objectClass": "FX_Family",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Radius",
+							"type": "number",
+							"initialValue": "50",
+							"comment": "",
+							"sid": 687806993946019
+						},
+						{
+							"name": "Scale",
+							"type": "number",
+							"initialValue": "40",
+							"comment": "",
+							"sid": 347974036189362
+						}
+					],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 254579465779867,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "FX_Family",
+									"sid": 522796170205055,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"Bulge\""
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 701793059779943,
+									"parameters": {
+										"effect": "\"Bulge\"",
+										"parameter-index": "0",
+										"value": "Radius"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 271323301128004,
+									"parameters": {
+										"effect": "\"Bulge\"",
+										"parameter-index": "1",
+										"value": "Scale"
+									}
+								}
+							],
+							"sid": 575023883952553
+						}
+					]
+				},
+				{
+					"aceType": "action",
+					"aceName": "Set Pulse",
+					"objectClass": "FX_Family",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Intesity",
+							"type": "number",
+							"initialValue": "100",
+							"comment": "",
+							"sid": 893715059745230
+						},
+						{
+							"name": "Lighting",
+							"type": "number",
+							"initialValue": "50",
+							"comment": "",
+							"sid": 500328021335230
+						},
+						{
+							"name": "Speed",
+							"type": "number",
+							"initialValue": "10",
+							"comment": "",
+							"sid": 398030759392906
+						},
+						{
+							"name": "Frequency",
+							"type": "number",
+							"initialValue": "30",
+							"comment": "",
+							"sid": 844341502726570
+						},
+						{
+							"name": "CenterX",
+							"type": "number",
+							"initialValue": "50",
+							"comment": "",
+							"sid": 411284829382378
+						},
+						{
+							"name": "CenterY",
+							"type": "number",
+							"initialValue": "50",
+							"comment": "",
+							"sid": 370685194117266
+						}
+					],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 518724538695317,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "FX_Family",
+									"sid": 919485209315643,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"Pulse\""
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 925222442642946,
+									"parameters": {
+										"effect": "\"Pulse\"",
+										"parameter-index": "0",
+										"value": "Intesity"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 197569745189270,
+									"parameters": {
+										"effect": "\"Pulse\"",
+										"parameter-index": "1",
+										"value": "Lighting"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 861163752778536,
+									"parameters": {
+										"effect": "\"Pulse\"",
+										"parameter-index": "2",
+										"value": "Speed"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 289879100559552,
+									"parameters": {
+										"effect": "\"Pulse\"",
+										"parameter-index": "3",
+										"value": "Frequency"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 362723106313663,
+									"parameters": {
+										"effect": "\"Pulse\"",
+										"parameter-index": "4",
+										"value": "CenterX"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 270538227469224,
+									"parameters": {
+										"effect": "\"Pulse\"",
+										"parameter-index": "5",
+										"value": "CenterY"
+									}
+								}
+							],
+							"sid": 410905148656519
+						}
+					]
+				},
+				{
+					"aceType": "action",
+					"aceName": "Warp Radial",
+					"objectClass": "FX_Family",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "Frequency",
+							"type": "number",
+							"initialValue": "12",
+							"comment": "",
+							"sid": 563088584734534
+						},
+						{
+							"name": "Amplitude",
+							"type": "number",
+							"initialValue": "5",
+							"comment": "",
+							"sid": 543913517918412
+						},
+						{
+							"name": "Speed",
+							"type": "number",
+							"initialValue": "2",
+							"comment": "",
+							"sid": 748687990601521
+						}
+					],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 110921240317620,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "FX_Family",
+									"sid": 793338617739819,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"WarpRadial\""
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 192767459386858,
+									"parameters": {
+										"effect": "\"WarpRadial\"",
+										"parameter-index": "0",
+										"value": "Frequency"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 616930888894996,
+									"parameters": {
+										"effect": "\"WarpRadial\"",
+										"parameter-index": "1",
+										"value": "Amplitude"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 980593543277310,
+									"parameters": {
+										"effect": "\"WarpRadial\"",
+										"parameter-index": "2",
+										"value": "Speed"
+									}
+								}
+							],
+							"sid": 266591643603696
+						}
+					]
+				},
+				{
+					"aceType": "action",
+					"aceName": "Set Warp Object Mask",
+					"objectClass": "FX_Family",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "xFrequency",
+							"type": "number",
+							"initialValue": "4",
+							"comment": "",
+							"sid": 798419674755800
+						},
+						{
+							"name": "yFrequency",
+							"type": "number",
+							"initialValue": "4",
+							"comment": "",
+							"sid": 383344244333798
+						},
+						{
+							"name": "xAmplitude",
+							"type": "number",
+							"initialValue": "10",
+							"comment": "",
+							"sid": 478369967249680
+						},
+						{
+							"name": "yAmplitude",
+							"type": "number",
+							"initialValue": "10",
+							"comment": "",
+							"sid": 852410660495981
+						},
+						{
+							"name": "xSpeed",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"sid": 522060103100610
+						},
+						{
+							"name": "ySpeed",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"sid": 545757991712014
+						}
+					],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 102086795740633,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-blend-mode",
+									"objectClass": "FX_Family",
+									"sid": 651531441494883,
+									"parameters": {
+										"blend-mode": "normal"
+									}
+								},
+								{
+									"id": "set-effect-enabled",
+									"objectClass": "FX_Family",
+									"sid": 735133029279223,
+									"parameters": {
+										"mode": "enable",
+										"effect": "\"WarpObjectMask\""
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 981182061114403,
+									"parameters": {
+										"effect": "\"WarpObjectMask\"",
+										"parameter-index": "0",
+										"value": "xFrequency"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 900251161186622,
+									"parameters": {
+										"effect": "\"WarpObjectMask\"",
+										"parameter-index": "1",
+										"value": "yFrequency"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 325258988031673,
+									"parameters": {
+										"effect": "\"WarpObjectMask\"",
+										"parameter-index": "2",
+										"value": "xAmplitude"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 691979476271023,
+									"parameters": {
+										"effect": "\"WarpObjectMask\"",
+										"parameter-index": "3",
+										"value": "yAmplitude"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 278650522122868,
+									"parameters": {
+										"effect": "\"WarpObjectMask\"",
+										"parameter-index": "4",
+										"value": "xSpeed"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "FX_Family",
+									"sid": 273653375292899,
+									"parameters": {
+										"effect": "\"WarpObjectMask\"",
+										"parameter-index": "5",
+										"value": "ySpeed"
+									}
+								}
+							],
+							"sid": 768526551013440
+						}
+					]
+				}
+			],
+			"sid": 335148380745314
+		}
+	],
+	"sid": 834155396275172
+}

@@ -42,6 +42,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
@@ -63,26 +70,51 @@
 			"Mouse",
 			"Audio",
 			"Browser",
-			"Camera"
+			"Camera",
+			"PlayerCharacter"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "AssetReady"
+			},
+			{
+				"items": [
+					"FX_Misc"
+				],
+				"subfolders": [],
+				"name": "FX"
+			},
+			{
+				"items": [
+					"AssetTitles"
+				],
+				"subfolders": [],
+				"name": "Text"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"FX_Family"
+		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
 			"Main",
-			"Assets"
+			"Assets",
+			"ArtPlayground"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"MainES"
+			"MainES",
+			"FXES"
 		],
 		"subfolders": []
 	},
@@ -206,7 +238,7 @@
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-scale",
 		"fullscreenQuality": "high",
-		"viewportFit": "auto",
+		"viewportFit": "cover",
 		"backgroundColor": [
 			0,
 			0,
@@ -228,13 +260,13 @@
 		],
 		"orientations": "landscape",
 		"webgpu": "auto",
-		"gpuPreference": "high-performance",
+		"gpuPreference": "low-power",
 		"scriptsType": "module",
 		"framerateMode": "vsync",
 		"compositingMode": "standard",
-		"sampling": "trilinear",
-		"downscaling": "medium",
-		"renderingMode": "auto",
+		"sampling": "bilinear",
+		"downscaling": "high",
+		"renderingMode": "2d",
 		"anisotropicFiltering": "auto",
 		"zNear": 1,
 		"zFar": 10000,

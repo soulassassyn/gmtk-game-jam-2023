@@ -1,0 +1,11 @@
+{
+	"name": "FX_Family",
+	"plugin-id": "Sprite",
+	"sid": 743184107456723,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"FX_Misc"
+	]
+}
