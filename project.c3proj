@@ -76,7 +76,35 @@
 		"subfolders": [
 			{
 				"items": [],
-				"subfolders": [],
+				"subfolders": [
+					{
+						"items": [
+							"Proto01_0001s_0000_cine",
+							"Proto01_0001s_0001_cine",
+							"Proto01_0001s_0002_cine",
+							"Proto01_0002s_0000_ui",
+							"Proto01_0002s_0001_ui",
+							"Proto01_0002s_0002_ui",
+							"Proto01_0002s_0003_ui",
+							"Proto01_0003s_0000_char",
+							"Proto01_0003s_0001_char",
+							"Proto01_0003s_0002_char",
+							"Proto01_0003s_0003_char",
+							"Proto01_0004s_0000_prop",
+							"Proto01_0004s_0001_prop",
+							"Proto01_0004s_0002_prop",
+							"Proto01_0004s_0003_prop",
+							"Proto01_0004s_0004_prop",
+							"Proto01_0004s_0005_prop",
+							"Proto01_0004s_0006_prop",
+							"Proto01_0004s_0007_prop",
+							"Proto01_0004s_0008_prop",
+							"Proto01_0004s_0009_prop"
+						],
+						"subfolders": [],
+						"name": "Proto"
+					}
+				],
 				"name": "AssetReady"
 			},
 			{

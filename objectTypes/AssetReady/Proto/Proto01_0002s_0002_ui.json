@@ -1,0 +1,37 @@
+{
+	"name": "Proto01_0002s_0002_ui",
+	"plugin-id": "Sprite",
+	"sid": 599784548432624,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 99,
+						"height": 97,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3338133,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 646136278349516,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}
