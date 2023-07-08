@@ -156,7 +156,16 @@ export class LevelManager {
     }
 
     playerBuyClay() {
-        
+        const clayTrader = this.runtime.objects.clayTrader.getFirstInstance();
+        const [x, y] = this.runtime.objects.shopCounter.getFirstInstance().getImagePoint(1);
+        clayTrader.behaviors.MoveTo.moveToPosition(welcomeMat.x, welcomeMat.y, false); 
+        clayTrader.behaviors.MoveTo.moveToPosition(x, y, false);
+        clayTrader.behaviors.MoveTo.maxSpeed = 700;
+        this.waypointEL = e => {
+            
+            clayTrader.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
+        }
+        clayTrader.behaviors.MoveTo.addEventListener("arrived", this.waypointEL);
     }
 
     playerCraftPots() {

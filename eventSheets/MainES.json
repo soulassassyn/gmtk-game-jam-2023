@@ -125,7 +125,25 @@
 				}
 			],
 			"actions": [],
-			"sid": 910522694761905
+			"sid": 910522694761905,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 789335351767086,
+							"parameters": {
+								"layer": "\"clayTraderUI\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 424281586956841
+				}
+			]
 		},
 		{
 			"eventType": "block",

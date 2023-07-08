@@ -194,7 +194,8 @@
 		"items": [
 			"Main",
 			"Assets",
-			"ArtPlayground"
+			"ArtPlayground",
+			"ClayTraderUI"
 		],
 		"subfolders": []
 	},
