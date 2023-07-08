@@ -328,7 +328,7 @@
 					"type": "heroCharacter",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -528,7 +528,7 @@
 					"type": "small",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "pot",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -536,8 +536,7 @@
 					"uid": 23,
 					"instanceVariables": {
 						"hp": 0,
-						"clayType": 0,
-						"size": 0
+						"gems": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -600,8 +599,7 @@
 					"uid": 24,
 					"instanceVariables": {
 						"hp": 0,
-						"clayType": 0,
-						"size": 0
+						"gems": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -862,7 +860,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0004s_0009_prop",
+					"type": "shopCounter",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",

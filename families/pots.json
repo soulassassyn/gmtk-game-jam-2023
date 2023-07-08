@@ -11,18 +11,11 @@
 			"sid": 609825224688886
 		},
 		{
-			"name": "clayType",
+			"name": "gems",
 			"type": "number",
 			"desc": "",
 			"show": true,
 			"sid": 266823552361986
-		},
-		{
-			"name": "size",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 147743906933659
 		}
 	],
 	"behaviorTypes": [

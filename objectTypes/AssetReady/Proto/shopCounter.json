@@ -1,5 +1,5 @@
 {
-	"name": "Proto01_0004s_0009_prop",
+	"name": "shopCounter",
 	"plugin-id": "Sprite",
 	"sid": 130210414345530,
 	"isGlobal": false,
@@ -36,6 +36,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "buy",
+								"x": 0.4422657952069717,
+								"y": 0.7176220806794055
+							}
+						],
 						"duration": 1
 					}
 				],

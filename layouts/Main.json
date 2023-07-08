@@ -40,7 +40,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Proto01_0004s_0009_prop",
+					"type": "shopCounter",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -361,8 +361,8 @@
 					"instanceVariables": {
 						"attackPoint": "topLeft",
 						"attackOrder": 1,
-						"isOccupied": false,
-						"potUid": 0
+						"isOccupied": true,
+						"potUid": 47
 					},
 					"behaviors": {},
 					"world": {
@@ -395,8 +395,8 @@
 					"instanceVariables": {
 						"attackPoint": "top",
 						"attackOrder": 0,
-						"isOccupied": false,
-						"potUid": 0
+						"isOccupied": true,
+						"potUid": 46
 					},
 					"behaviors": {},
 					"world": {
@@ -429,8 +429,8 @@
 					"instanceVariables": {
 						"attackPoint": "left",
 						"attackOrder": 2,
-						"isOccupied": false,
-						"potUid": 0
+						"isOccupied": true,
+						"potUid": 48
 					},
 					"behaviors": {},
 					"world": {
@@ -618,70 +618,6 @@
 					}
 				},
 				{
-					"type": "small",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 46,
-					"instanceVariables": {
-						"hp": 0,
-						"clayType": 0,
-						"size": 0
-					},
-					"behaviors": {
-						"Sine": {
-							"properties": {
-								"movement": "angle",
-								"wave": "sine",
-								"period": 0.2,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 5,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"effects": {
-						"AdjustHSL": {
-							"isEnabled": true,
-							"parameters": {
-								"hue": 0.5,
-								"saturation": 0.6,
-								"luminosity": 0.8
-							}
-						}
-					},
-					"world": {
-						"x": 1621,
-						"y": 987,
-						"width": 89.1380684139968,
-						"height": 107.3036463372284,
-						"originX": 0.5,
-						"originY": 1,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "medium",
 					"properties": {
 						"initially-visible": true,
@@ -692,9 +628,8 @@
 					},
 					"uid": 47,
 					"instanceVariables": {
-						"hp": 0,
-						"clayType": 0,
-						"size": 0
+						"hp": 3,
+						"gems": 10
 					},
 					"behaviors": {
 						"Sine": {
@@ -756,9 +691,8 @@
 					},
 					"uid": 48,
 					"instanceVariables": {
-						"hp": 0,
-						"clayType": 0,
-						"size": 0
+						"hp": 4,
+						"gems": 5
 					},
 					"behaviors": {
 						"Sine": {
@@ -794,7 +728,7 @@
 					},
 					"world": {
 						"x": 1802,
-						"y": 814,
+						"y": 819,
 						"width": 145.26696846146496,
 						"height": 174.8711373896308,
 						"originX": 0.5,
@@ -813,7 +747,7 @@
 					"type": "heroCharacter",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -844,12 +778,75 @@
 						}
 					},
 					"world": {
-						"x": 963,
-						"y": 1197,
+						"x": 997,
+						"y": 1220,
 						"width": 265,
 						"height": 171,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "small",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "pot",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 46,
+					"instanceVariables": {
+						"hp": 2,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
+					"world": {
+						"x": 1621,
+						"y": 987,
+						"width": 89.1380684139968,
+						"height": 107.3036463372284,
+						"originX": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
