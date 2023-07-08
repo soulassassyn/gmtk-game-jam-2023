@@ -22,6 +22,14 @@
 		},
 		{
 			"type": "plugin",
+			"id": "EdwardBonnett_VsCodePlugin",
+			"name": "VS Code Plugin",
+			"author": "Edward Bonnett",
+			"bundled": true,
+			"version": "1.0.0.1"
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -84,7 +92,8 @@
 			"Mouse",
 			"Audio",
 			"Browser",
-			"Camera"
+			"Camera",
+			"VSCodePlugin"
 		],
 		"subfolders": [
 			{
