@@ -47,7 +47,6 @@ function createPot(potType, clayType, size) {
     return {
         hp: baseStats.hp * sizeMultiplier,
         gems: baseStats.gems * sizeMultiplier,
-        // Add any additional properties here
     };
 }
 
