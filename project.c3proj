@@ -193,6 +193,14 @@
 					"script-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "levelManager.js",
+					"type": "text/javascript",
+					"sid": 459331467685755,
+					"script-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []

@@ -5,7 +5,6 @@ runOnStartup(async runtime =>
 {
 	// Code to run on the loading screen.
 	// Note layouts, objects etc. are not yet available.
-	console.log("main loaded");
 	
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
@@ -16,7 +15,6 @@ async function OnBeforeProjectStart(runtime)
 	// the first layout. Loading has finished and initial
 	// instances are created and available to use here.
 
-	
 	runtime.addEventListener("tick", () => Tick(runtime));
 }
 
