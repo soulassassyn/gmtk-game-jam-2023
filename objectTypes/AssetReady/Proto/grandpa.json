@@ -1,29 +1,34 @@
 {
-	"name": "Proto01_0003s_0003_char",
+	"name": "grandpa",
 	"plugin-id": "Sprite",
-	"sid": 476478978328961,
+	"sid": 570477514976461,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 95,
-						"height": 189,
+						"width": 150,
+						"height": 186,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5155697,
+						"imageSpriteId": 8281517,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 487654635610235,
+				"sid": 160465650809858,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

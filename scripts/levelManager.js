@@ -29,7 +29,7 @@ export class LevelManager {
 
     update() {
         if (this.levelState.victory || this.levelState.lose) {
-            
+
         }
 
         if (this.levelState.heroAttack) {
@@ -37,6 +37,17 @@ export class LevelManager {
                 this.runOnce = true;
                 this.heroAddAttackWaypoints();
             }
+        }
+
+        if (this.levelState.heroBuyWeapon) {
+            if (!this.runOnce) {
+                this.runOnce = true;
+                this.heroBuyWeapon();
+            }
+        }
+
+        if (this.levelState.playerBuyClay) {
+            this.playerBuyClay();
         }
     }
 
@@ -88,28 +99,31 @@ export class LevelManager {
             this.heroWeaponDamage--;
             object.behaviors.Sine.isEnabled = false;
             hero.setAnimation("idle");
+            // Broken pot
             if (object.instVars.hp <= 0) {
                 hero.removeEventListener("animationend", animationendEL);
                 object.setAnimation("broken");
                 this.heroGems += object.instVars.gems;
                 hero.behaviors.MoveTo.maxSpeed = 700;
             }
+            // Broken sword
             if (this.heroWeaponDamage === 0) {
                 hero.removeEventListener("animationend", animationendEL);
                 hero.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
                 hero.setAnimation("idle");
                 this.levelState.heroAttack = false;
                 object.behaviors.Sine.isEnabled = false;
-                this.runOnce = false;
                 this.waypointCount = 0;
                 const [x, y] = this.runtime.objects.shopCounter.getFirstInstance().getImagePoint(1);
                 hero.behaviors.MoveTo.moveToPosition(x, y);
                 hero.behaviors.MoveTo.maxSpeed = 700;
                 this.waypointEL = e => {
+                    this.runOnce = false;
                     this.levelState.heroBuyWeapon = true;
                     hero.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
                 };
                 hero.behaviors.MoveTo.addEventListener("arrived", this.waypointEL);
+            // Attack again
             } else if (object.instVars.hp > 0) {
                 hero.removeEventListener("animationend", animationendEL);
                 this.heroAttack(object, hero);
@@ -119,10 +133,29 @@ export class LevelManager {
     }
 
     heroBuyWeapon() {
-        
+        const hero = this.runtime.objects.heroCharacter.getFirstInstance();
+        hero.setAnimation("buySword");
+        const animationendEL = e => {
+            hero.setAnimation("idle");
+            this.levelState.heroBuyWeapon = false;
+            this.heroWeaponDamage = Math.floor(this.heroGems / 2);
+            this.playerGems = this.heroGems;
+            this.heroGems = 0;
+            console.log("heroWeaponDamage: " + this.heroWeaponDamage);
+            console.log("playerGems: " + this.playerGems);
+            console.log("heroGems: " + this.heroGems);
+            this.levelState.playerBuyClay = true;
+
+            // Hero leaves the shop
+            const welcomeMat = this.runtime.objects.welcomeMat.getFirstInstance();
+            hero.behaviors.MoveTo.moveToPosition(welcomeMat.x, welcomeMat.y, false); 
+            hero.behaviors.MoveTo.moveToPosition(955, 1220, false);
+            hero.removeEventListener("animationend", animationendEL);
+        };
+        hero.addEventListener("animationend", animationendEL);
     }
 
-    playerBuyClay(clayType, quantity) {
+    playerBuyClay() {
         
     }
 

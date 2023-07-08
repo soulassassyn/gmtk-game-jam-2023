@@ -376,7 +376,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0003s_0001_char",
+					"type": "grandpa",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -387,6 +387,16 @@
 					"uid": 19,
 					"instanceVariables": {},
 					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 15052,
 						"y": 2410,
@@ -462,7 +472,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0003s_0003_char",
+					"type": "clayTrader",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -472,7 +482,29 @@
 					},
 					"uid": 21,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 15557,
 						"y": 2371,
