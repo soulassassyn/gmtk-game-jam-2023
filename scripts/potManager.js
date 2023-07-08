@@ -58,5 +58,4 @@ export class PotManager {
     }
 }
 
-// const myPot = createPot(PotTypes.DECORATIVE, ClayTypes.EARTHENWARE, Sizes.SMALL);
-// console.log(myPot);
+// const myPot = createPot(potTypes.DECORATIVE, clayTypes.EARTHENWARE, sizes.SMALL);

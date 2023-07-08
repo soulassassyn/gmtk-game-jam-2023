@@ -139,6 +139,15 @@
 								"layer": "\"clayTraderUI\"",
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 910581026800883,
+							"parameters": {
+								"layer": "\"clayTraderUI\"",
+								"interactive": false
+							}
 						}
 					],
 					"sid": 424281586956841
@@ -186,9 +195,55 @@
 				{
 					"type": "script",
 					"script": "runtime.levelManager.levelState.heroAttack = true;"
+				},
+				{
+					"callFunction": "camShake",
+					"sid": 728160457083428
 				}
 			],
 			"sid": 859080109183828
+		},
+		{
+			"functionName": "camShake",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 961913370271562,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 734433399468168,
+							"parameters": {
+								"object": "camera"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "shake",
+							"objectClass": "camera",
+							"sid": 639006161446595,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "10",
+								"duration": "0.4",
+								"mode": "reducing-magnitude"
+							}
+						}
+					],
+					"sid": 904345376869780
+				}
+			]
 		}
 	],
 	"sid": 115018507732469

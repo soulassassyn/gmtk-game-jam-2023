@@ -1,0 +1,161 @@
+{
+	"name": "heroCharacter",
+	"plugin-id": "Sprite",
+	"sid": 364194010279881,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 755867326237169
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 387,
+						"height": 291,
+						"originX": 0.4082687338501292,
+						"originY": 0.7594501718213058,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3090240,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 654338948181573,
+				"name": "idle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			},
+			{
+				"frames": [
+					{
+						"width": 387,
+						"height": 291,
+						"originX": 0.4082687338501292,
+						"originY": 0.7594501718213058,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2947445,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 387,
+						"height": 291,
+						"originX": 0.4082687338501292,
+						"originY": 0.7594501718213058,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3543560,
+						"collisionPoly": {
+							"points": [
+								1,
+								1,
+								0,
+								1,
+								0,
+								0,
+								1,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 387,
+						"height": 291,
+						"originX": 0.4082687338501292,
+						"originY": 0.7594501718213058,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3170724,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 387,
+						"height": 291,
+						"originX": 0.4082687338501292,
+						"originY": 0.7594501718213058,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5645051,
+						"collisionPoly": {
+							"points": [
+								1,
+								1,
+								0,
+								1,
+								0,
+								0,
+								1,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 387,
+						"height": 291,
+						"originX": 0.4082687338501292,
+						"originY": 0.7594501718213058,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5753506,
+						"useCollisionPoly": true,
+						"duration": 5
+					}
+				],
+				"sid": 153387319253633,
+				"name": "attack",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			},
+			{
+				"frames": [
+					{
+						"width": 387,
+						"height": 291,
+						"originX": 0.4082687338501292,
+						"originY": 0.7594501718213058,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3698539,
+						"useCollisionPoly": true,
+						"duration": 30
+					}
+				],
+				"sid": 196621384931152,
+				"name": "buySword",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

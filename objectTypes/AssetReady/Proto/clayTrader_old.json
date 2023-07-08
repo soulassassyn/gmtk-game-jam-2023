@@ -1,29 +1,40 @@
 {
-	"name": "Assets_0001s_0006_UIItemDisplay",
+	"name": "clayTrader_old",
 	"plugin-id": "Sprite",
-	"sid": 267623198586248,
+	"sid": 476478978328961,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
-	"effectTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 516178754817011
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 335,
-						"height": 394,
-						"originX": 0.5164179104477612,
-						"originY": 0.5609137055837563,
+						"width": 95,
+						"height": 189,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 786916,
+						"imageSpriteId": 5155697,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 334853491451647,
+				"sid": 487654635610235,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

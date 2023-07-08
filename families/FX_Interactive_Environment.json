@@ -1,0 +1,38 @@
+{
+	"name": "FX_Interactive_Environment",
+	"plugin-id": "Sprite",
+	"sid": 618982977967902,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 313058896222476
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine2",
+			"sid": 672564993568415
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine3",
+			"sid": 628374884713857
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"enviroStool02",
+		"enviroStool01",
+		"enviroShopItem04",
+		"enviroShopItem03",
+		"enviroShopItem02",
+		"enviroShopItem01",
+		"enviroPot03",
+		"enviroPot02",
+		"enviroPot01",
+		"enviroPic02",
+		"enviroPic01",
+		"enviroBarrel01"
+	]
+}

@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0001s_0006_UIItemDisplay",
+	"name": "enviroPot01",
 	"plugin-id": "Sprite",
-	"sid": 267623198586248,
+	"sid": 635356071636389,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 335,
-						"height": 394,
-						"originX": 0.5164179104477612,
-						"originY": 0.5609137055837563,
+						"width": 65,
+						"height": 82,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 786916,
+						"imageSpriteId": 5462415,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 334853491451647,
+				"sid": 120383884080453,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

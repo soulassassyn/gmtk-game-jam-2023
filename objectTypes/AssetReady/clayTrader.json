@@ -1,29 +1,14 @@
 {
-	"name": "camera",
+	"name": "clayTrader",
 	"plugin-id": "Sprite",
-	"sid": 738136623445710,
+	"sid": 996344283841123,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 384896383866364
-		},
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 783133545909604
-		},
-		{
-			"behaviorId": "Sin",
-			"name": "Sine",
-			"sid": 514255663314344
-		},
-		{
-			"behaviorId": "Sin",
-			"name": "Sine2",
-			"sid": 420201994655348
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 200310179161071
 		}
 	],
 	"effectTypes": [],
@@ -32,25 +17,25 @@
 			{
 				"frames": [
 					{
-						"width": 64,
-						"height": 64,
+						"width": 178,
+						"height": 236,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3018137,
+						"imageSpriteId": 8119751,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 716393183422826,
-				"name": "Animation 1",
+				"sid": 157267649919594,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 0
+				"speed": 12
 			}
 		],
 		"subfolders": []

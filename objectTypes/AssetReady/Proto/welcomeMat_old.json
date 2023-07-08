@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0001s_0006_UIItemDisplay",
+	"name": "welcomeMat_old",
 	"plugin-id": "Sprite",
-	"sid": 267623198586248,
+	"sid": 942342038995191,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 335,
-						"height": 394,
-						"originX": 0.5164179104477612,
-						"originY": 0.5609137055837563,
+						"width": 521,
+						"height": 193,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 786916,
+						"imageSpriteId": 3082974,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 334853491451647,
+				"sid": 532680072835113,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

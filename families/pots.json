@@ -34,6 +34,18 @@
 	"members": [
 		"small",
 		"medium",
-		"large"
+		"large",
+		"Assets_0003s_0004s_0003_EarthPot",
+		"Assets_0003s_0004s_0002_EarthPot",
+		"Assets_0003s_0004s_0001_EarthPot",
+		"Assets_0003s_0004s_0000_EarthPot",
+		"Assets_0003s_0003s_0003_StonePot",
+		"Assets_0003s_0003s_0002_StonePot",
+		"Assets_0003s_0003s_0001_StonePot",
+		"Assets_0003s_0003s_0000_StonePot",
+		"Assets_0003s_0002s_0003_PorcPot",
+		"Assets_0003s_0002s_0002_PorcPot",
+		"Assets_0003s_0002s_0001_PorcPot",
+		"Assets_0003s_0002s_0000_PorcPot"
 	]
 }

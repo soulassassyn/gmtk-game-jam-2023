@@ -325,7 +325,7 @@
 					}
 				},
 				{
-					"type": "heroCharacter",
+					"type": "heroCharacter_old",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "idle",
@@ -415,7 +415,7 @@
 					}
 				},
 				{
-					"type": "playerCharacter",
+					"type": "playerCharacter_old",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -472,7 +472,7 @@
 					}
 				},
 				{
-					"type": "clayTrader",
+					"type": "clayTrader_old",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -542,10 +542,10 @@
 					"world": {
 						"x": 17636,
 						"y": 2884,
-						"width": 164,
-						"height": 154,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 159,
+						"height": 146,
+						"originX": 0.5031446540880503,
+						"originY": 0.5068493150684932,
 						"color": [
 							1,
 							1,
@@ -594,7 +594,7 @@
 					},
 					"effects": {
 						"AdjustHSL": {
-							"isEnabled": true,
+							"isEnabled": false,
 							"parameters": {
 								"hue": 0,
 								"saturation": 1,
@@ -657,7 +657,7 @@
 					},
 					"effects": {
 						"AdjustHSL": {
-							"isEnabled": true,
+							"isEnabled": false,
 							"parameters": {
 								"hue": 0,
 								"saturation": 1,
@@ -791,7 +791,7 @@
 					}
 				},
 				{
-					"type": "kiln",
+					"type": "kiln_old",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -827,7 +827,7 @@
 					}
 				},
 				{
-					"type": "welcomeMat",
+					"type": "welcomeMat_old",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -892,7 +892,7 @@
 					}
 				},
 				{
-					"type": "shopCounter",
+					"type": "shopCounter_old",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1296,7 +1296,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0002s_0005_Chair",
+					"type": "enviroStool02",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1311,6 +1311,48 @@
 							"properties": {
 								"enabled": true,
 								"tags": ""
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						}
 					},
@@ -1332,7 +1374,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0002s_0004_Chair",
+					"type": "enviroStool01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1347,6 +1389,48 @@
 							"properties": {
 								"enabled": true,
 								"tags": ""
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						}
 					},
@@ -1368,7 +1452,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0002s_0003_Desk",
+					"type": "shopCounter",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1440,7 +1524,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0002s_0001_Barrel",
+					"type": "enviroBarrel01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1455,6 +1539,48 @@
 							"properties": {
 								"enabled": true,
 								"tags": ""
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						}
 					},
@@ -1512,7 +1638,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0001s_0006_SmallPicture",
+					"type": "enviroPic01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1522,7 +1648,50 @@
 					},
 					"uid": 70,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 8762,
 						"y": 1819,
@@ -1541,7 +1710,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0001s_0005_Urn",
+					"type": "enviroPot01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1551,7 +1720,50 @@
 					},
 					"uid": 71,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 8998,
 						"y": 1832,
@@ -1570,7 +1782,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0001s_0004_Urn",
+					"type": "enviroPot02",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1580,7 +1792,50 @@
 					},
 					"uid": 72,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 9145,
 						"y": 1858,
@@ -1599,7 +1854,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0001s_0003_Urn",
+					"type": "enviroPot03",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1609,7 +1864,50 @@
 					},
 					"uid": 73,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 8863,
 						"y": 1860,
@@ -1628,7 +1926,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0001s_0002_LargePicture",
+					"type": "enviroPic02",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1638,7 +1936,50 @@
 					},
 					"uid": 74,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 8621,
 						"y": 1926,
@@ -1657,7 +1998,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0001s_0001_WelcomeRug",
+					"type": "welcomeMat",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1715,7 +2056,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0000s_0003_ShopShield",
+					"type": "enviroShopItem02",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1725,7 +2066,50 @@
 					},
 					"uid": 77,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 9475,
 						"y": 2175,
@@ -1744,7 +2128,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0000s_0002_ShopBoomerang",
+					"type": "enviroShopItem03",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1754,7 +2138,50 @@
 					},
 					"uid": 78,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 9462,
 						"y": 2013,
@@ -1773,7 +2200,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0000s_0001_ShopJar",
+					"type": "enviroShopItem04",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1783,7 +2210,50 @@
 					},
 					"uid": 79,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 9536,
 						"y": 2006,
@@ -1802,7 +2272,7 @@
 					}
 				},
 				{
-					"type": "Assets_0004s_0000s_0000_ShopSword",
+					"type": "enviroShopItem01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1812,7 +2282,50 @@
 					},
 					"uid": 80,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine3": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 9583,
 						"y": 2128,
@@ -1831,7 +2344,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0005s_0000_Kiln",
+					"type": "kiln",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1840,15 +2353,38 @@
 						"live-preview": false
 					},
 					"uid": 81,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 0
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 9805,
 						"y": 2081,
 						"width": 246,
 						"height": 260,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -1869,8 +2405,36 @@
 						"live-preview": false
 					},
 					"uid": 82,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
 						"x": 2897,
 						"y": 4956,
@@ -1941,8 +2505,36 @@
 						"live-preview": false
 					},
 					"uid": 84,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
 						"x": 3118,
 						"y": 4947,
@@ -1970,8 +2562,36 @@
 						"live-preview": false
 					},
 					"uid": 85,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
 						"x": 3395,
 						"y": 4927,
@@ -1999,8 +2619,36 @@
 						"live-preview": false
 					},
 					"uid": 86,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
 						"x": 3628,
 						"y": 4942,
@@ -2028,8 +2676,36 @@
 						"live-preview": false
 					},
 					"uid": 87,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
 						"x": 2877,
 						"y": 5298,
@@ -2057,8 +2733,36 @@
 						"live-preview": false
 					},
 					"uid": 88,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
 						"x": 3117,
 						"y": 5282,
@@ -2086,8 +2790,36 @@
 						"live-preview": false
 					},
 					"uid": 89,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
 						"x": 3423,
 						"y": 5248,
@@ -2115,8 +2847,36 @@
 						"live-preview": false
 					},
 					"uid": 90,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
 						"x": 3689,
 						"y": 5282,
@@ -2144,8 +2904,36 @@
 						"live-preview": false
 					},
 					"uid": 91,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
 						"x": 2872,
 						"y": 5627,
@@ -2173,8 +2961,36 @@
 						"live-preview": false
 					},
 					"uid": 92,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
 						"x": 3100,
 						"y": 5687,
@@ -2202,11 +3018,39 @@
 						"live-preview": false
 					},
 					"uid": 93,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
-						"x": 3422,
-						"y": 5603,
+						"x": 3411,
+						"y": 5650,
 						"width": 147,
 						"height": 187,
 						"originX": 0.5,
@@ -2231,11 +3075,39 @@
 						"live-preview": false
 					},
 					"uid": 94,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
 					"world": {
-						"x": 3711,
-						"y": 5549,
+						"x": 3685,
+						"y": 5623,
 						"width": 114,
 						"height": 235,
 						"originX": 0.5,
@@ -2425,7 +3297,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0000_PlacementRug",
+					"type": "placementTile_new",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2434,7 +3306,12 @@
 						"live-preview": false
 					},
 					"uid": 101,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"attackPoint": "",
+						"attackOrder": 0,
+						"isOccupied": false,
+						"potUid": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 2855,
@@ -2454,7 +3331,7 @@
 					}
 				},
 				{
-					"type": "Assets_0002s_0003_CharLilScotty",
+					"type": "playerCharacter",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2464,7 +3341,25 @@
 					},
 					"uid": 102,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"allow-sliding": false,
+								"default-controls": true,
+								"enabled": true
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						}
+					},
 					"world": {
 						"x": 2539,
 						"y": 1004,
@@ -2512,7 +3407,7 @@
 					}
 				},
 				{
-					"type": "Assets_0002s_0001_CharMerchant",
+					"type": "clayTrader",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2522,7 +3417,19 @@
 					},
 					"uid": 104,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 3010,
 						"y": 958,
@@ -2541,24 +3448,36 @@
 					}
 				},
 				{
-					"type": "Assets_0002s_0000_CharLunk",
+					"type": "heroCharacter",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
 					"uid": 105,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 3421,
 						"y": 937,
 						"width": 387,
 						"height": 291,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.4082687338501292,
+						"originY": 0.7594501718213058,
 						"color": [
 							1,
 							1,
@@ -2673,8 +3592,8 @@
 						"y": 2525,
 						"width": 335,
 						"height": 394,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5164179104477612,
+						"originY": 0.5609137055837563,
 						"color": [
 							1,
 							1,

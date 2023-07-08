@@ -2,7 +2,8 @@ export class LevelManager {
     constructor(runtime) {
         this.runtime = runtime;
         this.heroWeaponDamage = 6;
-        this.kilnHealth = 100;
+        this.kilnHealth = 10;
+        this.kilnLevel = 1;
         this.runOnce = false;
         this.waypointCount = 0;
         this.waypointEL = null;
@@ -47,7 +48,10 @@ export class LevelManager {
         }
 
         if (this.levelState.playerBuyClay) {
-            this.playerBuyClay();
+            if (!this.runOnce) {
+                this.runOnce = true;
+                this.playerBuyClay();
+            }
         }
     }
 
@@ -59,7 +63,6 @@ export class LevelManager {
 
         // Sort placement tiles by attack order
         placementTiles.sort((a, b) => a.instVars.attackOrder - b.instVars.attackOrder);
-        console.log(placementTiles);
 
         // Add welcome mat as first waypoint
         hero.behaviors.MoveTo.moveToPosition(welcomeMat.x, welcomeMat.y, false);
@@ -77,14 +80,17 @@ export class LevelManager {
 
         // Add event listener for when hero arrives at a waypoint
         this.waypointEL = e => {
-            console.log("waypointCount: " + this.waypointCount);
             if (this.waypointCount !== 0 && this.waypointCount !== totalWaypoints - 1) {
-                console.log(placementTiles[this.waypointCount - 1]);
                 if (placementTiles[this.waypointCount - 1].instVars.isOccupied) {
                     hero.behaviors.MoveTo.maxSpeed = 0;
                     const object = this.runtime.getInstanceByUid(placementTiles[this.waypointCount - 1].instVars.potUid);
                     this.heroAttack(object, hero);
                 }
+            }
+            if (this.waypointCount === totalWaypoints - 1) {
+                hero.behaviors.MoveTo.maxSpeed = 0;
+                const kiln = this.runtime.objects.kiln.getFirstInstance();
+                this.heroAttack(kiln, hero);
             }
             this.waypointCount++;
         };
@@ -93,10 +99,12 @@ export class LevelManager {
 
     heroAttack(object, hero) {
         hero.setAnimation("attack");
+        this.environmentDamage();
         object.behaviors.Sine.isEnabled = true;
         const animationendEL = e => {
             object.instVars.hp -= 1;
             this.heroWeaponDamage--;
+            this.environmentDamage(false);
             object.behaviors.Sine.isEnabled = false;
             hero.setAnimation("idle");
             // Broken pot
@@ -132,6 +140,24 @@ export class LevelManager {
         hero.addEventListener("animationend", animationendEL);
     }
 
+    environmentDamage(on = true) {
+        const enviroObjects = this.runtime.objects.FX_Interactive_Environment.getAllInstances();
+        if (on) {
+            this.runtime.callFunction("camShake");
+            for (const object of enviroObjects) {
+                object.behaviors.Sine.isEnabled = true;
+                object.behaviors.Sine2.isEnabled = true;
+                object.behaviors.Sine3.isEnabled = true;
+            }
+        } else {
+            for (const object of enviroObjects) {
+                object.behaviors.Sine.isEnabled = false;
+                object.behaviors.Sine2.isEnabled = false;
+                object.behaviors.Sine3.isEnabled = false;
+            }
+        }
+    }
+
     heroBuyWeapon() {
         const hero = this.runtime.objects.heroCharacter.getFirstInstance();
         hero.setAnimation("buySword");
@@ -141,15 +167,12 @@ export class LevelManager {
             this.heroWeaponDamage = Math.floor(this.heroGems / 2);
             this.playerGems = this.heroGems;
             this.heroGems = 0;
-            console.log("heroWeaponDamage: " + this.heroWeaponDamage);
-            console.log("playerGems: " + this.playerGems);
-            console.log("heroGems: " + this.heroGems);
             this.levelState.playerBuyClay = true;
 
             // Hero leaves the shop
             const welcomeMat = this.runtime.objects.welcomeMat.getFirstInstance();
             hero.behaviors.MoveTo.moveToPosition(welcomeMat.x, welcomeMat.y, false); 
-            hero.behaviors.MoveTo.moveToPosition(955, 1220, false);
+            hero.behaviors.MoveTo.moveToPosition(905, 1351, false);
             hero.removeEventListener("animationend", animationendEL);
         };
         hero.addEventListener("animationend", animationendEL);
@@ -157,12 +180,13 @@ export class LevelManager {
 
     playerBuyClay() {
         const clayTrader = this.runtime.objects.clayTrader.getFirstInstance();
+        const welcomeMat = this.runtime.objects.welcomeMat.getFirstInstance();
         const [x, y] = this.runtime.objects.shopCounter.getFirstInstance().getImagePoint(1);
         clayTrader.behaviors.MoveTo.moveToPosition(welcomeMat.x, welcomeMat.y, false); 
         clayTrader.behaviors.MoveTo.moveToPosition(x, y, false);
         clayTrader.behaviors.MoveTo.maxSpeed = 700;
         this.waypointEL = e => {
-
+            clayTrader.behaviors.MoveTo.maxSpeed = 0;
             clayTrader.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
         }
         clayTrader.behaviors.MoveTo.addEventListener("arrived", this.waypointEL);

@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0001s_0006_UIItemDisplay",
+	"name": "shopCounter",
 	"plugin-id": "Sprite",
-	"sid": 267623198586248,
+	"sid": 525167404954708,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,26 @@
 			{
 				"frames": [
 					{
-						"width": 335,
-						"height": 394,
-						"originX": 0.5164179104477612,
-						"originY": 0.5609137055837563,
+						"width": 400,
+						"height": 261,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 786916,
+						"imageSpriteId": 9992336,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5125,
+								"y": 0.7547892720306514
+							}
+						],
 						"duration": 1
 					}
 				],
-				"sid": 334853491451647,
+				"sid": 314494684528552,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

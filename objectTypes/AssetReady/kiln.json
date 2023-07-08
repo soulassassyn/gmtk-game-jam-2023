@@ -1,0 +1,74 @@
+{
+	"name": "kiln",
+	"plugin-id": "Sprite",
+	"sid": 736302944676555,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "hp",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 533630654929091
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 709171541760699
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 246,
+						"height": 260,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9422599,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 618329522920842,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			},
+			{
+				"frames": [
+					{
+						"width": 246,
+						"height": 260,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7507876,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 381996064814497,
+				"name": "broken",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}
