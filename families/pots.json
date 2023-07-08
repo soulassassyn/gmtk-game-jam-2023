@@ -25,7 +25,13 @@
 			"sid": 147743906933659
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 932647212171028
+		}
+	],
 	"effectTypes": [
 		{
 			"effectId": "hsladjust",

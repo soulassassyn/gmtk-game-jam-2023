@@ -20,6 +20,33 @@
 						"exportQuality": 0.8,
 						"imageSpriteId": 9233348,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "top",
+								"x": 0.5,
+								"y": -0.2597402597402597
+							},
+							{
+								"name": "topLeft",
+								"x": -0.24390243902439024,
+								"y": -0.2597402597402597
+							},
+							{
+								"name": "left",
+								"x": -0.24390243902439024,
+								"y": 0.4999999999999999
+							},
+							{
+								"name": "botLeft",
+								"x": 0,
+								"y": 1
+							},
+							{
+								"name": "bot",
+								"x": 0.5,
+								"y": 1
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -29,7 +56,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 12
+				"speed": 0
 			}
 		],
 		"subfolders": []

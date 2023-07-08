@@ -1,10 +1,15 @@
 // Import any other script files here, e.g.:
 // import * as myModule from "./mymodule.js";
 
+import { PotManager } from "./potManager";
+
 runOnStartup(async runtime =>
 {
 	// Code to run on the loading screen.
 	// Note layouts, objects etc. are not yet available.
+
+	const potManager = new PotManager(runtime);
+	runtime.potManager = potManager;
 	
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });

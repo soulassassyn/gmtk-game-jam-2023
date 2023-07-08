@@ -1,54 +1,60 @@
-const PotTypes = {
-    DECORATIVE: 'Decorative',
-    REINFORCED: 'Reinforced',
-    MAGIC: 'Magic',
-};
+export class PotManager {
+    constructor(runtime) {
+        this.runtime = runtime;
+        
+        this.potTypes = {
+            DECORATIVE: 'Decorative',
+            REINFORCED: 'Reinforced',
+            MAGIC: 'Magic',
+        };
 
-const ClayTypes = {
-    EARTHENWARE: 'Earthenware',
-    STONEWARE: 'Stoneware',
-    PORCELAIN: 'Porcelain',
-};
+        this.clayTypes = {
+            EARTHENWARE: 'Earthenware',
+            STONEWARE: 'Stoneware',
+            PORCELAIN: 'Porcelain',
+        };
 
-const Sizes = {
-    SMALL: 'Small',
-    MEDIUM: 'Medium',
-    LARGE: 'Large',
-};
+        this.sizes = {
+            SMALL: 'Small',
+            MEDIUM: 'Medium',
+            LARGE: 'Large',
+        };
+        
+        this.basePotStats = {
+            [PotTypes.DECORATIVE]: {
+                [ClayTypes.EARTHENWARE]: { hp: 2, gems: 10, heat: 2 },
+                [ClayTypes.STONEWARE]: { hp: 3, gems: 15, heat: 5 },
+                [ClayTypes.PORCELAIN]: { hp: 1, gems: 20, heat: 7 },
+            },
+            [PotTypes.REINFORCED]: {
+                [ClayTypes.EARTHENWARE]: { hp: 3, gems: 5, heat: 2 },
+                [ClayTypes.STONEWARE]: { hp: 5, gems: 10, heat: 7 },
+                // No porcelain for reinforced
+            },
+            [PotTypes.MAGIC]: {
+                [ClayTypes.EARTHENWARE]: { hp: 1, gems: 20, heat: 5 },
+                // No stoneware for magic
+                [ClayTypes.PORCELAIN]: { hp: 1, gems: 40, heat: 10 },
+            },
+        };
+    
+        this.sizeMultipliers = {
+            [Sizes.SMALL]: 1,
+            [Sizes.MEDIUM]: 2,
+            [Sizes.LARGE]: 3,
+        };
+    }
 
-const basePotStats = {
-    [PotTypes.DECORATIVE]: {
-        [ClayTypes.EARTHENWARE]: { hp: 2, gems: 10 },
-        [ClayTypes.STONEWARE]: { hp: 3, gems: 15 },
-        [ClayTypes.PORCELAIN]: { hp: 1, gems: 20 },
-    },
-    [PotTypes.REINFORCED]: {
-        [ClayTypes.EARTHENWARE]: { hp: 3, gems: 5 },
-        [ClayTypes.STONEWARE]: { hp: 5, gems: 10 },
-        // No porcelain for reinforced
-    },
-    [PotTypes.MAGIC]: {
-        [ClayTypes.EARTHENWARE]: { hp: 1, gems: 20 },
-        // No stoneware for magic
-        [ClayTypes.PORCELAIN]: { hp: 1, gems: 40 },
-    },
-};
+    createPot(potType, clayType, size) {
+        const baseStats = basePotStats[potType][clayType];
+        const sizeMultiplier = sizeMultipliers[size];
 
-const sizeMultipliers = {
-    [Sizes.SMALL]: 1,
-    [Sizes.MEDIUM]: 2,
-    [Sizes.LARGE]: 3,
-};
-
-function createPot(potType, clayType, size) {
-    const baseStats = basePotStats[potType][clayType];
-    const sizeMultiplier = sizeMultipliers[size];
-
-    return {
-        hp: baseStats.hp * sizeMultiplier,
-        gems: baseStats.gems * sizeMultiplier,
-    };
+        return {
+            hp: baseStats.hp * sizeMultiplier,
+            gems: baseStats.gems * sizeMultiplier,
+        };
+    }
 }
 
-const myPot = createPot(PotTypes.DECORATIVE, ClayTypes.EARTHENWARE, Sizes.SMALL);
-console.log(myPot);
+// const myPot = createPot(PotTypes.DECORATIVE, ClayTypes.EARTHENWARE, Sizes.SMALL);
+// console.log(myPot);
