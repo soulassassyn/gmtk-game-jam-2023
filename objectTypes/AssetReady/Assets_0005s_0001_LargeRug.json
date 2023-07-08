@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0005s_0001_LargeRug",
+	"plugin-id": "Sprite",
+	"sid": 222731350671416,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 923,
+						"height": 338,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6176906,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 440860950229576,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

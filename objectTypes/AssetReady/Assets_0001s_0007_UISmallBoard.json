@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0001s_0007_UISmallBoard",
+	"plugin-id": "Sprite",
+	"sid": 982574663091301,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 743,
+						"height": 239,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1295002,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 137166581876699,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

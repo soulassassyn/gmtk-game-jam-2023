@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0003s_0003s_0001_StonePot",
+	"plugin-id": "Sprite",
+	"sid": 150134771346774,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 171,
+						"height": 279,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9192583,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 934819228229059,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0001s_0001_UIPorcClay",
+	"plugin-id": "Sprite",
+	"sid": 142897235130360,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 198,
+						"height": 174,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8879331,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 793062609540396,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

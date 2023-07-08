@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0001s_0009_FadeBlack",
+	"plugin-id": "Sprite",
+	"sid": 763452129700526,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1920,
+						"height": 1080,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6685723,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 246685478239139,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

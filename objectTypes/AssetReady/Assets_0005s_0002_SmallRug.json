@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0005s_0002_SmallRug",
+	"plugin-id": "Sprite",
+	"sid": 463088949961410,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 411,
+						"height": 208,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4575258,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 183230481800801,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

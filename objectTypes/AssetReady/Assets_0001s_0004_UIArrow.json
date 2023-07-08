@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0001s_0004_UIArrow",
+	"plugin-id": "Sprite",
+	"sid": 223978248762195,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 111,
+						"height": 140,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7405791,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 393011960976932,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

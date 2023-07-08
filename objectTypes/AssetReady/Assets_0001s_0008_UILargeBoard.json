@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0001s_0008_UILargeBoard",
+	"plugin-id": "Sprite",
+	"sid": 406128713762907,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 926,
+						"height": 991,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2538080,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 368539388444088,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

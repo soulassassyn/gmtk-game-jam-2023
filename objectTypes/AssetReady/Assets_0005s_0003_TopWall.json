@@ -1,0 +1,49 @@
+{
+	"name": "Assets_0005s_0003_TopWall",
+	"plugin-id": "Sprite",
+	"sid": 482672301489835,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1869,
+						"height": 164,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 889296,
+						"collisionPoly": {
+							"points": [
+								0.0005350454788657035,
+								0.006097560975609756,
+								0.9994649545211343,
+								0.006097560975609756,
+								0.9994649545211343,
+								1,
+								0.0005350454788657035,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 664730218318430,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

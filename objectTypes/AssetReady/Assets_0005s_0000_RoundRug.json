@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0005s_0000_RoundRug",
+	"plugin-id": "Sprite",
+	"sid": 945069615820764,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 318,
+						"height": 314,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4226873,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 208714780102417,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

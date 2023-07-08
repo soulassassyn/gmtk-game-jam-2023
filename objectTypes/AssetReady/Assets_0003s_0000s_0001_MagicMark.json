@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0003s_0000s_0001_MagicMark",
+	"plugin-id": "Sprite",
+	"sid": 871410643391864,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 55,
+						"height": 86,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3887414,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 845945257443798,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0004s_0000s_0002_ShopBoomerang",
+	"plugin-id": "Sprite",
+	"sid": 415034599930774,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 66,
+						"height": 41,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 670321,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 236394933257069,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

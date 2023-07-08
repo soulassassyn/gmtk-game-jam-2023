@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0003s_0004s_0003_EarthPot",
+	"plugin-id": "Sprite",
+	"sid": 259509308731945,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 176,
+						"height": 201,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8419002,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 722061492575265,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

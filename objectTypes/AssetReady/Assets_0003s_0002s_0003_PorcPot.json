@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0003s_0002s_0003_PorcPot",
+	"plugin-id": "Sprite",
+	"sid": 456963758829963,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 118,
+						"height": 229,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7710848,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 569165286952024,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

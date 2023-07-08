@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0003s_0001s_0000_EarthDebris",
+	"plugin-id": "Sprite",
+	"sid": 873179132696823,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 182,
+						"height": 82,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7903029,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 822202826861610,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

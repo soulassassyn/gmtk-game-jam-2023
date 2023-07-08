@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0004s_0000s_0001_ShopJar",
+	"plugin-id": "Sprite",
+	"sid": 121260145004101,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 28,
+						"height": 46,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3852412,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 430435589098348,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

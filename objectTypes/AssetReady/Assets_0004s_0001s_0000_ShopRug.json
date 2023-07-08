@@ -1,0 +1,37 @@
+{
+	"name": "Assets_0004s_0001s_0000_ShopRug",
+	"plugin-id": "Sprite",
+	"sid": 651373748601690,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 348,
+						"height": 122,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4586168,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 811369429286032,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}
