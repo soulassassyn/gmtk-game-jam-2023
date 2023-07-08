@@ -50,7 +50,7 @@
 					"world": {
 						"x": -17,
 						"y": -3,
-						"width": 1945,
+						"width": 1945.0000000000002,
 						"height": 164,
 						"originX": 0,
 						"originY": 0,
@@ -225,7 +225,7 @@
 						"x": 1628,
 						"y": 276,
 						"width": 318,
-						"height": 244,
+						"height": 244.00000000000003,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1183,7 +1183,7 @@
 						"x": 1820,
 						"y": 153,
 						"width": 140,
-						"height": 117,
+						"height": 116.99999999999999,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1472,8 +1472,37 @@
 					"world": {
 						"x": 163,
 						"y": 895,
-						"width": -62,
+						"width": -62.00000000000001,
 						"height": 84,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Assets_0002s_0001_CharMerchant",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 161,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 617,
+						"y": 226,
+						"width": 178,
+						"height": 236,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2174,8 +2203,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1300,
-						"y": 1248,
+						"x": 1251,
+						"y": 529,
 						"width": 387,
 						"height": 291,
 						"originX": 0.5,
