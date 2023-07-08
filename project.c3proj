@@ -50,6 +50,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
 			"author": "Scirra",
@@ -61,6 +68,13 @@
 			"name": "Scroll To",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "hsladjust",
+			"name": "Adjust HSL",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "lid9fr024ul",
@@ -70,8 +84,7 @@
 			"Mouse",
 			"Audio",
 			"Browser",
-			"Camera",
-			"PlayerCharacter"
+			"Camera"
 		],
 		"subfolders": [
 			{
@@ -88,11 +101,9 @@
 							"Proto01_0002s_0003_ui",
 							"Proto01_0003s_0000_char",
 							"Proto01_0003s_0001_char",
-							"Proto01_0003s_0002_char",
+							"playerCharacter",
 							"Proto01_0003s_0003_char",
-							"Proto01_0004s_0000_prop",
-							"Proto01_0004s_0001_prop",
-							"Proto01_0004s_0002_prop",
+							"placementTile",
 							"Proto01_0004s_0003_prop",
 							"Proto01_0004s_0004_prop",
 							"Proto01_0004s_0005_prop",
@@ -120,6 +131,15 @@
 				],
 				"subfolders": [],
 				"name": "Text"
+			},
+			{
+				"items": [
+					"small",
+					"medium",
+					"large"
+				],
+				"subfolders": [],
+				"name": "Pots"
 			}
 		]
 	},
@@ -127,7 +147,8 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"FX_Family"
+			"FX_Family",
+			"pots"
 		],
 		"subfolders": []
 	},

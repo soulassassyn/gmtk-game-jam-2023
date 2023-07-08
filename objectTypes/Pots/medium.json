@@ -1,7 +1,7 @@
 {
-	"name": "Proto01_0003s_0002_char",
+	"name": "medium",
 	"plugin-id": "Sprite",
-	"sid": 903089508693752,
+	"sid": 139226723005274,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 92,
-						"height": 172,
+						"width": 154,
+						"height": 211,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2177795,
+						"imageSpriteId": 4044423,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 911575755731643,
+				"sid": 885778737881887,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

@@ -1,29 +1,40 @@
 {
-	"name": "Proto01_0004s_0002_prop",
+	"name": "playerCharacter",
 	"plugin-id": "Sprite",
-	"sid": 139226723005274,
+	"sid": 903089508693752,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
-	"effectTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 235093593895405
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 154,
-						"height": 211,
+						"width": 92,
+						"height": 172,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4044423,
+						"imageSpriteId": 2177795,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 885778737881887,
+				"sid": 911575755731643,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

@@ -336,6 +336,16 @@
 					"uid": 18,
 					"instanceVariables": {},
 					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 14562,
 						"y": 2395,
@@ -383,7 +393,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0003s_0002_char",
+					"type": "playerCharacter",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -393,7 +403,30 @@
 					},
 					"uid": 20,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"allow-sliding": false,
+								"default-controls": true,
+								"enabled": true
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 15329,
 						"y": 2377,
@@ -441,7 +474,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0004s_0000_prop",
+					"type": "placementTile",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -470,7 +503,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0004s_0001_prop",
+					"type": "small",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -481,6 +514,16 @@
 					"uid": 23,
 					"instanceVariables": {},
 					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 14876,
 						"y": 2772,
@@ -499,7 +542,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0004s_0002_prop",
+					"type": "medium",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -510,6 +553,16 @@
 					"uid": 24,
 					"instanceVariables": {},
 					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 15142,
 						"y": 2791,

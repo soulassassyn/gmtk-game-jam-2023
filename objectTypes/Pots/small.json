@@ -1,7 +1,7 @@
 {
-	"name": "PlayerCharacter",
+	"name": "small",
 	"plugin-id": "Sprite",
-	"sid": 624788303674166,
+	"sid": 488064238435895,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 211,
+						"height": 254,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3882846,
+						"imageSpriteId": 6546676,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 559217098008405,
-				"name": "PlayerCharacter",
+				"sid": 686193417159823,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

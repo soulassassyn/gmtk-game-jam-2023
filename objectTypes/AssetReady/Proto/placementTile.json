@@ -1,7 +1,7 @@
 {
-	"name": "Proto01_0004s_0001_prop",
+	"name": "placementTile",
 	"plugin-id": "Sprite",
-	"sid": 488064238435895,
+	"sid": 955418590916187,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 211,
-						"height": 254,
+						"width": 164,
+						"height": 154,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6546676,
+						"imageSpriteId": 9233348,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 686193417159823,
+				"sid": 265188934505332,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
