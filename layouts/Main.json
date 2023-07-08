@@ -592,7 +592,11 @@
 						"live-preview": false
 					},
 					"uid": 46,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"hp": 0,
+						"clayType": 0,
+						"size": 0
+					},
 					"behaviors": {
 						"Solid": {
 							"properties": {
@@ -638,7 +642,11 @@
 						"live-preview": false
 					},
 					"uid": 47,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"hp": 0,
+						"clayType": 0,
+						"size": 0
+					},
 					"behaviors": {
 						"Solid": {
 							"properties": {
@@ -684,7 +692,11 @@
 						"live-preview": false
 					},
 					"uid": 48,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"hp": 0,
+						"clayType": 0,
+						"size": 0
+					},
 					"behaviors": {
 						"Solid": {
 							"properties": {

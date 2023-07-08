@@ -517,7 +517,11 @@
 						"live-preview": false
 					},
 					"uid": 23,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"hp": 0,
+						"clayType": 0,
+						"size": 0
+					},
 					"behaviors": {
 						"Solid": {
 							"properties": {
@@ -563,7 +567,11 @@
 						"live-preview": false
 					},
 					"uid": 24,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"hp": 0,
+						"clayType": 0,
+						"size": 0
+					},
 					"behaviors": {
 						"Solid": {
 							"properties": {
