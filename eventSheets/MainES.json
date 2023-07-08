@@ -6,104 +6,114 @@
 			"includeSheet": "FXES"
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "PlayerController",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 988179640709082,
-					"parameters": {
-						"key": 87
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 900416916350972,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "playerCharacter",
+							"sid": 505608193007549,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 227872794327212
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 820467517264616,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "playerCharacter",
+							"sid": 173333964736784,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 914075540827130
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 831400772665423,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "playerCharacter",
+							"sid": 518256965878755,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 237945387024186
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 319983891426296,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "playerCharacter",
+							"sid": 968616934841376,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 801405877109425
 				}
 			],
-			"actions": [
-				{
-					"id": "simulate-control",
-					"objectClass": "playerCharacter",
-					"sid": 522266023251672,
-					"behaviorType": "8Direction",
-					"parameters": {
-						"control": "up"
-					}
-				}
-			],
-			"sid": 743469626510457
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 439556445732804,
-					"parameters": {
-						"key": 83
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "simulate-control",
-					"objectClass": "playerCharacter",
-					"sid": 727563183660191,
-					"behaviorType": "8Direction",
-					"parameters": {
-						"control": "down"
-					}
-				}
-			],
-			"sid": 579580414277343
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 157906467772503,
-					"parameters": {
-						"key": 65
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "simulate-control",
-					"objectClass": "playerCharacter",
-					"sid": 913938928719605,
-					"behaviorType": "8Direction",
-					"parameters": {
-						"control": "left"
-					}
-				}
-			],
-			"sid": 876907625274911
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 708608416387260,
-					"parameters": {
-						"key": 68
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "simulate-control",
-					"objectClass": "playerCharacter",
-					"sid": 859835055170022,
-					"behaviorType": "8Direction",
-					"parameters": {
-						"control": "right"
-					}
-				}
-			],
-			"sid": 855885094522904
+			"sid": 166320559319883
 		}
 	],
 	"sid": 115018507732469
