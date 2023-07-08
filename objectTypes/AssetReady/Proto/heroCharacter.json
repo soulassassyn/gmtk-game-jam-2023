@@ -1,10 +1,16 @@
 {
-	"name": "Proto01_0003s_0000_char",
+	"name": "heroCharacter",
 	"plugin-id": "Sprite",
 	"sid": 773048743651675,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 696772018108692
+		}
+	],
 	"effectTypes": [
 		{
 			"effectId": "hsladjust",

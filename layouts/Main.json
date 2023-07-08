@@ -112,7 +112,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0004s_0007_prop",
+					"type": "welcomeMat",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -256,7 +256,10 @@
 						"live-preview": false
 					},
 					"uid": 39,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"attackPoint": "bot",
+						"attackOrder": 6
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1621,
@@ -285,7 +288,10 @@
 						"live-preview": false
 					},
 					"uid": 40,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"attackPoint": "botLeft",
+						"attackOrder": 5
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1800,
@@ -314,7 +320,10 @@
 						"live-preview": false
 					},
 					"uid": 41,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"attackPoint": "left",
+						"attackOrder": 4
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1801,
@@ -343,7 +352,10 @@
 						"live-preview": false
 					},
 					"uid": 42,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"attackPoint": "topLeft",
+						"attackOrder": 1
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1801,
@@ -372,7 +384,10 @@
 						"live-preview": false
 					},
 					"uid": 43,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"attackPoint": "top",
+						"attackOrder": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1618,
@@ -401,7 +416,10 @@
 						"live-preview": false
 					},
 					"uid": 45,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"attackPoint": "left",
+						"attackOrder": 2
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1800,
@@ -430,7 +448,10 @@
 						"live-preview": false
 					},
 					"uid": 51,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"attackPoint": "left",
+						"attackOrder": 3
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1800,
@@ -490,7 +511,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0004s_0006_prop",
+					"type": "kiln",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -775,7 +796,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0003s_0000_char",
+					"type": "heroCharacter",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -785,7 +806,19 @@
 					},
 					"uid": 44,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"MoveTo": {
+							"properties": {
+								"max-speed": 700,
+								"acceleration": 5000,
+								"deceleration": 20000,
+								"rotate-speed": 0,
+								"set-angle": false,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
 					"effects": {
 						"AdjustHSL": {
 							"isEnabled": true,
@@ -797,8 +830,8 @@
 						}
 					},
 					"world": {
-						"x": 1350,
-						"y": 747,
+						"x": 963,
+						"y": 1197,
 						"width": 265,
 						"height": 171,
 						"originX": 0.5,

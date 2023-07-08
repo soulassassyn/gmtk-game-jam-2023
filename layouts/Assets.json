@@ -325,7 +325,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0003s_0000_char",
+					"type": "heroCharacter",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -335,7 +335,19 @@
 					},
 					"uid": 18,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
 					"effects": {
 						"AdjustHSL": {
 							"isEnabled": true,
@@ -488,7 +500,10 @@
 						"live-preview": false
 					},
 					"uid": 22,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"attackPoint": "",
+						"attackOrder": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 14548,
@@ -744,7 +759,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0004s_0006_prop",
+					"type": "kiln",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -780,7 +795,7 @@
 					}
 				},
 				{
-					"type": "Proto01_0004s_0007_prop",
+					"type": "welcomeMat",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",

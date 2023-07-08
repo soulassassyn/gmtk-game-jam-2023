@@ -137,7 +137,8 @@
 									"actions": [
 										{
 											"type": "script",
-											"script": "const mouseX = runtime.objects.Mouse.getMouseX();\nconst mouseY = runtime.objects.Mouse.getMouseY();\nconst fx = [\n\t'FX_Misc'// 0\n]\n\nruntime.callFunction(fx[11], mouseX, mouseY);"
+											"script": "const mouseX = runtime.objects.Mouse.getMouseX();\nconst mouseY = runtime.objects.Mouse.getMouseY();\nconst fx = [\n\t'FX_Misc'// 0\n]\n\nruntime.callFunction(fx[11], mouseX, mouseY);",
+											"disabled": true
 										}
 									],
 									"sid": 845915608631485

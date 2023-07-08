@@ -114,6 +114,63 @@
 				}
 			],
 			"sid": 166320559319883
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 891723228131804
+				}
+			],
+			"actions": [],
+			"sid": 910522694761905
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 944835850876572
+				}
+			],
+			"actions": [],
+			"sid": 193908131165657,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "script",
+							"script": "runtime.levelManager.update();"
+						}
+					],
+					"sid": 759740172124995
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 871923433554326,
+					"parameters": {
+						"key": 70
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "runtime.levelManager.levelState.heroAttack = true;"
+				}
+			],
+			"sid": 859080109183828
 		}
 	],
 	"sid": 115018507732469

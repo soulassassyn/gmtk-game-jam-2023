@@ -3,7 +3,22 @@
 	"plugin-id": "Sprite",
 	"sid": 955418590916187,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "attackPoint",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 569078304939314
+		},
+		{
+			"name": "attackOrder",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 147944645886796
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {

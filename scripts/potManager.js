@@ -21,33 +21,33 @@ export class PotManager {
         };
         
         this.basePotStats = {
-            [PotTypes.DECORATIVE]: {
-                [ClayTypes.EARTHENWARE]: { hp: 2, gems: 10, heat: 2, time: 2},
-                [ClayTypes.STONEWARE]: { hp: 3, gems: 15, heat: 5, time: 3},
-                [ClayTypes.PORCELAIN]: { hp: 1, gems: 20, heat: 7, time: 8},
+            [this.potTypes.DECORATIVE]: {
+                [this.clayTypes.EARTHENWARE]: { hp: 2, gems: 10, heat: 2, time: 2},
+                [this.clayTypes.STONEWARE]: { hp: 3, gems: 15, heat: 5, time: 3},
+                [this.clayTypes.PORCELAIN]: { hp: 1, gems: 20, heat: 7, time: 8},
             },
-            [PotTypes.REINFORCED]: {
-                [ClayTypes.EARTHENWARE]: { hp: 3, gems: 5, heat: 2, time: 3},
-                [ClayTypes.STONEWARE]: { hp: 5, gems: 10, heat: 7, time: 5 },
+            [this.potTypes.REINFORCED]: {
+                [this.clayTypes.EARTHENWARE]: { hp: 3, gems: 5, heat: 2, time: 3},
+                [this.clayTypes.STONEWARE]: { hp: 5, gems: 10, heat: 7, time: 5 },
                 // No porcelain for reinforced
             },
-            [PotTypes.MAGIC]: {
-                [ClayTypes.EARTHENWARE]: { hp: 1, gems: 20, heat: 5, time: 4 },
+            [this.potTypes.MAGIC]: {
+                [this.clayTypes.EARTHENWARE]: { hp: 1, gems: 20, heat: 5, time: 4 },
                 // No stoneware for magic
-                [ClayTypes.PORCELAIN]: { hp: 1, gems: 40, heat: 10, time: 15 },
+                [this.clayTypes.PORCELAIN]: { hp: 1, gems: 40, heat: 10, time: 15 },
             },
         };
     
         this.sizeMultipliers = {
-            [Sizes.SMALL]: 1,
-            [Sizes.MEDIUM]: 2,
-            [Sizes.LARGE]: 3,
+            [this.sizes.SMALL]: 1,
+            [this.sizes.MEDIUM]: 2,
+            [this.sizes.LARGE]: 3,
         };
     }
 
     createPot(potType, clayType, size) {
-        const baseStats = basePotStats[potType][clayType];
-        const sizeMultiplier = sizeMultipliers[size];
+        const baseStats = this.basePotStats[potType][clayType];
+        const sizeMultiplier = this.sizeMultipliers[size];
 
         return {
             hp: baseStats.hp * sizeMultiplier,
