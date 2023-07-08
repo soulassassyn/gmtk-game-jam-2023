@@ -162,7 +162,7 @@ export class LevelManager {
         clayTrader.behaviors.MoveTo.moveToPosition(x, y, false);
         clayTrader.behaviors.MoveTo.maxSpeed = 700;
         this.waypointEL = e => {
-            
+
             clayTrader.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
         }
         clayTrader.behaviors.MoveTo.addEventListener("arrived", this.waypointEL);
