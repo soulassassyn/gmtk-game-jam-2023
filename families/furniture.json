@@ -1,0 +1,25 @@
+{
+	"name": "furniture",
+	"plugin-id": "Sprite",
+	"sid": 420462924624870,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 714285394953784
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"large",
+		"medium",
+		"Proto01_0004s_0003_prop",
+		"Proto01_0004s_0004_prop",
+		"Proto01_0004s_0005_prop",
+		"Proto01_0004s_0006_prop",
+		"Proto01_0004s_0008_prop",
+		"small",
+		"Proto01_0004s_0009_prop"
+	]
+}

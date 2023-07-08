@@ -9,6 +9,11 @@
 			"behaviorId": "EightDir",
 			"name": "8Direction",
 			"sid": 235093593895405
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 651516683999323
 		}
 	],
 	"effectTypes": [
@@ -30,6 +35,18 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"imageSpriteId": 2177795,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.5813953488372093,
+								1,
+								0.5813953488372093,
+								1,
+								1,
+								0,
+								1
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}

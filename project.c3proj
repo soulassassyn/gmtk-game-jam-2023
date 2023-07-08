@@ -72,8 +72,22 @@
 		},
 		{
 			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -157,7 +171,8 @@
 	"families": {
 		"items": [
 			"FX_Family",
-			"pots"
+			"pots",
+			"furniture"
 		],
 		"subfolders": []
 	},
