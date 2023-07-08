@@ -2,6 +2,7 @@
 // import * as myModule from "./mymodule.js";
 
 import { PotManager } from "./potManager";
+import { LevelManager } from "./levelManager";
 
 runOnStartup(async runtime =>
 {
@@ -10,6 +11,9 @@ runOnStartup(async runtime =>
 
 	const potManager = new PotManager(runtime);
 	runtime.potManager = potManager;
+
+	const levelManager = new LevelManager();
+	runtime.levelManager = levelManager;
 	
 	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
