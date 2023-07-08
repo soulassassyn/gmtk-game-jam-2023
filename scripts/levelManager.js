@@ -4,6 +4,7 @@ export class LevelManager {
         this.heroWeaponDamage = 0;
         this.kilnHealth = 100;
         this.runOnce = false;
+        this.waypointCount = 0;
         this.levelState = {
             heroAttack: false,
             heroBuyWeapon: false,
@@ -46,6 +47,7 @@ export class LevelManager {
 
         // Sort placement tiles by attack order
         placementTiles.sort((a, b) => a.instVars.attackOrder - b.instVars.attackOrder);
+        console.log(placementTiles);
 
         // Add welcome mat as first waypoint
         hero.behaviors.MoveTo.moveToPosition(welcomeMat.x, welcomeMat.y, false);
@@ -59,10 +61,24 @@ export class LevelManager {
         // Add kiln as last waypoint
         hero.behaviors.MoveTo.moveToPosition(kiln.x, kiln.y, false);
 
-        console.log(hero.behaviors.MoveTo.getWaypointCount());
+        let totalWaypoints = hero.behaviors.MoveTo.getWaypointCount();
+
+        // Add event listener for when hero arrives at a waypoint
+        hero.behaviors.MoveTo.addEventListener("arrived", e => {
+            console.log("waypointCount: " + this.waypointCount);
+            if (this.waypointCount !== 0 && this.waypointCount !== totalWaypoints - 1) {
+                console.log(placementTiles[this.waypointCount - 1]);
+                if (placementTiles[this.waypointCount - 1].instVars.isOccupied) {
+                    hero.behaviors.MoveTo.speed = 0;
+                    const object = this.runtime.getInstanceByUid(placementTiles[this.waypointCount - 1].instVars.potUid);
+                    this.heroAttack(object);
+                }
+            }
+            this.waypointCount++;
+        });
     }
 
-    heroAttack() {
+    heroAttack(object) {
         
     }
 

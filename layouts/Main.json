@@ -258,7 +258,9 @@
 					"uid": 39,
 					"instanceVariables": {
 						"attackPoint": "bot",
-						"attackOrder": 6
+						"attackOrder": 6,
+						"isOccupied": false,
+						"potUid": 0
 					},
 					"behaviors": {},
 					"world": {
@@ -290,7 +292,9 @@
 					"uid": 40,
 					"instanceVariables": {
 						"attackPoint": "botLeft",
-						"attackOrder": 5
+						"attackOrder": 5,
+						"isOccupied": false,
+						"potUid": 0
 					},
 					"behaviors": {},
 					"world": {
@@ -322,7 +326,9 @@
 					"uid": 41,
 					"instanceVariables": {
 						"attackPoint": "left",
-						"attackOrder": 4
+						"attackOrder": 4,
+						"isOccupied": false,
+						"potUid": 0
 					},
 					"behaviors": {},
 					"world": {
@@ -354,7 +360,9 @@
 					"uid": 42,
 					"instanceVariables": {
 						"attackPoint": "topLeft",
-						"attackOrder": 1
+						"attackOrder": 1,
+						"isOccupied": false,
+						"potUid": 0
 					},
 					"behaviors": {},
 					"world": {
@@ -386,7 +394,9 @@
 					"uid": 43,
 					"instanceVariables": {
 						"attackPoint": "top",
-						"attackOrder": 0
+						"attackOrder": 0,
+						"isOccupied": false,
+						"potUid": 0
 					},
 					"behaviors": {},
 					"world": {
@@ -418,7 +428,9 @@
 					"uid": 45,
 					"instanceVariables": {
 						"attackPoint": "left",
-						"attackOrder": 2
+						"attackOrder": 2,
+						"isOccupied": false,
+						"potUid": 0
 					},
 					"behaviors": {},
 					"world": {
@@ -450,7 +462,9 @@
 					"uid": 51,
 					"instanceVariables": {
 						"attackPoint": "left",
-						"attackOrder": 3
+						"attackOrder": 3,
+						"isOccupied": false,
+						"potUid": 0
 					},
 					"behaviors": {},
 					"world": {

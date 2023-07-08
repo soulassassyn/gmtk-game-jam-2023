@@ -502,7 +502,9 @@
 					"uid": 22,
 					"instanceVariables": {
 						"attackPoint": "",
-						"attackOrder": 0
+						"attackOrder": 0,
+						"isOccupied": false,
+						"potUid": 0
 					},
 					"behaviors": {},
 					"world": {

@@ -17,6 +17,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 147944645886796
+		},
+		{
+			"name": "isOccupied",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 918764181868174
+		},
+		{
+			"name": "potUid",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 165220782793758
 		}
 	],
 	"behaviorTypes": [],
