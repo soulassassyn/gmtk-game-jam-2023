@@ -1372,7 +1372,7 @@
 					"type": "Assets_0002s_0002_CharGrandpaMcgowan",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1383,10 +1383,10 @@
 					"world": {
 						"x": 204,
 						"y": 255,
-						"width": 176,
-						"height": 201,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 175,
+						"height": 220,
+						"originX": 0.4857142857142857,
+						"originY": 0.5954545454545455,
 						"color": [
 							1,
 							1,
@@ -2563,7 +2563,7 @@
 					"type": "clayTrader",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2586,10 +2586,10 @@
 					"world": {
 						"x": 660,
 						"y": 1306,
-						"width": 178,
-						"height": 236,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 237,
+						"height": 237,
+						"originX": 0.4345991561181435,
+						"originY": 0.7341772151898734,
 						"color": [
 							1,
 							1,
@@ -2996,7 +2996,7 @@
 					"type": "playerCharacter",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3027,8 +3027,8 @@
 						"y": 626,
 						"width": 117,
 						"height": 163,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5704225352112676,
+						"originY": 0.7608695652173914,
 						"color": [
 							1,
 							1,
@@ -3064,12 +3064,12 @@
 						}
 					},
 					"world": {
-						"x": 905,
-						"y": 1351,
-						"width": 387,
-						"height": 291,
-						"originX": 0.4082687338501292,
-						"originY": 0.7594501718213058,
+						"x": 953,
+						"y": 1396,
+						"width": 447,
+						"height": 398,
+						"originX": 0.436241610738255,
+						"originY": 0.8668341708542714,
 						"color": [
 							1,
 							1,
