@@ -172,7 +172,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "cinematicStandIn",
+					"type": "cinematics",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "lunkEntrance",

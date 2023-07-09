@@ -60,6 +60,7 @@ export class PotManager {
             gems: baseStats.gems * sizeMultiplier,
             heat: baseStats.heat,
             time: baseStats.time * sizeMultiplier,
+            cost: baseStats.cost * sizeMultiplier,
         };
     }
 
@@ -79,7 +80,6 @@ export class PotManager {
 
     unlockInfo(potType, clayType, size) {
         const baseStats = this.basePotStats[potType][clayType];
-        const sizeMultiplier = this.sizeMultipliers[size];
 
         const info = [
             `Kiln Level ${baseStats.kiln} Required`,

@@ -135,6 +135,13 @@ export class LevelManager {
                 hero.removeEventListener("animationend", animationendEL);
                 hero.setAnimation("walk");
                 object.setAnimation("broken");
+
+                const gem = this.runtime.objects.Gem.createInstance("interactive", object.x, object.y - 150);
+                gem.height = gem.height * 0.5;
+                gem.width = gem.width * 0.5;
+                gem.behaviors.Tween.startTween("scale", [1, 1], 0.5, "linear");
+                gem.behaviors.Tween.startTween("position", [gem.x, gem.y - 100], 0.5, "linear", { destroyOnComplete: true });
+
                 this.heroGems += object.instVars.gems;
                 hero.behaviors.MoveTo.maxSpeed = 700;
             }
@@ -216,8 +223,8 @@ export class LevelManager {
 
     playerBuyClay() {
         this.runtime.callFunction("toggleClayTraderUIControls");
-        const cinematicStandIn = this.runtime.objects.cinematicStandIn.getFirstInstance(); // Replace this with actual cinematic object
-        cinematicStandIn.setAnimation("cinematic");
+        const cinematicStandIn = this.runtime.objects.cinematics.getFirstInstance(); // Replace this with actual cinematic object
+        cinematicStandIn.setAnimation("merchantEntrance");
         let clayTraderUI = this.runtime.layout.getLayer("clayTraderUI");
         let cinematic = this.runtime.layout.getLayer("cinematics");
         cinematic.isVisible = true;
@@ -340,11 +347,13 @@ export class LevelManager {
     craftingMenu(on = true) {
         if (on) {
             this.runtime.callFunction("toggleCraftingMenuController");
+            this.runtime.callFunction("toggleControls");
             const craftingMenu = this.runtime.layout.getLayer("craftingMenu");
             craftingMenu.isVisible = true;
             craftingMenu.isInteractive = true;
         } else {
             this.runtime.callFunction("toggleCraftingMenuController");
+            this.runtime.callFunction("toggleControls");
             const craftingMenu = this.runtime.layout.getLayer("craftingMenu");
             craftingMenu.isVisible = false;
             craftingMenu.isInteractive = false;
@@ -365,8 +374,6 @@ export class LevelManager {
         totalEarthen.text = String(this.playerInventory[this.runtime.potManager.clayTypes.EARTHENWARE]);
         totalStoneware.text = String(this.playerInventory[this.runtime.potManager.clayTypes.STONEWARE]);
         totalPorcelain.text = String(this.playerInventory[this.runtime.potManager.clayTypes.PORCELAIN]);
-
-        
     }
 
     advanceState() {

@@ -2262,7 +2262,7 @@
 					}
 				},
 				{
-					"type": "FX01_0004_GEM",
+					"type": "Gem",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2272,7 +2272,13 @@
 					},
 					"uid": 238,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 1409,
 						"y": 887,

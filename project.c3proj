@@ -129,7 +129,7 @@
 			"Title_0002_BG",
 			"Title_0001_Start",
 			"Title_0000_Title",
-			"FX01_0004_GEM"
+			"Gem"
 		],
 		"subfolders": [
 			{
@@ -218,7 +218,7 @@
 							"welcomeMat_old",
 							"Proto01_0004s_0008_prop",
 							"shopCounter_old",
-							"cinematicStandIn"
+							"cinematics"
 						],
 						"subfolders": [],
 						"name": "Proto"
@@ -287,7 +287,8 @@
 			"ArtPlayground",
 			"ClayTraderUI",
 			"Cinematics",
-			"CraftingMenu"
+			"CraftingMenu",
+			"StartMenu"
 		],
 		"subfolders": []
 	},
@@ -296,7 +297,8 @@
 			"MainES",
 			"FXES",
 			"ClayTraderUIES",
-			"CraftingMenuES"
+			"CraftingMenuES",
+			"StartMenuES"
 		],
 		"subfolders": []
 	},
@@ -720,5 +722,5 @@
 	},
 	"viewportWidth": 1920,
 	"viewportHeight": 1080,
-	"firstLayout": "Main"
+	"firstLayout": "StartMenu"
 }

@@ -2589,7 +2589,7 @@
 						"width": 159,
 						"height": 143,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -4123,7 +4123,7 @@
 					}
 				},
 				{
-					"type": "cinematicStandIn",
+					"type": "cinematics",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "lunkEntrance",
@@ -4309,7 +4309,22 @@
 					},
 					"uid": 235,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 13164,
 						"y": 6804,
@@ -4338,7 +4353,36 @@
 					},
 					"uid": 236,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 12518,
 						"y": 6568,
@@ -4357,7 +4401,7 @@
 					}
 				},
 				{
-					"type": "FX01_0004_GEM",
+					"type": "Gem",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -4367,7 +4411,13 @@
 					},
 					"uid": 237,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 4408,
 						"y": 4959,

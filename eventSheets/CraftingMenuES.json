@@ -9,6 +9,26 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "variable",
+					"name": "tempClayType",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 847753677516966
+				},
+				{
+					"eventType": "variable",
+					"name": "tempClayAmount",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 137549481953780
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -19,6 +39,14 @@
 								"mouse-button": "left",
 								"click-type": "clicked",
 								"object-clicked": "uiPaperSquare2"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "uiPaperSquare2",
+							"sid": 611877672989284,
+							"parameters": {
+								"instance-variable": "isUnlocked"
 							}
 						}
 					],
@@ -67,6 +95,26 @@
 								}
 							],
 							"sid": 343834557509709
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "uiPaperSquare2",
+									"sid": 203109496368209,
+									"parameters": {
+										"object": "pots"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst uiPaper = runtime.objects.uiPaperSquare2.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked) {\n\tconst potValues = runtime.potManager.createPot(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\n\tlocalVars.tempClayType = pot.instVars.clayType;\n\tlocalVars.tempClayAmount = potValues.cost;\n\truntime.levelManager.adjustInventoryAmount(pot.instVars.clayType, -potValues.cost);\n}"
+								}
+							],
+							"sid": 617784054091819
 						}
 					]
 				},
@@ -81,6 +129,15 @@
 								"mouse-button": "left",
 								"click-type": "clicked"
 							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 333434142606971,
+							"parameters": {
+								"object": "navCheckMark"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -92,13 +149,26 @@
 								"variable": "isItemSelected",
 								"value": "false"
 							}
+						},
+						{
+							"type": "script",
+							"script": "runtime.levelManager.adjustInventoryAmount(localVars.tempClayType, localVars.tempClayAmount);"
 						}
 					],
 					"sid": 793637874046314,
 					"children": [
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "uiPaperSquare2",
+									"sid": 993169404065722,
+									"parameters": {
+										"instance-variable": "isUnlocked"
+									}
+								}
+							],
 							"actions": [
 								{
 									"id": "set-scale",
@@ -139,7 +209,7 @@
 					"actions": [
 						{
 							"type": "script",
-							"script": "runtime.levelManager.buyShop();"
+							"script": "runtime.levelManager.craftingMenu(false);"
 						}
 					],
 					"sid": 434862894993544

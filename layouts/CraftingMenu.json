@@ -1230,7 +1230,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -1274,12 +1274,12 @@
 						}
 					},
 					"world": {
-						"x": 171,
-						"y": 178,
+						"x": 172,
+						"y": 211,
 						"width": 79.5,
 						"height": 71.5,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -1432,7 +1432,7 @@
 					},
 					"uid": 200,
 					"instanceVariables": {
-						"isHover": true,
+						"isHover": false,
 						"isOpacity": false,
 						"shopItem": "",
 						"isUnlocked": false
@@ -1563,7 +1563,7 @@
 					},
 					"uid": 201,
 					"instanceVariables": {
-						"isHover": true,
+						"isHover": false,
 						"isOpacity": false,
 						"shopItem": "",
 						"isUnlocked": false
@@ -1694,7 +1694,7 @@
 					},
 					"uid": 202,
 					"instanceVariables": {
-						"isHover": true,
+						"isHover": false,
 						"isOpacity": false,
 						"shopItem": "",
 						"isUnlocked": false
@@ -1942,7 +1942,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -2036,7 +2036,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -2130,7 +2130,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -2463,7 +2463,7 @@
 					},
 					"uid": 211,
 					"instanceVariables": {
-						"isHover": true,
+						"isHover": false,
 						"isOpacity": false,
 						"shopItem": "",
 						"isUnlocked": false
@@ -2594,7 +2594,7 @@
 					},
 					"uid": 212,
 					"instanceVariables": {
-						"isHover": true,
+						"isHover": false,
 						"isOpacity": false,
 						"shopItem": "",
 						"isUnlocked": false
@@ -2725,7 +2725,7 @@
 					},
 					"uid": 214,
 					"instanceVariables": {
-						"isHover": true,
+						"isHover": false,
 						"isOpacity": false,
 						"shopItem": "",
 						"isUnlocked": false
@@ -2856,7 +2856,7 @@
 					},
 					"uid": 215,
 					"instanceVariables": {
-						"isHover": true,
+						"isHover": false,
 						"isOpacity": false,
 						"shopItem": "",
 						"isUnlocked": false
@@ -2987,7 +2987,7 @@
 					},
 					"uid": 216,
 					"instanceVariables": {
-						"isHover": true,
+						"isHover": false,
 						"isOpacity": false,
 						"shopItem": "",
 						"isUnlocked": false
@@ -3141,7 +3141,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -3235,7 +3235,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -3329,7 +3329,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -3423,7 +3423,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -3517,7 +3517,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -3611,7 +3611,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -3705,7 +3705,7 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
@@ -3858,9 +3858,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							0.21176470588235294,
+							0.21176470588235294,
+							0.21176470588235294,
 							1
 						],
 						"horizontal-alignment": "left",

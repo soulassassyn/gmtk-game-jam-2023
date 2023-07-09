@@ -3144,8 +3144,8 @@
 						}
 					},
 					"world": {
-						"x": 640,
-						"y": 626,
+						"x": 518,
+						"y": 394,
 						"width": 117,
 						"height": 163,
 						"originX": 0.5704225352112676,
@@ -3216,21 +3216,21 @@
 					}
 				},
 				{
-					"type": "potEarthenwareDeco02",
+					"type": "potEarthenwareDeco01",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "broken",
+						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
 					"uid": 179,
 					"instanceVariables": {
-						"hp": 3,
+						"hp": 2,
 						"gems": 10,
-						"potType": "",
-						"clayType": "",
-						"size": ""
+						"potType": "Decorative",
+						"clayType": "Earthenware",
+						"size": "Small"
 					},
 					"behaviors": {
 						"Sine": {
@@ -3256,19 +3256,47 @@
 					},
 					"effects": {
 						"AdjustHSL": {
-							"isEnabled": true,
+							"isEnabled": false,
 							"parameters": {
-								"hue": 0,
-								"saturation": 1,
-								"luminosity": 1
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
 							}
 						}
 					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 179,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
 					"world": {
-						"x": 1263,
-						"y": 994,
-						"width": 182,
-						"height": 82,
+						"x": 1244,
+						"y": 978,
+						"width": 159,
+						"height": 143,
 						"originX": 0.5,
 						"originY": 1,
 						"color": [
@@ -3282,21 +3310,21 @@
 					}
 				},
 				{
-					"type": "potEarthenwareDeco02",
+					"type": "potEarthenwareDeco01",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "broken",
+						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
 					"uid": 180,
 					"instanceVariables": {
-						"hp": 3,
+						"hp": 2,
 						"gems": 10,
-						"potType": "",
-						"clayType": "",
-						"size": ""
+						"potType": "Decorative",
+						"clayType": "Earthenware",
+						"size": "Small"
 					},
 					"behaviors": {
 						"Sine": {
@@ -3322,19 +3350,47 @@
 					},
 					"effects": {
 						"AdjustHSL": {
-							"isEnabled": true,
+							"isEnabled": false,
 							"parameters": {
-								"hue": 0,
-								"saturation": 1,
-								"luminosity": 1
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
 							}
 						}
 					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 180,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
 					"world": {
-						"x": 1805,
-						"y": 823,
-						"width": 182,
-						"height": 82,
+						"x": 1781,
+						"y": 822,
+						"width": 159,
+						"height": 143,
 						"originX": 0.5,
 						"originY": 1,
 						"color": [
@@ -3348,7 +3404,7 @@
 					}
 				},
 				{
-					"type": "potEarthenwareDeco02",
+					"type": "potEarthenwareDeco01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3358,11 +3414,11 @@
 					},
 					"uid": 181,
 					"instanceVariables": {
-						"hp": 3,
+						"hp": 2,
 						"gems": 10,
-						"potType": "",
-						"clayType": "",
-						"size": ""
+						"potType": "Decorative",
+						"clayType": "Earthenware",
+						"size": "Small"
 					},
 					"behaviors": {
 						"Sine": {
@@ -3381,26 +3437,54 @@
 						},
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						}
 					},
 					"effects": {
 						"AdjustHSL": {
-							"isEnabled": true,
+							"isEnabled": false,
 							"parameters": {
-								"hue": 0,
-								"saturation": 1,
-								"luminosity": 1
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
 							}
 						}
 					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 181,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
 					"world": {
-						"x": 1392,
-						"y": 420,
-						"width": 158,
-						"height": 144,
+						"x": 1375,
+						"y": 413,
+						"width": 159,
+						"height": 143,
 						"originX": 0.5,
 						"originY": 1,
 						"color": [

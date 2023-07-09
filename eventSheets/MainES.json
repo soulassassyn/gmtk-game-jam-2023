@@ -3,10 +3,6 @@
 	"events": [
 		{
 			"eventType": "include",
-			"includeSheet": "FXES"
-		},
-		{
-			"eventType": "include",
 			"includeSheet": "ClayTraderUIES"
 		},
 		{
@@ -292,20 +288,41 @@
 								"layer": "\"UI\"",
 								"interactive": false
 							}
-						},
-						{
-							"id": "set-layer-visible",
-							"objectClass": "System",
-							"sid": 995004394719946,
-							"parameters": {
-								"layer": "\"cinematics\"",
-								"visibility": "invisible"
-							}
 						}
 					],
 					"sid": 424281586956841
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "cinematics",
+					"sid": 772672247397473,
+					"parameters": {
+						"animation": "\"lunkEntrance\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 304190455710498,
+					"parameters": {
+						"layer": "\"cinematics\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"type": "script",
+					"script": "runtime.levelManager.levelState.heroAttack = true;"
+				}
+			],
+			"sid": 909057133797008,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -349,6 +366,10 @@
 					"type": "script",
 					"script": "runtime.levelManager.levelState.heroAttack = true;",
 					"disabled": true
+				},
+				{
+					"type": "script",
+					"script": "runtime.levelManager.levelState.playerBuyClay = true;\nruntime.levelManager.playerGems = 30;\nruntime.levelManager.runOnce = false;"
 				},
 				{
 					"callFunction": "camShake",
@@ -634,10 +655,55 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"type": "script",
+							"script": "runtime.levelManager.craftingMenu();"
+						}
+					],
 					"sid": 782946226005007
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "playerCharacter",
+					"sid": 843779337519224,
+					"parameters": {
+						"object": "pots"
+					}
+				},
+				{
+					"id": "is-enabled",
+					"objectClass": "pots",
+					"sid": 287002070333146,
+					"behaviorType": "Solid",
+					"isInverted": true
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "pots",
+					"sid": 604751561050881,
+					"parameters": {
+						"layer": "\"interactive\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "playerCharacter",
+					"sid": 328624681462271,
+					"parameters": {
+						"where": "in-front",
+						"object": "pots"
+					}
+				}
+			],
+			"sid": 313404637609549
 		},
 		{
 			"eventType": "block",
@@ -656,6 +722,14 @@
 					"sid": 836060532195894,
 					"behaviorType": "Solid",
 					"isInverted": true
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "pots",
+					"sid": 645635600573219,
+					"parameters": {
+						"layer": "\"interactive\""
+					}
 				},
 				{
 					"id": "compare-boolean-eventvar",
@@ -803,6 +877,14 @@
 						"object": "pots"
 					},
 					"isInverted": true
+				},
+				{
+					"id": "is-on-layer",
+					"objectClass": "pots",
+					"sid": 455168630639027,
+					"parameters": {
+						"layer": "\"interactive\""
+					}
 				}
 			],
 			"actions": [
@@ -862,6 +944,14 @@
 							"sid": 367408482557387,
 							"parameters": {
 								"object": "pots"
+							}
+						},
+						{
+							"id": "is-on-layer",
+							"objectClass": "pots",
+							"sid": 851661643026859,
+							"parameters": {
+								"layer": "\"interactive\""
 							}
 						}
 					],

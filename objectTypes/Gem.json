@@ -1,10 +1,16 @@
 {
-	"name": "FX01_0004_GEM",
+	"name": "Gem",
 	"plugin-id": "Sprite",
 	"sid": 566038651326386,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 619915613631579
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
