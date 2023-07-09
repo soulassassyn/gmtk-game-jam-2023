@@ -23,16 +23,14 @@ export class LevelManager {
             [this.runtime.potManager.clayTypes.STONEWARE]: 0,
             [this.runtime.potManager.clayTypes.PORCELAIN]: 0,
             totalGemCostAmount: 0,
-        }
+        };
 
         this.playerInventory = {
-            clay: {
-                [this.runtime.potManager.clayTypes.EARTHENWARE]: 0,
-                [this.runtime.potManager.clayTypes.STONEWARE]: 0,
-                [this.runtime.potManager.clayTypes.PORCELAIN]: 0,
-            },
-            pots: [],
+            [this.runtime.potManager.clayTypes.EARTHENWARE]: 0,
+            [this.runtime.potManager.clayTypes.STONEWARE]: 0,
+            [this.runtime.potManager.clayTypes.PORCELAIN]: 0,
         };
+
         this.playerGems = 0;
         this.heroGems = 0;
     }
@@ -60,6 +58,13 @@ export class LevelManager {
             if (!this.runOnce) {
                 this.runOnce = true;
                 this.playerBuyClay();
+            }
+        }
+
+        if (this.levelState.playerCraftPots) {
+            if (!this.runOnce) {
+                this.runOnce = true;
+                this.playerCraftPots();
             }
         }
     }
@@ -269,12 +274,30 @@ export class LevelManager {
         totalGemCost.text = String(this.clayShopTotals.totalGemCostAmount);
     }
 
-    adjustClayAmount(clayType, amount) {
-        
+    buyShop() {
+        const clayTraderUI = this.runtime.layout.getLayer("clayTraderUI");
+        clayTraderUI.isVisible = false;
+        clayTraderUI.isInteractive = false;
+
+        this.playerInventory[this.runtime.potManager.clayTypes.EARTHENWARE] += this.clayShopTotals[this.runtime.potManager.clayTypes.EARTHENWARE];
+        this.playerInventory[this.runtime.potManager.clayTypes.STONEWARE] += this.clayShopTotals[this.runtime.potManager.clayTypes.STONEWARE];
+        this.playerInventory[this.runtime.potManager.clayTypes.PORCELAIN] += this.clayShopTotals[this.runtime.potManager.clayTypes.PORCELAIN];
+        this.playerGems -= this.clayShopTotals.totalGemCostAmount;
+
+        this.levelState.playerBuyClay = false;
+        this.runOnce = false;
+        this.levelState.playerCraftPots = true;
     }
 
     playerCraftPots() {
-        
+        console.log("Crafting pots");
+    }
+
+    countdown() {
+        const countdown = this.runtime.objects.centerCountdown.getFirstInstance();
+        const textSizeController = this.runtime.objects.textSizeController.getFirstInstance();
+
+    
     }
 
     advanceState() {

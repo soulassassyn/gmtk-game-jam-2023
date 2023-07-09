@@ -438,6 +438,28 @@
 							"sid": 457468231155947
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 897840087512588,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "navCheckMark"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "runtime.levelManager.buyShop();"
+						}
+					],
+					"sid": 356558266788543
 				}
 			],
 			"sid": 590345421002748

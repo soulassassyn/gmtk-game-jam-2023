@@ -121,7 +121,8 @@
 			"Audio",
 			"Browser",
 			"camera",
-			"VSCodePlugin"
+			"VSCodePlugin",
+			"textSizeController"
 		],
 		"subfolders": [
 			{
@@ -231,7 +232,9 @@
 					"totalPorcelain",
 					"totalGemCost",
 					"totalPlayerGems",
-					"totalText"
+					"totalText",
+					"buildTimer",
+					"centerCountdown"
 				],
 				"subfolders": [],
 				"name": "Text"
