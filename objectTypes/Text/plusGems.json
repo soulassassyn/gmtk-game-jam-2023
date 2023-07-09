@@ -1,0 +1,20 @@
+{
+	"name": "plusGems",
+	"plugin-id": "Text",
+	"sid": 135806561813223,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 407955743395537
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 232731577420242
+		}
+	],
+	"effectTypes": []
+}

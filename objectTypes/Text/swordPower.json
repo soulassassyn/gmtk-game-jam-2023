@@ -1,0 +1,20 @@
+{
+	"name": "swordPower",
+	"plugin-id": "Text",
+	"sid": 963651278005366,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 239863219667369
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 962350363203239
+		}
+	],
+	"effectTypes": []
+}

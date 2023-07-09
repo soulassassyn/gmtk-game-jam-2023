@@ -125,7 +125,7 @@
 			"textSizeController",
 			"interactionZone",
 			"Transition",
-			"clayStoneware",
+			"Stoneware",
 			"Title_0002_BG",
 			"Title_0001_Start",
 			"Title_0000_Title",
@@ -134,8 +134,8 @@
 		"subfolders": [
 			{
 				"items": [
-					"clayEarthenware",
-					"clayPorcelain",
+					"Earthenware",
+					"Porcelain",
 					"clayStoneware_old",
 					"navCheckMark",
 					"navArrow",
@@ -194,7 +194,8 @@
 					"Assets_0005s_0004_Wall",
 					"bgFloor",
 					"uiArrow",
-					"uiPaperSquare2"
+					"uiPaperSquare2",
+					"bgFloor2"
 				],
 				"subfolders": [
 					{
@@ -250,7 +251,12 @@
 					"potInfoText",
 					"totalEarthen2",
 					"totalStone2",
-					"totalPorcelain2"
+					"totalPorcelain2",
+					"swordPower",
+					"plusGems",
+					"clayInfoText",
+					"totalText2",
+					"kilnLevelText"
 				],
 				"subfolders": [],
 				"name": "Text"

@@ -18,8 +18,8 @@
 	],
 	"members": [
 		"clayStoneware_old",
-		"clayEarthenware",
-		"clayPorcelain",
-		"clayStoneware"
+		"Earthenware",
+		"Porcelain",
+		"Stoneware"
 	]
 }

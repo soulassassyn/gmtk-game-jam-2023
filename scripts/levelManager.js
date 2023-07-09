@@ -4,12 +4,20 @@ export class LevelManager {
         this.heroWeaponDamage = 6;
         this.kilnHealth = 10;
         this.kilnLevel = 1;
+
+        this.kilnUpgradeCosts = {
+            2: 40,
+            3: 100,
+        };
+
         this.runOnce = false;
         this.waypointCount = 0;
         this.waypointEL = null;
         this.heroAttackAnimationLength = 0.5;
+        this.timerOn = false;
         this.startTime = 60;
         this.resetTime = 60;
+        this.round = 1;
 
         this.levelState = {
             heroAttack: false,
@@ -27,15 +35,56 @@ export class LevelManager {
             totalGemCostAmount: 0,
         };
 
+        this.clayShopUnlocks = {
+            [this.runtime.potManager.clayTypes.EARTHENWARE]: true,
+            [this.runtime.potManager.clayTypes.STONEWARE]: false,
+            [this.runtime.potManager.clayTypes.PORCELAIN]: false,
+        };
+
         this.playerInventory = {
             [this.runtime.potManager.clayTypes.EARTHENWARE]: 0,
             [this.runtime.potManager.clayTypes.STONEWARE]: 0,
             [this.runtime.potManager.clayTypes.PORCELAIN]: 0,
         };
 
-        this.potToCreate = null;
+        this.tempPot = {
+            clayType: null,
+            potType: null,
+            size: null,
+            name: null,
+        }
+
         this.playerGems = 0;
         this.heroGems = 0;
+    }
+
+    resetRound() {
+        this.runOnce = false;
+        this.waypointCount = 0;
+        this.waypointEL = null;
+        this.timerOn = false;
+        this.startTime = 60;
+        this.levelState = {
+            heroAttack: false,
+            heroBuyWeapon: false,
+            playerBuyClay: false,
+            playerCraftPots: false,
+            victory: false,
+            lose: false,
+        };
+        this.clayShopTotals = {
+            [this.runtime.potManager.clayTypes.EARTHENWARE]: 0,
+            [this.runtime.potManager.clayTypes.STONEWARE]: 0,
+            [this.runtime.potManager.clayTypes.PORCELAIN]: 0,
+            totalGemCostAmount: 0,
+        };
+        this.tempPot = {
+            clayType: null,
+            potType: null,
+            size: null,
+            name: null,
+        };
+        this.runtime.globalVars.playerCraftPots = false;
     }
 
     update() {
@@ -74,6 +123,12 @@ export class LevelManager {
             if (this.timerOn) {
                 this.startTime -= this.runtime.dt;
                 this.craftingTimer();
+                if (this.startTime <= 0) {
+                    this.craftingMenu(false);
+                    this.resetRound();
+                    this.round++;
+                    this.levelState.heroAttack = true;
+                }
             }
         }
     }
@@ -136,6 +191,7 @@ export class LevelManager {
                 hero.removeEventListener("animationend", animationendEL);
                 hero.setAnimation("walk");
                 object.setAnimation("broken");
+                object.behaviors.Solid.isEnabled = false;
 
                 const gem = this.runtime.objects.Gem.createInstance("interactive", object.x, object.y - 150);
                 gem.height = gem.height * 0.5;
@@ -148,9 +204,21 @@ export class LevelManager {
             }
             // Broken sword
             if (this.heroWeaponDamage === 0) {
+                hero.timeScale = 0;
+                const heroSwordBreakCinematic = this.runtime.objects.cinematics.getFirstInstance();
+                heroSwordBreakCinematic.setAnimation("swordBreak");
+                let cinematic = this.runtime.layout.getLayer("cinematics");
+                cinematic.isVisible = true;
+                const animationendEL = e => {
+                    cinematic.isVisible = false;
+                    hero.timeScale = 1;
+                    heroSwordBreakCinematic.removeEventListener("animationend", animationendEL);
+                };
+                heroSwordBreakCinematic.addEventListener("animationend", animationendEL);
+
                 hero.removeEventListener("animationend", animationendEL);
                 hero.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
-                hero.setAnimation("walk");
+                hero.setAnimation("walkBroken");
                 this.levelState.heroAttack = false;
                 object.behaviors.Sine.isEnabled = false;
                 this.waypointCount = 0;
@@ -198,13 +266,25 @@ export class LevelManager {
 
     heroBuyWeapon() {
         const hero = this.runtime.objects.heroCharacter.getFirstInstance();
+        const swordPower = this.runtime.objects.swordPower.getFirstInstance();
+        const plusGems = this.runtime.objects.plusGems.getFirstInstance();
+
+        this.heroWeaponDamage = Math.floor(this.heroGems / 2);
+        this.playerGems = this.heroGems;
+        this.heroGems = 0;
+        plusGems.text = `+${this.playerGems} Gems`;
+        plusGems.isVisible = true;
+        plusGems.behaviors.Tween.startTween("y", plusGems.y - 200, 3, "linear");
+        plusGems.behaviors.Tween.startTween("opacity", 0, 3, "linear");
+        swordPower.text = `+${this.heroWeaponDamage} Damage`;
+        swordPower.isVisible = true;
+        swordPower.behaviors.Tween.startTween("y", swordPower.y - 200, 3, "linear");
+        swordPower.behaviors.Tween.startTween("opacity", 0, 3, "linear");
+        
         hero.setAnimation("buySword");
         const animationendEL = e => {
             hero.setAnimation("walk");
             this.levelState.heroBuyWeapon = false;
-            this.heroWeaponDamage = Math.floor(this.heroGems / 2);
-            this.playerGems = this.heroGems;
-            this.heroGems = 0;
             
             // Hero leaves the shop
             const welcomeMat = this.runtime.objects.welcomeMat.getFirstInstance();
@@ -215,6 +295,12 @@ export class LevelManager {
             this.waypointEL = e => {
                 this.runOnce = false;
                 this.levelState.playerBuyClay = true;
+                plusGems.isVisible = false;
+                plusGems.y = plusGems.y + 200;
+                plusGems.opacity = 1;
+                swordPower.isVisible = false;
+                swordPower.y = swordPower.y + 200;
+                swordPower.opacity = 1;
                 hero.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
             }
             hero.behaviors.MoveTo.addEventListener("arrived", this.waypointEL);
@@ -223,10 +309,9 @@ export class LevelManager {
     }
 
     playerBuyClay() {
-        console.log("playerBuyClay")
         this.runtime.callFunction("toggleClayTraderUIControls");
-        const cinematicStandIn = this.runtime.objects.cinematics.getFirstInstance(); // Replace this with actual cinematic object
-        cinematicStandIn.setAnimation("merchantEntrance");
+        const clayTraderCinematic = this.runtime.objects.cinematics.getFirstInstance();
+        clayTraderCinematic.setAnimation("merchantEntrance");
         let clayTraderUI = this.runtime.layout.getLayer("clayTraderUI");
         let cinematic = this.runtime.layout.getLayer("cinematics");
         cinematic.isVisible = true;
@@ -234,15 +319,16 @@ export class LevelManager {
             cinematic.isVisible = false;
             clayTraderUI.isVisible = true;
             clayTraderUI.isInteractive = true;
-            cinematicStandIn.removeEventListener("animationend", animationendEL);
+            clayTraderCinematic.removeEventListener("animationend", animationendEL);
         };
-        cinematicStandIn.addEventListener("animationend", animationendEL);
+        clayTraderCinematic.addEventListener("animationend", animationendEL);
     }
 
     async adjustClayShopAmount(clayType, change) {
         const totalEarthen = this.runtime.objects.totalEarthen.getFirstInstance();
         const totalStoneware = this.runtime.objects.totalStone.getFirstInstance();
         const totalPorcelain = this.runtime.objects.totalPorcelain.getFirstInstance();
+        const kilnLevelText = this.runtime.objects.kilnLevelText.getFirstInstance();
         const totalGemCost = this.runtime.objects.totalGemCost.getFirstInstance();
         const tempCostCheck = this.clayShopTotals.totalGemCostAmount
         let clayCost;
@@ -256,6 +342,13 @@ export class LevelManager {
         } else if (clayType === this.runtime.potManager.clayTypes.PORCELAIN) {
             clayCost = this.runtime.potManager.clayCosts.PORCELAIN;
             if (this.clayShopTotals[clayType] === 0 && change === -1) return;
+        } else if (clayType === "KilnUpgrade") {
+            clayCost = this.kilnUpgradeCosts[this.kilnLevel + 1];
+            if (this.playerGems < clayCost) return;
+            if (this.kilnLevel === 3) return;
+            if (this.kilnLevel === 1 && change === -1) return;
+            kilnLevelText.text = `${this.kilnLevel + 1}`;
+            return;
         }
 
         // Adjust the total amount and cost
@@ -367,6 +460,23 @@ export class LevelManager {
         }
     };
 
+    async craftPot(placementTile) {
+        this.runtime.callFunction("toggleControls");
+        const potInfo = this.runtime.potManager.createPot(this.tempPot.potType, this.tempPot.clayType, this.tempPot.size)
+        this.playerInventory[this.tempPot.clayType] -= potInfo.cost;
+        placementTile.instVars.isOccupied = true;
+        const newPot = this.runtime.objects[this.tempPot.name].createInstance("interactive", placementTile.x, placementTile.y);
+        placementTile.instVars.potUid = newPot.uid;
+        newPot.behaviors.Solid.isEnabled = true;
+        newPot.setAnimation("idle");
+        newPot.y += newPot.height / 4;
+        newPot.opacity = 0.25
+        newPot.behaviors.Tween.startTween("scale", [1, 1], potInfo.time, "linear");
+        const craftTime = newPot.behaviors.Tween.startTween("opacity", 1, potInfo.time, "linear");
+        await craftTime.finished;
+        this.runtime.callFunction("toggleControls");
+    }
+
     setInventoryText() {
         const totalEarthen = this.runtime.objects.totalEarthen2.getFirstInstance();
         const totalStoneware = this.runtime.objects.totalStone2.getFirstInstance();
@@ -391,9 +501,5 @@ export class LevelManager {
         totalEarthen.text = String(this.playerInventory[this.runtime.potManager.clayTypes.EARTHENWARE]);
         totalStoneware.text = String(this.playerInventory[this.runtime.potManager.clayTypes.STONEWARE]);
         totalPorcelain.text = String(this.playerInventory[this.runtime.potManager.clayTypes.PORCELAIN]);
-    }
-
-    advanceState() {
-        
     }
 }

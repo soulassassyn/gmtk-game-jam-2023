@@ -30,6 +30,16 @@
 				},
 				{
 					"eventType": "variable",
+					"name": "tempSize",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 121934882540012
+				},
+				{
+					"eventType": "variable",
 					"name": "tempPotName",
 					"type": "string",
 					"initialValue": "",
@@ -121,7 +131,7 @@
 							"actions": [
 								{
 									"type": "script",
-									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst uiPaper = runtime.objects.uiPaperSquare2.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked) {\n\tconst potValues = runtime.potManager.createPot(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\n\tlocalVars.tempClayType = pot.instVars.clayType;\n\tlocalVars.tempClayAmount = potValues.cost;\n\tlocalVars.tempPotName = pot.objectType.name;\n\truntime.levelManager.potToCreate = pot.objectType.name;\n\truntime.levelManager.adjustInventoryAmount(pot.instVars.clayType, -potValues.cost);\n}"
+									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst uiPaper = runtime.objects.uiPaperSquare2.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked) {\n\tconst potValues = runtime.potManager.createPot(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\n\tlocalVars.tempClayType = pot.instVars.clayType;\n\tlocalVars.tempSize = pot.instVars.size;\n\tlocalVars.tempClayAmount = potValues.cost;\n\truntime.levelManager.tempPot.potType = pot.instVars.potType;\n\truntime.levelManager.tempPot.clayType = pot.instVars.clayType;\n\truntime.levelManager.tempPot.size = pot.instVars.size\n\truntime.levelManager.tempPot.name = pot.objectType.name;\n\truntime.levelManager.adjustInventoryAmount(pot.instVars.clayType, -potValues.cost);\n}"
 								}
 							],
 							"sid": 617784054091819
@@ -170,7 +180,7 @@
 						},
 						{
 							"type": "script",
-							"script": "console.log(localVars.tempClayType);\nconsole.log(localVars.tempClayAmount);\nconsole.log(localVars.tempPotName);\n\nruntime.levelManager.adjustInventoryAmount(localVars.tempClayType, localVars.tempClayAmount);"
+							"script": "runtime.levelManager.adjustInventoryAmount(localVars.tempClayType, localVars.tempClayAmount);\nruntime.levelManager.potToCreate = null;"
 						}
 					],
 					"sid": 793637874046314,
@@ -258,7 +268,29 @@
 							"script": "runtime.levelManager.craftingMenu(false);"
 						}
 					],
-					"sid": 434862894993544
+					"sid": 434862894993544,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "playerCharacter",
+									"sid": 736136665656237,
+									"parameters": {
+										"object": "placementTile"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "const placementTile = runtime.objects.placementTile.getFirstPickedInstance();\nconst player = runtime.objects.playerCharacter.getFirstPickedInstance();\nruntime.levelManager.craftPot(placementTile);"
+								}
+							],
+							"sid": 758766634677453
+						}
+					]
 				},
 				{
 					"eventType": "block",

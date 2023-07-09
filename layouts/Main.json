@@ -3199,8 +3199,8 @@
 						}
 					},
 					"world": {
-						"x": 953,
-						"y": 1396,
+						"x": 872,
+						"y": 1442,
 						"width": 447,
 						"height": 398,
 						"originX": 0.436241610738255,
@@ -3219,7 +3219,7 @@
 					"type": "potEarthenwareDeco01",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3251,6 +3251,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -3313,7 +3318,7 @@
 					"type": "potEarthenwareDeco01",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3345,6 +3350,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -3407,7 +3417,7 @@
 					"type": "potEarthenwareDeco01",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3439,6 +3449,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -3487,6 +3502,132 @@
 						"height": 143,
 						"originX": 0.5,
 						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "swordPower",
+					"properties": {
+						"text": "+20 Damage",
+						"enable-bbcode": true,
+						"font": "Asphalt BlackCondensed",
+						"size": 80,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.5019607843137255,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 244,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 20,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 312,
+						"y": 702,
+						"width": 623,
+						"height": 110,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "plusGems",
+					"properties": {
+						"text": "+30 Gems",
+						"enable-bbcode": true,
+						"font": "Asphalt BlackCondensed",
+						"size": 80,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0.3764705882352941,
+							0.5411764705882353,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": false,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 246,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0,
+								"period-offset": 1,
+								"period-offset-random": 0,
+								"magnitude": 20,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 307,
+						"y": 595,
+						"width": 623,
+						"height": 105,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

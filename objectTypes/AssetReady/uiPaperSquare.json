@@ -10,6 +10,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 524585302183842
+		},
+		{
+			"name": "isUnlocked",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 936978909525800
 		}
 	],
 	"behaviorTypes": [

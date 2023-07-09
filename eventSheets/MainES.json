@@ -293,6 +293,7 @@
 							"id": "set-layer-visible",
 							"objectClass": "System",
 							"sid": 466840996600409,
+							"disabled": true,
 							"parameters": {
 								"layer": "\"cinematics\"",
 								"visibility": "invisible"
@@ -330,8 +331,7 @@
 					"script": "runtime.levelManager.levelState.heroAttack = true;"
 				}
 			],
-			"sid": 909057133797008,
-			"disabled": true
+			"sid": 909057133797008
 		},
 		{
 			"eventType": "block",

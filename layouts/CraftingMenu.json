@@ -683,7 +683,7 @@
 					}
 				},
 				{
-					"type": "clayEarthenware",
+					"type": "Earthenware",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -765,7 +765,7 @@
 					}
 				},
 				{
-					"type": "clayPorcelain",
+					"type": "Porcelain",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1200,7 +1200,7 @@
 					"type": "potEarthenwareDeco01",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1232,6 +1232,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -1818,7 +1823,7 @@
 					"type": "potEarthenwareDeco02",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1850,6 +1855,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -1912,7 +1922,7 @@
 					"type": "potStonewareDeco01",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1944,6 +1954,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -1986,12 +2001,12 @@
 						}
 					},
 					"world": {
-						"x": 514,
-						"y": 259,
+						"x": 510,
+						"y": 311,
 						"width": 79.5,
 						"height": 91,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -2006,7 +2021,7 @@
 					"type": "potStonewareDeco02",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2038,6 +2053,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -2080,12 +2100,12 @@
 						}
 					},
 					"world": {
-						"x": 708,
-						"y": 402,
+						"x": 706,
+						"y": 474,
 						"width": 85.5,
 						"height": 139.5,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -2100,7 +2120,7 @@
 					"type": "potPorcelainDeco01",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2132,6 +2152,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -2175,11 +2200,11 @@
 					},
 					"world": {
 						"x": 825,
-						"y": 183,
+						"y": 243,
 						"width": 57,
 						"height": 117.5,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -3111,7 +3136,7 @@
 					"type": "potEarthenwareRe01",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3143,6 +3168,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -3186,11 +3216,11 @@
 					},
 					"world": {
 						"x": 1111,
-						"y": 193,
+						"y": 253,
 						"width": 88,
 						"height": 100.5,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -3205,7 +3235,7 @@
 					"type": "potStonewareRe02",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3237,6 +3267,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -3279,12 +3314,12 @@
 						}
 					},
 					"world": {
-						"x": 1737,
-						"y": 390,
+						"x": 1735,
+						"y": 432,
 						"width": 90.5,
 						"height": 82.5,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -3299,7 +3334,7 @@
 					"type": "potStonewareRe01",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3331,6 +3366,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -3373,12 +3413,12 @@
 						}
 					},
 					"world": {
-						"x": 1516,
-						"y": 216,
+						"x": 1519,
+						"y": 256,
 						"width": 58,
 						"height": 74.5,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -3393,7 +3433,7 @@
 					"type": "potEarthenwareRe02",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3425,6 +3465,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -3468,11 +3513,11 @@
 					},
 					"world": {
 						"x": 1314,
-						"y": 382,
+						"y": 442,
 						"width": 53.5,
 						"height": 106,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -3487,7 +3532,7 @@
 					"type": "potPorcelain01",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3519,6 +3564,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -3562,11 +3612,11 @@
 					},
 					"world": {
 						"x": 244,
-						"y": 739,
+						"y": 799,
 						"width": 59,
 						"height": 114.5,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -3581,7 +3631,7 @@
 					"type": "potPorcelain02",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3613,6 +3663,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -3655,12 +3710,12 @@
 						}
 					},
 					"world": {
-						"x": 497,
-						"y": 916,
+						"x": 501,
+						"y": 948,
 						"width": 64,
 						"height": 58.5,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -3675,7 +3730,7 @@
 					"type": "potPorcelain03",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3707,6 +3762,11 @@
 							"properties": {
 								"enabled": false,
 								"tags": ""
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -3750,11 +3810,11 @@
 					},
 					"world": {
 						"x": 728,
-						"y": 767,
+						"y": 827,
 						"width": 73.5,
 						"height": 93.5,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -3919,7 +3979,7 @@
 					}
 				},
 				{
-					"type": "clayStoneware",
+					"type": "Stoneware",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",

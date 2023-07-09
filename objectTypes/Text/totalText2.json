@@ -1,0 +1,17 @@
+{
+	"name": "totalText2",
+	"plugin-id": "Text",
+	"sid": 426231083656982,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "amount",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 591027080030879
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

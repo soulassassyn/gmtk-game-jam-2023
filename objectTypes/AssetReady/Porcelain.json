@@ -1,7 +1,7 @@
 {
-	"name": "shopCounter",
+	"name": "Porcelain",
 	"plugin-id": "Sprite",
-	"sid": 525167404954708,
+	"sid": 142897235130360,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,26 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 400,
-						"height": 261,
+						"width": 198,
+						"height": 174,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9992336,
+						"imageSpriteId": 8879331,
 						"useCollisionPoly": true,
-						"imagePoints": [
-							{
-								"name": "Image Point 1",
-								"x": 0.52,
-								"y": 1.0727969348659003
-							}
-						],
 						"duration": 1
 					}
 				],
-				"sid": 314494684528552,
+				"sid": 793062609540396,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

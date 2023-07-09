@@ -63,6 +63,17 @@ export class PotManager {
             cost: baseStats.cost * sizeMultiplier,
         };
     }
+    
+    clayInfo(clayType) {
+        const upperClayType = clayType.toUpperCase();
+        
+        const info = [
+            `Clay Type: ${clayType}`,
+            `Clay Cost: ${this.clayCosts[upperClayType]}`,
+        ].join('\n');
+
+        return info;
+    }
 
     potInfo(potType, clayType, size) {
         const baseStats = this.basePotStats[potType][clayType];

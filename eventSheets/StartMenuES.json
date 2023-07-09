@@ -15,25 +15,7 @@
 					}
 				}
 			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 135320110518020,
-					"parameters": {
-						"layout": "Main"
-					}
-				},
-				{
-					"id": "set-layer-visible",
-					"objectClass": "System",
-					"sid": 532597267255230,
-					"parameters": {
-						"layer": "\"cinematics\"",
-						"visibility": "visible"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 134670337773325,
 			"children": [
 				{
@@ -42,7 +24,83 @@
 						{
 							"id": "pick-all",
 							"objectClass": "System",
-							"sid": 650783204695525,
+							"sid": 657476235703459,
+							"parameters": {
+								"object": "Transition"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "Transition",
+							"sid": 611051381637501,
+							"parameters": {
+								"speed": "12"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Transition",
+							"sid": 724181813025818,
+							"parameters": {
+								"animation": "\"Transition\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Transition",
+							"sid": 112309316788732,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 766199172686113
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Transition",
+					"sid": 499446945967390,
+					"parameters": {
+						"animation": "\"Transition\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 345937033743630,
+					"parameters": {
+						"layout": "Main"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 131984450192156,
+					"parameters": {
+						"layer": "\"cinematics\"",
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 550802948347719,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 837271670106452,
 							"parameters": {
 								"object": "cinematics"
 							}
@@ -52,14 +110,14 @@
 						{
 							"id": "set-animation",
 							"objectClass": "cinematics",
-							"sid": 882890949621190,
+							"sid": 493620541639705,
 							"parameters": {
 								"animation": "\"lunkEntrance\"",
 								"from": "beginning"
 							}
 						}
 					],
-					"sid": 441969757666062
+					"sid": 933296678176292
 				}
 			]
 		}

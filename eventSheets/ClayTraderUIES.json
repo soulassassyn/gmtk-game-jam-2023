@@ -20,69 +20,131 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-instance-variable",
-							"objectClass": "uiPaperSquare",
-							"sid": 183723609553548,
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 202265776941045,
 							"parameters": {
-								"instance-variable": "shopItem",
+								"object": "bgFloor2",
+								"expression": "bgFloor2.isMOHover",
 								"comparison": 0,
-								"value": "\"Earthenware\""
+								"value": "1"
 							}
 						}
 					],
-					"actions": [],
-					"sid": 123559212172738
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "bgFloor2",
+							"sid": 153037924148130,
+							"parameters": {
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "bgFloor2",
+							"sid": 143951363962907,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 147723165411715
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-instance-variable",
+							"id": "is-overlapping-another-object",
 							"objectClass": "uiPaperSquare",
-							"sid": 888351532924625,
+							"sid": 880162972576226,
 							"parameters": {
-								"instance-variable": "shopItem",
-								"comparison": 0,
-								"value": "\"Stoneware\""
+								"object": "clay"
 							}
 						}
 					],
-					"actions": [],
-					"sid": 659677101783554
+					"actions": [
+						{
+							"type": "script",
+							"script": "const clay = runtime.objects.clay.getFirstPickedInstance();\nconst textInfo = runtime.objects.clayInfoText.getFirstInstance();\nconst uiPaper = runtime.objects.uiPaperSquare.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked && uiPaper.instVars.shopItem !== \"KilnUpgrade\") {\n\ttextInfo.text = runtime.potManager.clayInfo(clay.objectType.name);\n} else if (!uiPaper.instVars.isUnlocked) {\n\ttextInfo.text = \"Upgrade Kiln to access better clays\";\n}"
+						}
+					],
+					"sid": 314410179804689
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-instance-variable",
+							"id": "is-overlapping-another-object",
 							"objectClass": "uiPaperSquare",
-							"sid": 936664501516859,
+							"sid": 771532630306920,
 							"parameters": {
-								"instance-variable": "shopItem",
-								"comparison": 0,
-								"value": "\"Porcelain\""
+								"object": "kiln"
 							}
 						}
 					],
-					"actions": [],
-					"sid": 104397163695526
-				},
+					"actions": [
+						{
+							"type": "script",
+							"script": "const textInfo = runtime.objects.clayInfoText.getFirstInstance();\n\nconst nextLevel = runtime.levelManager.kilnLevel + 1;\ntextInfo.text = `Upgrade Kiln to ${nextLevel}\\nCost: ${runtime.levelManager.kilnUpgradeCosts[nextLevel]}`;\n"
+						}
+					],
+					"sid": 364952910742969
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 479714082607170,
+					"parameters": {
+						"object": "uiPaperSquare"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 833121179896452,
+			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-instance-variable",
-							"objectClass": "uiPaperSquare",
-							"sid": 953500306999634,
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 706841991325177,
 							"parameters": {
-								"instance-variable": "shopItem",
+								"object": "bgFloor2",
+								"expression": "bgFloor2.isMOHover",
 								"comparison": 0,
-								"value": "\"KilnUpgrade\""
+								"value": "1"
 							}
 						}
 					],
-					"actions": [],
-					"sid": 686858530379623
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "bgFloor2",
+							"sid": 466512978513227,
+							"parameters": {
+								"x": "0",
+								"y": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "bgFloor2",
+							"sid": 179154539675715,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 764256332167783
 				}
 			]
 		},

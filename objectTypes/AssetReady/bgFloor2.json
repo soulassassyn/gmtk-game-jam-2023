@@ -1,29 +1,43 @@
 {
-	"name": "clayPorcelain",
+	"name": "bgFloor2",
 	"plugin-id": "Sprite",
-	"sid": 142897235130360,
+	"sid": 616995906306592,
 	"isGlobal": false,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "isMOHover",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 608350303087572
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 415539021341260
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 198,
-						"height": 174,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 1920,
+						"height": 1080,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8879331,
+						"imageSpriteId": 3406733,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 793062609540396,
+				"sid": 424360450158545,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

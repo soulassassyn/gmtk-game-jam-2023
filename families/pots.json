@@ -49,6 +49,11 @@
 			"behaviorId": "solid",
 			"name": "Solid",
 			"sid": 195247678459031
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 438905169736985
 		}
 	],
 	"effectTypes": [
