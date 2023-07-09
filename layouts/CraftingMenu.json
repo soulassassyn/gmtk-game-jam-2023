@@ -1066,7 +1066,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1296,7 +1296,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1427,7 +1427,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1558,7 +1558,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1689,7 +1689,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2216,7 +2216,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2347,7 +2347,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2478,7 +2478,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2609,7 +2609,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2740,7 +2740,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2871,7 +2871,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3002,7 +3002,7 @@
 					}
 				},
 				{
-					"type": "uiPaperSquare2",
+					"type": "uiCraftPaper",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",

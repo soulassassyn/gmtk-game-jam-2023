@@ -67,30 +67,10 @@
 					"actions": [
 						{
 							"type": "script",
-							"script": "const clay = runtime.objects.clay.getFirstPickedInstance();\nconst textInfo = runtime.objects.clayInfoText.getFirstInstance();\nconst uiPaper = runtime.objects.uiPaperSquare.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked && uiPaper.instVars.shopItem !== \"KilnUpgrade\") {\n\ttextInfo.text = runtime.potManager.clayInfo(clay.objectType.name);\n} else if (!uiPaper.instVars.isUnlocked) {\n\ttextInfo.text = \"Upgrade Kiln to access better clays\";\n}"
+							"script": "const clay = runtime.objects.clay.getFirstPickedInstance();\nconst textInfo = runtime.objects.clayInfoText.getFirstInstance();\nconst uiPaper = runtime.objects.uiPaperSquare.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked) {\n\ttextInfo.text = runtime.potManager.clayInfo(clay.objectType.name);\n}"
 						}
 					],
 					"sid": 314410179804689
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "uiPaperSquare",
-							"sid": 771532630306920,
-							"parameters": {
-								"object": "kiln"
-							}
-						}
-					],
-					"actions": [
-						{
-							"type": "script",
-							"script": "const textInfo = runtime.objects.clayInfoText.getFirstInstance();\n\nconst nextLevel = runtime.levelManager.kilnLevel + 1;\ntextInfo.text = `Upgrade Kiln to ${nextLevel}\\nCost: ${runtime.levelManager.kilnUpgradeCosts[nextLevel]}`;\n"
-						}
-					],
-					"sid": 364952910742969
 				}
 			]
 		},
@@ -348,16 +328,6 @@
 								"mouse-button": "left",
 								"click-type": "clicked"
 							}
-						},
-						{
-							"id": "cursor-is-over-object",
-							"objectClass": "Mouse",
-							"sid": 673218155001765,
-							"disabled": true,
-							"parameters": {
-								"object": "uiPaperSquare"
-							},
-							"isInverted": true
 						},
 						{
 							"id": "cursor-is-over-object",

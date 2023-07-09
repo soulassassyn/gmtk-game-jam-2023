@@ -47,6 +47,7 @@ export class LevelManager {
             potType: null,
             size: null,
             name: null,
+            cost: null,
         }
 
         this.playerGems = 0;

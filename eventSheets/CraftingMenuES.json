@@ -9,46 +9,6 @@
 			"isActiveOnStart": false,
 			"children": [
 				{
-					"eventType": "variable",
-					"name": "tempClayType",
-					"type": "string",
-					"initialValue": "",
-					"comment": "",
-					"isStatic": true,
-					"isConstant": false,
-					"sid": 847753677516966
-				},
-				{
-					"eventType": "variable",
-					"name": "tempClayAmount",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": true,
-					"isConstant": false,
-					"sid": 137549481953780
-				},
-				{
-					"eventType": "variable",
-					"name": "tempSize",
-					"type": "number",
-					"initialValue": "0",
-					"comment": "",
-					"isStatic": true,
-					"isConstant": false,
-					"sid": 121934882540012
-				},
-				{
-					"eventType": "variable",
-					"name": "tempPotName",
-					"type": "string",
-					"initialValue": "",
-					"comment": "",
-					"isStatic": true,
-					"isConstant": false,
-					"sid": 848310432293851
-				},
-				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -58,12 +18,12 @@
 							"parameters": {
 								"mouse-button": "left",
 								"click-type": "clicked",
-								"object-clicked": "uiPaperSquare2"
+								"object-clicked": "uiCraftPaper"
 							}
 						},
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "uiPaperSquare2",
+							"objectClass": "uiCraftPaper",
 							"sid": 611877672989284,
 							"parameters": {
 								"instance-variable": "isUnlocked"
@@ -89,7 +49,7 @@
 							"actions": [
 								{
 									"id": "set-scale",
-									"objectClass": "uiPaperSquare2",
+									"objectClass": "uiCraftPaper",
 									"sid": 526683203441704,
 									"parameters": {
 										"scale": "1.2"
@@ -97,7 +57,7 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "uiPaperSquare2",
+									"objectClass": "uiCraftPaper",
 									"sid": 698592603835248,
 									"parameters": {
 										"instance-variable": "isHover",
@@ -112,7 +72,7 @@
 							"conditions": [
 								{
 									"id": "is-overlapping-another-object",
-									"objectClass": "uiPaperSquare2",
+									"objectClass": "uiCraftPaper",
 									"sid": 203109496368209,
 									"parameters": {
 										"object": "pots"
@@ -122,7 +82,7 @@
 							"actions": [
 								{
 									"type": "script",
-									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst uiPaper = runtime.objects.uiPaperSquare2.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked) {\n\tconst potValues = runtime.potManager.createPot(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\n\tlocalVars.tempClayType = pot.instVars.clayType;\n\tlocalVars.tempSize = pot.instVars.size;\n\tlocalVars.tempClayAmount = potValues.cost;\n\truntime.levelManager.tempPot.potType = pot.instVars.potType;\n\truntime.levelManager.tempPot.clayType = pot.instVars.clayType;\n\truntime.levelManager.tempPot.size = pot.instVars.size\n\truntime.levelManager.tempPot.name = pot.objectType.name;\n\truntime.levelManager.adjustInventoryAmount(pot.instVars.clayType, potValues.cost);\n}"
+									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst potValues = runtime.potManager.createPot(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\nconst clayType = pot.instVars.clayType.toUpperCase;\n\nif (potValues.cost <= runtime.levelManager.playerInventory[clayType]) {\n\truntime.levelManager.tempPot.potType = pot.instVars.potType;\n\truntime.levelManager.tempPot.clayType = pot.instVars.clayType;\n\truntime.levelManager.tempPot.size = pot.instVars.size\n\truntime.levelManager.tempPot.name = pot.objectType.name;\n\truntime.levelManager.tempPot.cost = potValues.cost;\n\truntime.levelManager.adjustInventoryAmount(pot.instVars.clayType, potValues.cost);\n}"
 								}
 							],
 							"sid": 617784054091819
@@ -171,7 +131,7 @@
 						},
 						{
 							"type": "script",
-							"script": "runtime.levelManager.adjustInventoryAmount(localVars.tempClayType, -localVars.tempClayAmount);"
+							"script": "runtime.levelManager.adjustInventoryAmount(runtime.levelManager.tempPot.clayType, -runtime.levelManager.tempPot.cost);"
 						}
 					],
 					"sid": 793637874046314,
@@ -181,7 +141,7 @@
 							"conditions": [
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "uiPaperSquare2",
+									"objectClass": "uiCraftPaper",
 									"sid": 993169404065722,
 									"parameters": {
 										"instance-variable": "isUnlocked"
@@ -191,7 +151,7 @@
 							"actions": [
 								{
 									"id": "set-scale",
-									"objectClass": "uiPaperSquare2",
+									"objectClass": "uiCraftPaper",
 									"sid": 679024625731899,
 									"parameters": {
 										"scale": "1"
@@ -199,7 +159,7 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "uiPaperSquare2",
+									"objectClass": "uiCraftPaper",
 									"sid": 828613219102823,
 									"parameters": {
 										"instance-variable": "isHover",
@@ -266,42 +226,6 @@
 						{
 							"type": "script",
 							"script": "runtime.levelManager.craftingMenu(false);"
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 960994527755113,
-							"parameters": {
-								"variable": "tempClayAmount",
-								"value": "\"\""
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 731154555063879,
-							"parameters": {
-								"variable": "tempClayType",
-								"value": "\"\""
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 897567225978440,
-							"parameters": {
-								"variable": "tempPotName",
-								"value": "\"\""
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 488857176674196,
-							"parameters": {
-								"variable": "tempSize",
-								"value": "\"\""
-							}
 						}
 					],
 					"sid": 434862894993544,
@@ -314,12 +238,12 @@
 									"objectClass": "System",
 									"sid": 296289196023422,
 									"parameters": {
-										"object": "uiPaperSquare2"
+										"object": "uiCraftPaper"
 									}
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "uiPaperSquare2",
+									"objectClass": "uiCraftPaper",
 									"sid": 426508062107626,
 									"parameters": {
 										"instance-variable": "isUnlocked"
@@ -329,7 +253,7 @@
 							"actions": [
 								{
 									"id": "set-scale",
-									"objectClass": "uiPaperSquare2",
+									"objectClass": "uiCraftPaper",
 									"sid": 401571011125901,
 									"parameters": {
 										"scale": "1"
@@ -337,7 +261,7 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "uiPaperSquare2",
+									"objectClass": "uiCraftPaper",
 									"sid": 868590290161382,
 									"parameters": {
 										"instance-variable": "isHover",
@@ -460,7 +384,7 @@
 							"objectClass": "Mouse",
 							"sid": 470996517990028,
 							"parameters": {
-								"object": "uiPaperSquare2"
+								"object": "uiCraftPaper"
 							}
 						}
 					],
@@ -508,7 +432,7 @@
 							"conditions": [
 								{
 									"id": "is-overlapping-another-object",
-									"objectClass": "uiPaperSquare2",
+									"objectClass": "uiCraftPaper",
 									"sid": 547609812866002,
 									"parameters": {
 										"object": "pots"
@@ -518,7 +442,7 @@
 							"actions": [
 								{
 									"type": "script",
-									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst textInfo = runtime.objects.potInfoText.getFirstInstance();\nconst uiPaper = runtime.objects.uiPaperSquare2.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked) {\n\ttextInfo.text = runtime.potManager.potInfo(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\n} else {\n\ttextInfo.text = runtime.potManager.unlockInfo(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\n}"
+									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst textInfo = runtime.objects.potInfoText.getFirstInstance();\nconst uiPaper = runtime.objects.uiCraftPaper.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked) {\n\ttextInfo.text = runtime.potManager.potInfo(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\n}"
 								}
 							],
 							"sid": 372495668735690
@@ -533,7 +457,7 @@
 							"objectClass": "Mouse",
 							"sid": 288381982082946,
 							"parameters": {
-								"object": "uiPaperSquare2"
+								"object": "uiCraftPaper"
 							},
 							"isInverted": true
 						}
