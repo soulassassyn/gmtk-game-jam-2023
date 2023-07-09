@@ -4126,7 +4126,7 @@
 					"type": "cinematicStandIn",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "lunkEntrance",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
