@@ -293,7 +293,7 @@
 							"actions": [
 								{
 									"type": "script",
-									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst textInfo = runtime.objects.potInfoText.getFirstInstance();\n\ntextInfo.text = runtime.potManager.potInfo(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);"
+									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst textInfo = runtime.objects.potInfoText.getFirstInstance();\nconst uiPaper = runtime.objects.uiPaperSquare2.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked) {\n\ttextInfo.text = runtime.potManager.potInfo(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\n} else {\n\ttextInfo.text = runtime.potManager.unlockInfo(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\n}"
 								}
 							],
 							"sid": 372495668735690

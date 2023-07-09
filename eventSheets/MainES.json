@@ -357,7 +357,8 @@
 				},
 				{
 					"type": "script",
-					"script": "runtime.levelManager.levelState.playerCraftPots = true;\nruntime.levelManager.runOnce = false;"
+					"script": "runtime.levelManager.levelState.playerCraftPots = true;\nruntime.levelManager.runOnce = false;",
+					"disabled": true
 				}
 			],
 			"sid": 859080109183828

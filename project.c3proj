@@ -125,7 +125,7 @@
 			"textSizeController",
 			"interactionZone",
 			"Transition",
-			"FX01_0004_UIStonecopy",
+			"clayStoneware",
 			"Title_0002_BG",
 			"Title_0001_Start",
 			"Title_0000_Title",
@@ -136,7 +136,7 @@
 				"items": [
 					"clayEarthenware",
 					"clayPorcelain",
-					"clayStoneware",
+					"clayStoneware_old",
 					"navCheckMark",
 					"navArrow",
 					"uiPaperLong",
@@ -247,7 +247,10 @@
 					"centerCountdown",
 					"tutText",
 					"potDescriptionText",
-					"potInfoText"
+					"potInfoText",
+					"totalEarthen2",
+					"totalStone2",
+					"totalPorcelain2"
 				],
 				"subfolders": [],
 				"name": "Text"

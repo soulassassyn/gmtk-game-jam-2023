@@ -1,7 +1,7 @@
 {
-	"name": "FX01_0004_UIStonecopy",
+	"name": "clayStoneware_old",
 	"plugin-id": "Sprite",
-	"sid": 764657670249743,
+	"sid": 209445018689874,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 173,
-						"height": 158,
-						"originX": 0.41040462427745666,
+						"width": 162,
+						"height": 229,
+						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9592309,
+						"imageSpriteId": 916261,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 300356136604851,
+				"sid": 248416635249891,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

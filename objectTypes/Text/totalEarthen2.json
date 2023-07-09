@@ -1,0 +1,17 @@
+{
+	"name": "totalEarthen2",
+	"plugin-id": "Text",
+	"sid": 268386895258236,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "amount",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 664457194615050
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

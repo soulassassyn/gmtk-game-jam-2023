@@ -28,19 +28,19 @@ export class PotManager {
         
         this.basePotStats = {
             [this.potTypes.DECORATIVE]: {
-                [this.clayTypes.EARTHENWARE]: { hp: 2, gems: 10, heat: 2, time: 2},
-                [this.clayTypes.STONEWARE]: { hp: 3, gems: 15, heat: 5, time: 3},
-                [this.clayTypes.PORCELAIN]: { hp: 1, gems: 20, heat: 7, time: 8},
+                [this.clayTypes.EARTHENWARE]: { hp: 2, gems: 10, heat: 2, time: 2, cost: 1, kiln: 1 },
+                [this.clayTypes.STONEWARE]: { hp: 3, gems: 15, heat: 5, time: 3, cost: 1, kiln: 2 },
+                [this.clayTypes.PORCELAIN]: { hp: 1, gems: 20, heat: 7, time: 8, cost: 1, kiln: 3 },
             },
             [this.potTypes.REINFORCED]: {
-                [this.clayTypes.EARTHENWARE]: { hp: 3, gems: 5, heat: 2, time: 3},
-                [this.clayTypes.STONEWARE]: { hp: 5, gems: 10, heat: 7, time: 5 },
+                [this.clayTypes.EARTHENWARE]: { hp: 3, gems: 5, heat: 2, time: 3, cost: 2, kiln: 1},
+                [this.clayTypes.STONEWARE]: { hp: 5, gems: 10, heat: 7, time: 5, cost: 2, kiln: 3 },
                 // No porcelain for reinforced
             },
             [this.potTypes.MAGIC]: {
-                [this.clayTypes.EARTHENWARE]: { hp: 1, gems: 20, heat: 5, time: 4 },
+                [this.clayTypes.EARTHENWARE]: { hp: 1, gems: 20, heat: 5, time: 4, cost: 2, kiln: 2 },
                 // No stoneware for magic
-                [this.clayTypes.PORCELAIN]: { hp: 1, gems: 40, heat: 10, time: 15 },
+                [this.clayTypes.PORCELAIN]: { hp: 1, gems: 40, heat: 10, time: 15, cost: 1, kiln: 3 },
             },
         };
     
@@ -69,9 +69,20 @@ export class PotManager {
 
         const info = [
             `HP: ${baseStats.hp * sizeMultiplier}`,
-            `Gems: ${baseStats.gems * sizeMultiplier}`,
-            `Heat: ${baseStats.heat}`,
-            `Fire Time: ${baseStats.time * sizeMultiplier}`,
+            `Gems Dropped: ${baseStats.gems * sizeMultiplier}`,
+            `Clay Cost: ${baseStats.cost * sizeMultiplier}`,
+            `Fire Time: ${baseStats.time * sizeMultiplier} sec`,
+        ].join('\n');
+
+        return info;
+    }
+
+    unlockInfo(potType, clayType, size) {
+        const baseStats = this.basePotStats[potType][clayType];
+        const sizeMultiplier = this.sizeMultipliers[size];
+
+        const info = [
+            `Kiln Level ${baseStats.kiln} Required`,
         ].join('\n');
 
         return info;

@@ -1,0 +1,17 @@
+{
+	"name": "totalPorcelain2",
+	"plugin-id": "Text",
+	"sid": 683948940221023,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "amount",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 640141477654971
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

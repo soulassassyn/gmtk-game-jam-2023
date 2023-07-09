@@ -1,0 +1,17 @@
+{
+	"name": "totalStone2",
+	"plugin-id": "Text",
+	"sid": 458508348706953,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "amount",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 662723215719892
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

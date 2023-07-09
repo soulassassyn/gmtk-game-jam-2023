@@ -3961,7 +3961,7 @@
 					}
 				},
 				{
-					"type": "clayStoneware",
+					"type": "clayStoneware_old",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -4216,7 +4216,7 @@
 					}
 				},
 				{
-					"type": "FX01_0004_UIStonecopy",
+					"type": "clayStoneware",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -4226,7 +4226,32 @@
 					},
 					"uid": 233,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 14716,
 						"y": 2812,
