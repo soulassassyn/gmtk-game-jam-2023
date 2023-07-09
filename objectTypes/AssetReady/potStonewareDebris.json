@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0003s_0004s_0002_EarthPot",
+	"name": "potStonewareDebris",
 	"plugin-id": "Sprite",
-	"sid": 214921687926028,
+	"sid": 865884957189768,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 107,
-						"height": 212,
+						"width": 171,
+						"height": 89,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4558776,
+						"imageSpriteId": 5343106,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 429487024087325,
+				"sid": 104204405774601,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

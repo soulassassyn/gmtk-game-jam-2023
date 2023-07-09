@@ -2744,8 +2744,8 @@
 					"instanceVariables": {
 						"attackPoint": "bot",
 						"attackOrder": 6,
-						"isOccupied": false,
-						"potUid": 0
+						"isOccupied": true,
+						"potUid": 181
 					},
 					"behaviors": {},
 					"world": {
@@ -2880,8 +2880,8 @@
 					"instanceVariables": {
 						"attackPoint": "top",
 						"attackOrder": 0,
-						"isOccupied": false,
-						"potUid": 0
+						"isOccupied": true,
+						"potUid": 179
 					},
 					"behaviors": {},
 					"world": {
@@ -2948,8 +2948,8 @@
 					"instanceVariables": {
 						"attackPoint": "left",
 						"attackOrder": 3,
-						"isOccupied": false,
-						"potUid": 0
+						"isOccupied": true,
+						"potUid": 180
 					},
 					"behaviors": {},
 					"world": {
@@ -3136,6 +3136,177 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "potEarthenware04",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 179,
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
+					"world": {
+						"x": 1313,
+						"y": 1003,
+						"width": 158,
+						"height": 144,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "potEarthenware04",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 180,
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
+					"world": {
+						"x": 1804,
+						"y": 823,
+						"width": 158,
+						"height": 144,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "potEarthenware04",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 181,
+					"instanceVariables": {
+						"hp": 3,
+						"gems": 10
+					},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "angle",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": false,
+							"parameters": {
+								"hue": 0.5,
+								"saturation": 0.6,
+								"luminosity": 0.8
+							}
+						}
+					},
+					"world": {
+						"x": 1392,
+						"y": 420,
+						"width": 158,
+						"height": 144,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 117982453438704,
@@ -3280,8 +3451,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 966,
-						"y": 134,
+						"x": 929,
+						"y": 125,
 						"width": 553.6073261108063,
 						"height": 178.07826506121495,
 						"originX": 0.5,

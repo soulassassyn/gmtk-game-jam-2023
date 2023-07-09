@@ -33,7 +33,7 @@ export class LevelManager {
             },
             pots: [],
         };
-        this.playerGems = 20;
+        this.playerGems = 0;
         this.heroGems = 0;
     }
 
@@ -237,10 +237,13 @@ export class LevelManager {
 
         if (clayType === this.runtime.potManager.clayTypes.EARTHENWARE) {
             clayCost = this.runtime.potManager.clayCosts.EARTHENWARE;
+            if (this.clayShopTotals[clayType] === 0 && change === -1) return;
         } else if (clayType === this.runtime.potManager.clayTypes.STONEWARE) {
             clayCost = this.runtime.potManager.clayCosts.STONEWARE;
+            if (this.clayShopTotals[clayType] === 0 && change === -1) return;
         } else if (clayType === this.runtime.potManager.clayTypes.PORCELAIN) {
             clayCost = this.runtime.potManager.clayCosts.PORCELAIN;
+            if (this.clayShopTotals[clayType] === 0 && change === -1) return;
         }
 
         // Adjust the total amount and cost

@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0003s_0004s_0003_EarthPot",
+	"name": "potPorcelain04",
 	"plugin-id": "Sprite",
-	"sid": 259509308731945,
+	"sid": 418718781412712,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 176,
-						"height": 201,
+						"width": 114,
+						"height": 235,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8419002,
+						"imageSpriteId": 2380556,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 722061492575265,
+				"sid": 916619802042437,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0003s_0001s_0000_EarthDebris",
+	"name": "potPorcelain01",
 	"plugin-id": "Sprite",
-	"sid": 873179132696823,
+	"sid": 456963758829963,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 182,
-						"height": 82,
+						"width": 118,
+						"height": 229,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7903029,
+						"imageSpriteId": 7710848,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 822202826861610,
+				"sid": 569165286952024,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

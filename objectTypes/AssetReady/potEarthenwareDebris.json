@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0003s_0002s_0001_PorcPot",
+	"name": "potEarthenwareDebris",
 	"plugin-id": "Sprite",
-	"sid": 942689849630600,
+	"sid": 873179132696823,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 147,
-						"height": 187,
+						"width": 182,
+						"height": 82,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6973501,
+						"imageSpriteId": 7903029,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 544910394328968,
+				"sid": 822202826861610,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

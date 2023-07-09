@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0003s_0001s_0001_StoneDebris",
+	"name": "potPorcelain02",
 	"plugin-id": "Sprite",
-	"sid": 865884957189768,
+	"sid": 227775918850316,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 171,
-						"height": 89,
+						"width": 128,
+						"height": 117,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5343106,
+						"imageSpriteId": 2017318,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 104204405774601,
+				"sid": 334974187145460,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

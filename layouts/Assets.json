@@ -2396,7 +2396,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0004s_0003_EarthPot",
+					"type": "potEarthenware01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2496,7 +2496,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0004s_0002_EarthPot",
+					"type": "potEarthenware02",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2553,7 +2553,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0004s_0001_EarthPot",
+					"type": "potEarthenware03",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2593,8 +2593,8 @@
 						}
 					},
 					"world": {
-						"x": 3395,
-						"y": 4927,
+						"x": 3405,
+						"y": 4939,
 						"width": 159,
 						"height": 143,
 						"originX": 0.5,
@@ -2610,7 +2610,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0004s_0000_EarthPot",
+					"type": "potEarthenware04",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2650,12 +2650,12 @@
 						}
 					},
 					"world": {
-						"x": 3628,
-						"y": 4942,
+						"x": 3640,
+						"y": 4952,
 						"width": 158,
 						"height": 144,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -2667,7 +2667,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0003s_0003_StonePot",
+					"type": "potStoneware01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2724,7 +2724,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0003s_0002_StonePot",
+					"type": "potStoneware02",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2781,7 +2781,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0003s_0001_StonePot",
+					"type": "potStoneware03",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2838,7 +2838,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0003s_0000_StonePot",
+					"type": "potStoneware04",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2895,7 +2895,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0002s_0003_PorcPot",
+					"type": "potPorcelain01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2952,7 +2952,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0002s_0002_PorcPot",
+					"type": "potPorcelain02",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3009,7 +3009,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0002s_0001_PorcPot",
+					"type": "potPorcelain03",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3066,7 +3066,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0002s_0000_PorcPot",
+					"type": "potPorcelain04",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3123,7 +3123,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0001s_0002_PorcDebris",
+					"type": "potPorcelainDebris",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3152,7 +3152,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0001s_0001_StoneDebris",
+					"type": "potStonewareDebris",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3181,7 +3181,7 @@
 					}
 				},
 				{
-					"type": "Assets_0003s_0001s_0000_EarthDebris",
+					"type": "potEarthenwareDebris",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3222,8 +3222,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 2838,
-						"y": 5927,
+						"x": 2885,
+						"y": 5964,
 						"width": 103,
 						"height": 58,
 						"originX": 0.5,
@@ -3251,8 +3251,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3012,
-						"y": 5921,
+						"x": 3013,
+						"y": 5967,
 						"width": 55,
 						"height": 86,
 						"originX": 0.5,
@@ -3280,8 +3280,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 3166,
-						"y": 5922,
+						"x": 3120,
+						"y": 5959,
 						"width": 60,
 						"height": 114,
 						"originX": 0.5,

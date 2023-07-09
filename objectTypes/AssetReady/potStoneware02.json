@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0003s_0002s_0003_PorcPot",
+	"name": "potStoneware02",
 	"plugin-id": "Sprite",
-	"sid": 456963758829963,
+	"sid": 837518318621254,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 118,
-						"height": 229,
+						"width": 116,
+						"height": 149,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7710848,
+						"imageSpriteId": 2260077,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 569165286952024,
+				"sid": 630097297394559,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

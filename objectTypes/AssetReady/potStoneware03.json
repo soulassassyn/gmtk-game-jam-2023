@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0003s_0003s_0003_StonePot",
+	"name": "potStoneware03",
 	"plugin-id": "Sprite",
-	"sid": 597872766825221,
+	"sid": 150134771346774,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 159,
-						"height": 182,
+						"width": 171,
+						"height": 279,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1855805,
+						"imageSpriteId": 9192583,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 951201781591170,
+				"sid": 934819228229059,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

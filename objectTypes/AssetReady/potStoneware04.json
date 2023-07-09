@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0003s_0004s_0000_EarthPot",
+	"name": "potStoneware04",
 	"plugin-id": "Sprite",
-	"sid": 999162359997555,
+	"sid": 766737221689065,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 158,
-						"height": 144,
+						"width": 181,
+						"height": 165,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 22892,
+						"imageSpriteId": 3025713,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 871579001150426,
+				"sid": 618474557892766,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
