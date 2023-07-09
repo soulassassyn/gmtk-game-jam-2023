@@ -490,7 +490,6 @@ export class LevelManager {
     async craftPot(placementTile) {
         this.runtime.callFunction("toggleControls");
         const potInfo = this.runtime.potManager.createPot(this.tempPot.potType, this.tempPot.clayType, this.tempPot.size)
-        this.playerInventory[this.tempPot.clayType] -= potInfo.cost;
         placementTile.instVars.isOccupied = true;
         const newPot = this.runtime.objects[this.tempPot.name].createInstance("interactive", placementTile.x, placementTile.y);
         placementTile.instVars.potUid = newPot.uid;
