@@ -97,200 +97,291 @@
 			"sid": 401437540148067
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 527149012263932,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "uiPaperSquare"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 252028746971671,
-					"parameters": {
-						"variable": "isItemSelected",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 516723005619236,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-scale",
-							"objectClass": "uiPaperSquare",
-							"sid": 143616048996588,
-							"parameters": {
-								"scale": "1.2"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "uiPaperSquare",
-							"sid": 834906337537484,
-							"parameters": {
-								"instance-variable": "isHover",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 347300441193999
-				}
-			]
+			"eventType": "variable",
+			"name": "currentSelection",
+			"type": "string",
+			"initialValue": "null",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 168566844215990
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-click",
-					"objectClass": "Mouse",
-					"sid": 499056115258232,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 112972685034589,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-scale",
-							"objectClass": "uiPaperSquare",
-							"sid": 387941245949010,
-							"parameters": {
-								"scale": "1"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "uiPaperSquare",
-							"sid": 187117832134568,
-							"parameters": {
-								"instance-variable": "isHover",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 231341964376289
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 202380081872907,
-					"parameters": {
-						"variable": "isItemSelected"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 708663825244856,
+			"eventType": "group",
+			"disabled": false,
+			"title": "ClayTraderUIController",
+			"description": "",
+			"isActiveOnStart": true,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 225552343982472,
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 654700715007922,
 							"parameters": {
-								"object": "navArrow"
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "uiPaperSquare"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-opacity",
-							"objectClass": "navArrow",
-							"sid": 237801719315780,
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 205940737619368,
 							"parameters": {
-								"opacity": "100"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "navArrow",
-							"sid": 602986187558084,
-							"parameters": {
-								"instance-variable": "isHover",
+								"variable": "isItemSelected",
 								"value": "true"
 							}
 						}
 					],
-					"sid": 229681649856347
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 395328295681522,
-					"parameters": {
-						"variable": "isItemSelected"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [],
-			"sid": 505823493038254,
-			"children": [
+					"sid": 327007438567748,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "uiPaperSquare",
+									"sid": 126779451023712,
+									"parameters": {
+										"scale": "1.2"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "uiPaperSquare",
+									"sid": 201064187278052,
+									"parameters": {
+										"instance-variable": "isHover",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 204237447811887,
+									"parameters": {
+										"variable": "currentSelection",
+										"value": "uiPaperSquare.shopItem"
+									}
+								}
+							],
+							"sid": 706938735161454
+						}
+					]
+				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "for-each",
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 678057230467754,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "navArrow"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 162397916225536,
+							"sid": 497278960524962,
+							"parameters": {
+								"variable": "isItemSelected"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 767344429404294,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 877341031225980
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 324627263170976,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 673218155001765,
+							"disabled": true,
+							"parameters": {
+								"object": "uiPaperSquare"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 479960139879487,
 							"parameters": {
 								"object": "navArrow"
-							}
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
-							"id": "set-opacity",
-							"objectClass": "navArrow",
-							"sid": 359819791924496,
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 615731829063670,
 							"parameters": {
-								"opacity": "25"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "navArrow",
-							"sid": 943161358591628,
-							"parameters": {
-								"instance-variable": "isHover",
+								"variable": "isItemSelected",
 								"value": "false"
 							}
 						}
 					],
-					"sid": 723662792004668
+					"sid": 215662016044837,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "uiPaperSquare",
+									"sid": 963670746896349,
+									"parameters": {
+										"scale": "1"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "uiPaperSquare",
+									"sid": 500475159539377,
+									"parameters": {
+										"instance-variable": "isHover",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 532176826330838
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 317455888721249,
+							"parameters": {
+								"variable": "isItemSelected"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 636434509943137,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 302377709578801,
+									"parameters": {
+										"object": "navArrow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-opacity",
+									"objectClass": "navArrow",
+									"sid": 941010165597476,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "navArrow",
+									"sid": 255323449399637,
+									"parameters": {
+										"instance-variable": "isHover",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 249345452821701
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 660930851382721,
+							"parameters": {
+								"variable": "isItemSelected"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 136436480818132,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 329300361731567,
+									"parameters": {
+										"object": "navArrow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-opacity",
+									"objectClass": "navArrow",
+									"sid": 287941082094811,
+									"parameters": {
+										"opacity": "25"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "navArrow",
+									"sid": 440964528575286,
+									"parameters": {
+										"instance-variable": "isHover",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 457468231155947
+						}
+					]
 				}
-			]
+			],
+			"sid": 590345421002748
 		}
 	],
 	"sid": 934511148761981

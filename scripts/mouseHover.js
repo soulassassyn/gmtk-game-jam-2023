@@ -1,5 +1,5 @@
 export class MouseHover {
-    constructor(runtime, objectName, scaleUpFactor = 1.25, scaleDownFactor = 1, tweenDuration = 0.1, mouseObjectName = 'Mouse') {
+    constructor(runtime, objectName, scaleUpFactor = 1.25, scaleDownFactor = 1, tweenDuration = 0.05, mouseObjectName = 'Mouse') {
         this.runtime = runtime;
         this.objectName = objectName;
         this.mouseObjectName = mouseObjectName;

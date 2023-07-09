@@ -6,6 +6,10 @@
 			"includeSheet": "FXES"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "ClayTraderUIES"
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "PlayerController",
