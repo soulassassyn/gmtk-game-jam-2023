@@ -1452,7 +1452,8 @@
 					},
 					"uid": 166,
 					"instanceVariables": {
-						"hp": 0
+						"hp": 0,
+						"isMainKiln": false
 					},
 					"behaviors": {
 						"Solid": {

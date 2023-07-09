@@ -10,6 +10,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 533630654929091
+		},
+		{
+			"name": "isMainKiln",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 356977045241747
 		}
 	],
 	"behaviorTypes": [

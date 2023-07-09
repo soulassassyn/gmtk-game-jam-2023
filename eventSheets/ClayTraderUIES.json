@@ -212,6 +212,14 @@
 								"click-type": "clicked",
 								"object-clicked": "uiPaperSquare"
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "uiPaperSquare",
+							"sid": 534086715460117,
+							"parameters": {
+								"instance-variable": "isUnlocked"
+							}
 						}
 					],
 					"actions": [
@@ -376,7 +384,16 @@
 					"children": [
 						{
 							"eventType": "block",
-							"conditions": [],
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "uiPaperSquare",
+									"sid": 579982073834518,
+									"parameters": {
+										"instance-variable": "isUnlocked"
+									}
+								}
+							],
 							"actions": [
 								{
 									"id": "set-scale",

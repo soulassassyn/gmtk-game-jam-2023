@@ -85,6 +85,13 @@ export class LevelManager {
             name: null,
         };
         this.runtime.globalVars.playerCraftPots = false;
+
+        this.runtime.layout.getLayer("UI").isVisible = false;
+        this.runtime.layout.getLayer("UI").isInteractive = false;
+        this.runtime.layout.getLayer("craftingMenu").isVisible = false;
+        this.runtime.layout.getLayer("craftingMenu").isInteractive = false;
+        this.runtime.layout.getLayer("clayTraderUI").isVisible = false;
+        this.runtime.layout.getLayer("clayTraderUI").isInteractive = false;
     }
 
     update() {
@@ -137,7 +144,13 @@ export class LevelManager {
         const hero = this.runtime.objects.heroCharacter.getFirstInstance();
         const welcomeMat = this.runtime.objects.welcomeMat.getFirstInstance();
         const placementTiles = this.runtime.objects.placementTile.getAllInstances();
-        const kiln = this.runtime.objects.kiln.getFirstInstance();
+        const kilns = this.runtime.objects.kiln.getAllInstances();
+        let kiln;
+        for (const k of kilns) {
+            if (k.instVars.isMainKiln) {
+                kiln = k;
+            }
+        }
         hero.setAnimation("walk");
 
         // Sort placement tiles by attack order
@@ -168,7 +181,6 @@ export class LevelManager {
             }
             if (this.waypointCount === totalWaypoints - 1) {
                 hero.behaviors.MoveTo.maxSpeed = 0;
-                const kiln = this.runtime.objects.kiln.getFirstInstance();
                 this.heroAttack(kiln, hero);
             }
             this.waypointCount++;
@@ -209,12 +221,12 @@ export class LevelManager {
                 heroSwordBreakCinematic.setAnimation("swordBreak");
                 let cinematic = this.runtime.layout.getLayer("cinematics");
                 cinematic.isVisible = true;
-                const animationendEL = e => {
+                const animationendEL2 = e => {
                     cinematic.isVisible = false;
                     hero.timeScale = 1;
-                    heroSwordBreakCinematic.removeEventListener("animationend", animationendEL);
+                    heroSwordBreakCinematic.removeEventListener("animationend", animationendEL2);
                 };
-                heroSwordBreakCinematic.addEventListener("animationend", animationendEL);
+                heroSwordBreakCinematic.addEventListener("animationend", animationendEL2);
 
                 hero.removeEventListener("animationend", animationendEL);
                 hero.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
@@ -226,8 +238,8 @@ export class LevelManager {
                 hero.behaviors.MoveTo.moveToPosition(x, y);
                 hero.behaviors.MoveTo.maxSpeed = 700;
                 this.waypointEL = e => {
-                    this.runOnce = false;
                     this.levelState.heroBuyWeapon = true;
+                    this.runOnce = false;
                     hero.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
                 };
                 hero.behaviors.MoveTo.addEventListener("arrived", this.waypointEL);
@@ -492,7 +504,10 @@ export class LevelManager {
         const totalStoneware = this.runtime.objects.totalStone2.getFirstInstance();
         const totalPorcelain = this.runtime.objects.totalPorcelain2.getFirstInstance();
 
-        this.playerInventory[clayType] += change;
+        if (this.playerInventory[clayType] < change) return;
+
+
+        this.playerInventory[clayType] -= change;
 
         // Make sure the total doesn't go below zero
         this.playerInventory[clayType] = Math.max(this.playerInventory[clayType], 0);

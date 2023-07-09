@@ -391,7 +391,8 @@
 					"script": "runtime.levelManager.levelState.playerCraftPots = true;\nruntime.levelManager.playerInventory.Earthenware = 30;\nruntime.levelManager.runOnce = false;"
 				}
 			],
-			"sid": 859080109183828
+			"sid": 859080109183828,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -543,7 +544,7 @@
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 605685980090184
+			"sid": 886977410589867
 		},
 		{
 			"eventType": "block",
@@ -831,6 +832,15 @@
 						"parameter-index": "2",
 						"value": "110"
 					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "pots",
+					"sid": 402024739186672,
+					"parameters": {
+						"mode": "enable",
+						"effect": "\"AdjustHSL\""
+					}
 				}
 			],
 			"sid": 788314811813017,
@@ -980,6 +990,15 @@
 						"parameter-index": "2",
 						"value": "100"
 					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "pots",
+					"sid": 336689912410148,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"AdjustHSL\""
+					}
 				}
 			],
 			"sid": 587000739422194
@@ -1004,15 +1023,6 @@
 					"parameters": {
 						"animation": "\"idle\"",
 						"from": "beginning"
-					}
-				},
-				{
-					"id": "set-group-active",
-					"objectClass": "System",
-					"sid": 800766050176361,
-					"parameters": {
-						"group-name": "\"PlayerController\"",
-						"state": "activated"
 					}
 				}
 			],
@@ -1052,14 +1062,6 @@
 					"conditions": [
 						{
 							"id": "is-overlapping-another-object",
-							"objectClass": "pots",
-							"sid": 381993146174611,
-							"parameters": {
-								"object": "placementTile"
-							}
-						},
-						{
-							"id": "is-overlapping-another-object",
 							"objectClass": "playerCharacter",
 							"sid": 483593896605266,
 							"parameters": {
@@ -1084,6 +1086,15 @@
 							"parameters": {
 								"instance-variable": "potUid",
 								"value": "0"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 353455342835858,
+							"parameters": {
+								"group-name": "\"PlayerController\"",
+								"state": "activated"
 							}
 						}
 					],

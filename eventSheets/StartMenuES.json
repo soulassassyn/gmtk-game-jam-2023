@@ -15,7 +15,20 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 397098668061644,
+					"parameters": {
+						"audio-file": "GemDrop01",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
 			"sid": 134670337773325,
 			"children": [
 				{
