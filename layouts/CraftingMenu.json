@@ -1437,10 +1437,10 @@
 					},
 					"uid": 200,
 					"instanceVariables": {
-						"isHover": false,
+						"isHover": true,
 						"isOpacity": false,
 						"shopItem": "",
-						"isUnlocked": false
+						"isUnlocked": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1568,10 +1568,10 @@
 					},
 					"uid": 201,
 					"instanceVariables": {
-						"isHover": false,
+						"isHover": true,
 						"isOpacity": false,
 						"shopItem": "",
-						"isUnlocked": false
+						"isUnlocked": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1699,10 +1699,10 @@
 					},
 					"uid": 202,
 					"instanceVariables": {
-						"isHover": false,
+						"isHover": true,
 						"isOpacity": false,
 						"shopItem": "",
-						"isUnlocked": false
+						"isUnlocked": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -2011,7 +2011,7 @@
 							1,
 							1,
 							1,
-							0.39999999999999947
+							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -2110,7 +2110,7 @@
 							1,
 							1,
 							1,
-							0.39999999999999947
+							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -2209,7 +2209,7 @@
 							1,
 							1,
 							1,
-							0.39999999999999947
+							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -2488,10 +2488,10 @@
 					},
 					"uid": 211,
 					"instanceVariables": {
-						"isHover": false,
+						"isHover": true,
 						"isOpacity": false,
 						"shopItem": "",
-						"isUnlocked": false
+						"isUnlocked": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -2619,10 +2619,10 @@
 					},
 					"uid": 212,
 					"instanceVariables": {
-						"isHover": false,
+						"isHover": true,
 						"isOpacity": false,
 						"shopItem": "",
-						"isUnlocked": false
+						"isUnlocked": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -2750,10 +2750,10 @@
 					},
 					"uid": 214,
 					"instanceVariables": {
-						"isHover": false,
+						"isHover": true,
 						"isOpacity": false,
 						"shopItem": "",
-						"isUnlocked": false
+						"isUnlocked": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -2881,10 +2881,10 @@
 					},
 					"uid": 215,
 					"instanceVariables": {
-						"isHover": false,
+						"isHover": true,
 						"isOpacity": false,
 						"shopItem": "",
-						"isUnlocked": false
+						"isUnlocked": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -3012,10 +3012,10 @@
 					},
 					"uid": 216,
 					"instanceVariables": {
-						"isHover": false,
+						"isHover": true,
 						"isOpacity": false,
 						"shopItem": "",
-						"isUnlocked": false
+						"isUnlocked": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -3324,7 +3324,7 @@
 							1,
 							1,
 							1,
-							0.39999999999999947
+							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -3423,7 +3423,7 @@
 							1,
 							1,
 							1,
-							0.39999999999999947
+							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -3621,7 +3621,7 @@
 							1,
 							1,
 							1,
-							0.39999999999999947
+							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -3720,7 +3720,7 @@
 							1,
 							1,
 							1,
-							0.39999999999999947
+							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -3819,7 +3819,7 @@
 							1,
 							1,
 							1,
-							0.39999999999999947
+							1
 						],
 						"angle": 0,
 						"zElevation": 0

@@ -247,21 +247,6 @@
 								}
 							},
 							{
-								"uid": 165,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								}
-							},
-							{
 								"uid": 162,
 								"flags": {
 									"x": true,
@@ -977,10 +962,10 @@
 					},
 					"uid": 162,
 					"instanceVariables": {
-						"isHover": false,
+						"isHover": true,
 						"isOpacity": false,
 						"shopItem": "Stoneware",
-						"isUnlocked": false
+						"isUnlocked": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1108,10 +1093,10 @@
 					},
 					"uid": 163,
 					"instanceVariables": {
-						"isHover": false,
+						"isHover": true,
 						"isOpacity": false,
 						"shopItem": "Porcelain",
-						"isUnlocked": false
+						"isUnlocked": true
 					},
 					"behaviors": {
 						"Tween": {
@@ -1300,218 +1285,6 @@
 						"height": 174,
 						"originX": 0.5,
 						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0.5
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "uiPaperSquare",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 165,
-					"instanceVariables": {
-						"isHover": true,
-						"isOpacity": false,
-						"shopItem": "KilnUpgrade",
-						"isUnlocked": true
-					},
-					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
-						"Sine2": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 4,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 50,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						},
-						"Sine": {
-							"properties": {
-								"movement": "angle",
-								"wave": "sine",
-								"period": 4,
-								"period-random": 0.25,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 1,
-								"magnitude-random": 0,
-								"enabled": true,
-								"live-preview": false
-							}
-						}
-					},
-					"effects": {
-						"AdjustHSL2": {
-							"isEnabled": true,
-							"parameters": {
-								"hue": 0,
-								"saturation": 1,
-								"luminosity": 1
-							}
-						},
-						"AdjustHSL": {
-							"isEnabled": true,
-							"parameters": {
-								"hue": 0,
-								"saturation": 1,
-								"luminosity": 1
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 32,
-						"uid": 165,
-						"children": [
-							{
-								"uid": 166,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": true,
-									"h": true,
-									"a": true,
-									"o": true,
-									"v": true,
-									"d": true,
-									"sm": "normal"
-								}
-							}
-						],
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 2.220446049250313e-16,
-							"transformH": 2.220446049250313e-16,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"world": {
-						"x": 703,
-						"y": 618,
-						"width": 335,
-						"height": 394,
-						"originX": 0.46865671641791046,
-						"originY": 0.2233502538071066,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "kiln",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 166,
-					"instanceVariables": {
-						"hp": 0,
-						"isMainKiln": false
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": false,
-								"tags": ""
-							}
-						},
-						"Sine": {
-							"properties": {
-								"movement": "horizontal",
-								"wave": "sine",
-								"period": 4,
-								"period-random": 0,
-								"period-offset": 0,
-								"period-offset-random": 0,
-								"magnitude": 50,
-								"magnitude-random": 0,
-								"enabled": false,
-								"live-preview": false
-							}
-						}
-					},
-					"sceneGraphData": {
-						"parent-uid": 165,
-						"uid": 166,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": true,
-							"a": true,
-							"o": true,
-							"v": true,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 2.220446049250313e-16,
-							"transformH": 2.220446049250313e-16,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"world": {
-						"x": 734,
-						"y": 850,
-						"width": 201.8951225577542,
-						"height": 213.38508888217925,
-						"originX": 0.5,
-						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -2377,7 +2150,7 @@
 							1,
 							1,
 							1,
-							0.5
+							1
 						],
 						"angle": 0,
 						"zElevation": 0
@@ -2608,122 +2381,6 @@
 						"height": 162,
 						"originX": 0,
 						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "totalText2",
-					"properties": {
-						"text": "Kiln Level: ",
-						"enable-bbcode": true,
-						"font": "Asphalt BlackCondensed",
-						"size": 60,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							0.8392156862745098,
-							0,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "left",
-						"read-aloud": false
-					},
-					"uid": 245,
-					"instanceVariables": {
-						"amount": 0
-					},
-					"behaviors": {},
-					"sceneGraphData": {
-						"parent-uid": null,
-						"uid": 245,
-						"flags": {
-							"x": true,
-							"y": true,
-							"z": true,
-							"w": true,
-							"h": false,
-							"a": true,
-							"o": false,
-							"v": false,
-							"d": true,
-							"sm": "normal"
-						},
-						"preview": {
-							"transformX": 0,
-							"transformY": 0,
-							"transformZElevation": 0,
-							"transformW": 2.220446049250313e-16,
-							"transformH": 2.220446049250313e-16,
-							"transformA": 0,
-							"transformSX": 0,
-							"transformSY": 0,
-							"transformO": 0,
-							"previewSceneGraph": false
-						}
-					},
-					"world": {
-						"x": 1032,
-						"y": 460,
-						"width": 340,
-						"height": 101,
-						"originX": 0,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "kilnLevelText",
-					"properties": {
-						"text": "1",
-						"enable-bbcode": true,
-						"font": "Asphalt BlackCondensed",
-						"size": 60,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							0.8392156862745098,
-							0,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center",
-						"read-aloud": false
-					},
-					"uid": 247,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 1401.5,
-						"y": 464,
-						"width": 97,
-						"height": 92,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,

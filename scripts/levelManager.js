@@ -3,12 +3,7 @@ export class LevelManager {
         this.runtime = runtime;
         this.heroWeaponDamage = 6;
         this.kilnHealth = 10;
-        this.kilnLevel = 1;
-
-        this.kilnUpgradeCosts = {
-            2: 40,
-            3: 100,
-        };
+        this.kilnLevel = 3;
 
         this.runOnce = false;
         this.waypointCount = 0;
@@ -347,7 +342,6 @@ export class LevelManager {
         const totalEarthen = this.runtime.objects.totalEarthen.getFirstInstance();
         const totalStoneware = this.runtime.objects.totalStone.getFirstInstance();
         const totalPorcelain = this.runtime.objects.totalPorcelain.getFirstInstance();
-        const kilnLevelText = this.runtime.objects.kilnLevelText.getFirstInstance();
         const totalGemCost = this.runtime.objects.totalGemCost.getFirstInstance();
         const tempCostCheck = this.clayShopTotals.totalGemCostAmount
         let clayCost;
@@ -361,13 +355,6 @@ export class LevelManager {
         } else if (clayType === this.runtime.potManager.clayTypes.PORCELAIN) {
             clayCost = this.runtime.potManager.clayCosts.PORCELAIN;
             if (this.clayShopTotals[clayType] === 0 && change === -1) return;
-        } else if (clayType === "KilnUpgrade") {
-            clayCost = this.kilnUpgradeCosts[this.kilnLevel + 1];
-            if (this.playerGems < clayCost) return;
-            if (this.kilnLevel === 3) return;
-            if (this.kilnLevel === 1 && change === -1) return;
-            kilnLevelText.text = `${this.kilnLevel + 1}`;
-            return;
         }
 
         // Adjust the total amount and cost
