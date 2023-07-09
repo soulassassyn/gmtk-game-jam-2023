@@ -260,6 +260,24 @@
 						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
+							"sid": 592630611095069,
+							"parameters": {
+								"layer": "\"craftingMenu\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 428332854606414,
+							"parameters": {
+								"layer": "\"craftingMenu\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
 							"sid": 151581589188307,
 							"parameters": {
 								"layer": "\"UI\"",
@@ -431,6 +449,29 @@
 				}
 			],
 			"sid": 790601827132884
+		},
+		{
+			"functionName": "toggleCraftingMenuControls",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 372664126332448,
+					"parameters": {
+						"group-name": "\"CraftingMenuController\"",
+						"state": "toggle-active"
+					}
+				}
+			],
+			"sid": 684392276862271
 		},
 		{
 			"eventType": "variable",

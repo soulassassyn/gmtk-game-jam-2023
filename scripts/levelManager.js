@@ -8,6 +8,8 @@ export class LevelManager {
         this.waypointCount = 0;
         this.waypointEL = null;
         this.heroAttackAnimationLength = 0.5;
+        this.startTime = 60;
+        this.resetTime = 60;
 
         this.levelState = {
             heroAttack: false,
@@ -36,6 +38,7 @@ export class LevelManager {
     }
 
     update() {
+        
         if (this.levelState.victory || this.levelState.lose) {
 
         }
@@ -65,6 +68,10 @@ export class LevelManager {
             if (!this.runOnce) {
                 this.runOnce = true;
                 this.playerCraftPots();
+            }
+
+            if (this.timerOn) {
+                this.startTime -= this.runtime.dt;
             }
         }
     }
@@ -315,17 +322,39 @@ export class LevelManager {
         tweenState = textSizeController.behaviors.Tween.startTween("opacity", 0, 1, "linear");
         await tweenState.finished;
         this.runtime.callFunction("toggleControls");
+        this.timerOn = true;
     }
 
-    craftingMenu() {
+    craftingTimer() {
+        const buildTimer = this.runtime.objects.buildTimer.getFirstInstance();
 
+        // Ensure startTime doesn't go below zero
+        this.startTime = Math.max(this.startTime, 0);
+
+        // Calculate minutes and seconds
+        const minutes = Math.floor(this.startTime / 60);
+        const seconds = Math.floor(this.startTime % 60);
+
+        // Format time as MM:SS
+        const timeString = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        // Update buildTimer.text
+        this.runtime.objects.buildTimer.getFirstInstance().text = timeString;
+    }
+
+    craftingMenu(on = true) {
+        if (on) {
+            this.runtime.callFunction("toggleCraftingMenuController");
+            const craftingMenu = this.runtime.layout.getLayer("craftingMenu");
+            craftingMenu.isVisible = true;
+            craftingMenu.isInteractive = true;
+        } else {
+            this.runtime.callFunction("toggleCraftingMenuController");
+            const craftingMenu = this.runtime.layout.getLayer("craftingMenu");
+            craftingMenu.isVisible = false;
+            craftingMenu.isInteractive = false;
+        }
     };
-
-    updateHoverText() {
-        const potInfoText = this.runtime.objects.potInfoText.getFirstInstance();
-
-    }
-
 
     advanceState() {
         

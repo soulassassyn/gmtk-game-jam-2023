@@ -68,8 +68,8 @@ export class PotManager {
         const sizeMultiplier = this.sizeMultipliers[size];
 
         const info = [
-            `HP: ${baseStats.hp}`,
-            `Gems: ${baseStats.gems}`,
+            `HP: ${baseStats.hp * sizeMultiplier}`,
+            `Gems: ${baseStats.gems * sizeMultiplier}`,
             `Heat: ${baseStats.heat}`,
             `Fire Time: ${baseStats.time * sizeMultiplier}`,
         ].join('\n');

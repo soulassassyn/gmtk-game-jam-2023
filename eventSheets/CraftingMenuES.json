@@ -148,6 +148,89 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 110542959021588,
+							"parameters": {
+								"variable": "isItemSelected"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 595600946727355,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-opacity",
+									"objectClass": "navCheckMark",
+									"sid": 565130512064596,
+									"parameters": {
+										"opacity": "100"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "navCheckMark",
+									"sid": 233930168532126,
+									"parameters": {
+										"instance-variable": "isHover",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 549166782508960
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 904935875424978,
+							"parameters": {
+								"variable": "isItemSelected"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 647674182565673,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-opacity",
+									"objectClass": "navCheckMark",
+									"sid": 985427707553367,
+									"parameters": {
+										"opacity": "25"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "navCheckMark",
+									"sid": 771662139431602,
+									"parameters": {
+										"instance-variable": "isHover",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 670929502077904
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "cursor-is-over-object",
 							"objectClass": "Mouse",
 							"sid": 470996517990028,
@@ -194,6 +277,26 @@
 								}
 							],
 							"sid": 574108847554445
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "uiPaperSquare2",
+									"sid": 547609812866002,
+									"parameters": {
+										"object": "pots"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst textInfo = runtime.objects.potInfoText.getFirstInstance();\n\ntextInfo.text = runtime.potManager.potInfo(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);"
+								}
+							],
+							"sid": 372495668735690
 						}
 					]
 				},
