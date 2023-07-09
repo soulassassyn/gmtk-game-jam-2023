@@ -321,6 +321,12 @@ export class LevelManager {
 
     };
 
+    updateHoverText() {
+        const potInfoText = this.runtime.objects.potInfoText.getFirstInstance();
+
+    }
+
+
     advanceState() {
         
     }

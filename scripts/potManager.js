@@ -62,6 +62,20 @@ export class PotManager {
             time: baseStats.time * sizeMultiplier,
         };
     }
+
+    potInfo(potType, clayType, size) {
+        const baseStats = this.basePotStats[potType][clayType];
+        const sizeMultiplier = this.sizeMultipliers[size];
+
+        const info = [
+            `HP: ${baseStats.hp}`,
+            `Gems: ${baseStats.gems}`,
+            `Heat: ${baseStats.heat}`,
+            `Fire Time: ${baseStats.time * sizeMultiplier}`,
+        ].join('\n');
+
+        return info;
+    }
 }
 
 // const myPot = createPot(potTypes.DECORATIVE, clayTypes.EARTHENWARE, sizes.SMALL);

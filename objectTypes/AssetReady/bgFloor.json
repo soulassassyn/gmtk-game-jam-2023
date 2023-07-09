@@ -1,9 +1,17 @@
 {
-	"name": "Assets_0005s_0005_Floor",
+	"name": "bgFloor",
 	"plugin-id": "Sprite",
 	"sid": 446883001698303,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "isMOHover",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 584996220304272
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "bound",

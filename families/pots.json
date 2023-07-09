@@ -16,6 +16,27 @@
 			"desc": "",
 			"show": true,
 			"sid": 266823552361986
+		},
+		{
+			"name": "potType",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 217636546780379
+		},
+		{
+			"name": "clayType",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 391319459943597
+		},
+		{
+			"name": "size",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 809894305531604
 		}
 	],
 	"behaviorTypes": [

@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Assets_0005s_0005_Floor",
+					"type": "bgFloor",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -16,7 +16,9 @@
 						"live-preview": false
 					},
 					"uid": 116,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"isMOHover": false
+					},
 					"behaviors": {
 						"BoundToLayout": {
 							"properties": {
@@ -3225,7 +3227,10 @@
 					"uid": 179,
 					"instanceVariables": {
 						"hp": 3,
-						"gems": 10
+						"gems": 10,
+						"potType": "",
+						"clayType": "",
+						"size": ""
 					},
 					"behaviors": {
 						"Sine": {
@@ -3288,7 +3293,10 @@
 					"uid": 180,
 					"instanceVariables": {
 						"hp": 3,
-						"gems": 10
+						"gems": 10,
+						"potType": "",
+						"clayType": "",
+						"size": ""
 					},
 					"behaviors": {
 						"Sine": {
@@ -3351,7 +3359,10 @@
 					"uid": 181,
 					"instanceVariables": {
 						"hp": 3,
-						"gems": 10
+						"gems": 10,
+						"potType": "",
+						"clayType": "",
+						"size": ""
 					},
 					"behaviors": {
 						"Sine": {

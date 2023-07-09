@@ -157,7 +157,99 @@
 						}
 					],
 					"actions": [],
-					"sid": 530956411024332
+					"sid": 530956411024332,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 909739123976203,
+									"parameters": {
+										"object": "bgFloor",
+										"expression": "bgFloor.isMOHover",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "bgFloor",
+									"sid": 339833853231726,
+									"parameters": {
+										"x": "Mouse.X",
+										"y": "Mouse.Y"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "bgFloor",
+									"sid": 522624869683661,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 574108847554445
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 288381982082946,
+							"parameters": {
+								"object": "uiPaperSquare2"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 657336632332866,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 448817710792888,
+									"parameters": {
+										"object": "bgFloor",
+										"expression": "bgFloor.isMOHover",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "bgFloor",
+									"sid": 526471292623511,
+									"parameters": {
+										"x": "0",
+										"y": "0"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "bgFloor",
+									"sid": 991693638866428,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 162662605762773
+						}
+					]
 				}
 			],
 			"sid": 589544827354029

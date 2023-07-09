@@ -1508,8 +1508,11 @@
 					},
 					"uid": 218,
 					"instanceVariables": {
-						"hp": 3,
-						"gems": 10
+						"hp": 2,
+						"gems": 10,
+						"potType": "Decorative",
+						"clayType": "Earthenware",
+						"size": "Small"
 					},
 					"behaviors": {
 						"Sine": {
@@ -2123,8 +2126,11 @@
 					},
 					"uid": 219,
 					"instanceVariables": {
-						"hp": 3,
-						"gems": 10
+						"hp": 4,
+						"gems": 20,
+						"potType": "Decorative",
+						"clayType": "Earthenware",
+						"size": "Medium"
 					},
 					"behaviors": {
 						"Sine": {
@@ -2215,7 +2221,10 @@
 					"uid": 220,
 					"instanceVariables": {
 						"hp": 3,
-						"gems": 10
+						"gems": 15,
+						"potType": "Decorative",
+						"clayType": "Stoneware",
+						"size": "Small"
 					},
 					"behaviors": {
 						"Sine": {
@@ -2305,8 +2314,11 @@
 					},
 					"uid": 221,
 					"instanceVariables": {
-						"hp": 3,
-						"gems": 10
+						"hp": 6,
+						"gems": 30,
+						"potType": "Decorative",
+						"clayType": "Stoneware",
+						"size": "Medium"
 					},
 					"behaviors": {
 						"Sine": {
@@ -2396,8 +2408,11 @@
 					},
 					"uid": 222,
 					"instanceVariables": {
-						"hp": 3,
-						"gems": 10
+						"hp": 1,
+						"gems": 20,
+						"potType": "Decorative",
+						"clayType": "Porcelain",
+						"size": "Small"
 					},
 					"behaviors": {
 						"Sine": {
@@ -3405,7 +3420,10 @@
 					"uid": 217,
 					"instanceVariables": {
 						"hp": 3,
-						"gems": 10
+						"gems": 5,
+						"potType": "Reinforced",
+						"clayType": "Earthenware",
+						"size": "Small"
 					},
 					"behaviors": {
 						"Sine": {
@@ -3496,7 +3514,10 @@
 					"uid": 224,
 					"instanceVariables": {
 						"hp": 3,
-						"gems": 10
+						"gems": 10,
+						"potType": "Reinforced",
+						"clayType": "Stoneware",
+						"size": "Medium"
 					},
 					"behaviors": {
 						"Sine": {
@@ -3586,8 +3607,11 @@
 					},
 					"uid": 225,
 					"instanceVariables": {
-						"hp": 3,
-						"gems": 10
+						"hp": 5,
+						"gems": 10,
+						"potType": "Reinforced",
+						"clayType": "Stoneware",
+						"size": "Small"
 					},
 					"behaviors": {
 						"Sine": {
@@ -3677,8 +3701,11 @@
 					},
 					"uid": 226,
 					"instanceVariables": {
-						"hp": 3,
-						"gems": 10
+						"hp": 6,
+						"gems": 10,
+						"potType": "Reinforced",
+						"clayType": "Earthenware",
+						"size": "Medium"
 					},
 					"behaviors": {
 						"Sine": {
@@ -3768,8 +3795,11 @@
 					},
 					"uid": 227,
 					"instanceVariables": {
-						"hp": 3,
-						"gems": 10
+						"hp": 1,
+						"gems": 20,
+						"potType": "Magic",
+						"clayType": "Porcelain",
+						"size": "Small"
 					},
 					"behaviors": {
 						"Sine": {
@@ -3859,8 +3889,11 @@
 					},
 					"uid": 228,
 					"instanceVariables": {
-						"hp": 3,
-						"gems": 10
+						"hp": 1,
+						"gems": 30,
+						"potType": "Magic",
+						"clayType": "Porcelain",
+						"size": "Small"
 					},
 					"behaviors": {
 						"Sine": {
@@ -3950,8 +3983,11 @@
 					},
 					"uid": 229,
 					"instanceVariables": {
-						"hp": 3,
-						"gems": 10
+						"hp": 1,
+						"gems": 40,
+						"potType": "Magic",
+						"clayType": "Porcelain",
+						"size": "Small"
 					},
 					"behaviors": {
 						"Sine": {
@@ -4031,16 +4067,18 @@
 					}
 				},
 				{
-					"type": "Assets_0005s_0005_Floor",
+					"type": "bgFloor",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Default",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
 					"uid": 213,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"isMOHover": true
+					},
 					"behaviors": {
 						"BoundToLayout": {
 							"properties": {
@@ -4061,8 +4099,8 @@
 									"w": true,
 									"h": true,
 									"a": true,
-									"o": false,
-									"v": false,
+									"o": true,
+									"v": true,
 									"d": true,
 									"sm": "normal"
 								}
@@ -4096,7 +4134,7 @@
 					"world": {
 						"x": 61,
 						"y": -219,
-						"width": 360.2585623992394,
+						"width": 245.2585623992394,
 						"height": 202.64544134957217,
 						"originX": 0,
 						"originY": 0,
@@ -4146,8 +4184,8 @@
 							"w": true,
 							"h": true,
 							"a": true,
-							"o": false,
-							"v": false,
+							"o": true,
+							"v": true,
 							"d": true,
 							"sm": "normal"
 						},
@@ -4167,7 +4205,7 @@
 					"world": {
 						"x": 72,
 						"y": -208,
-						"width": 336,
+						"width": 225,
 						"height": 180,
 						"originX": 0,
 						"originY": 0,
