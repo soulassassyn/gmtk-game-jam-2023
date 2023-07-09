@@ -326,11 +326,125 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Bell01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 547683210762817,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "DestroyPot01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 173669128740704,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "FootSteps01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 124161345493795,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "GlassShatter01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 365884111831356,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "RockShatter01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 189318521625958,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "RockShatter02.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 415288613209569,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Scream01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 188391685945966,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "StonesFalling01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 545125056670475,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SwordSwish01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 651505765736346,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SwordSwish02.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 822485674063720,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "dark-dramatic-epic-horror-trailer-scary-music-122447.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 855068307041938,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "fun-background-14316.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 589872545276066,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "horror-background-music-ig-version-60s-9468.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 576513749494309,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "simple-piano-melody-9834.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 927671375368571,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
