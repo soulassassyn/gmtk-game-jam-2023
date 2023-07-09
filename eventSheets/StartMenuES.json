@@ -103,6 +103,18 @@
 						"layer": "\"cinematics\"",
 						"visibility": "visible"
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 254974637541974,
+					"parameters": {
+						"audio-file": "dark-dramatic-epic-horror-trailer-scary-music-122447",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"intro\""
+					}
 				}
 			],
 			"sid": 550802948347719,

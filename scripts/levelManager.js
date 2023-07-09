@@ -132,7 +132,9 @@ export class LevelManager {
                 this.craftingTimer();
                 if (this.startTime <= 0) {
                     this.craftingMenu(false);
+                    console.log(this.clayShopTotals);
                     this.resetRound();
+                    console.log(this.clayShopTotals);
                     this.round++;
                     this.levelState.heroAttack = true;
                 }
@@ -190,6 +192,7 @@ export class LevelManager {
 
     heroAttack(object, hero) {
         hero.setAnimation("attack");
+        this.runtime.callFunction("playSfx", 0);
         this.environmentDamage();
         object.behaviors.Sine.isEnabled = true;
         const animationendEL = e => {
@@ -200,6 +203,7 @@ export class LevelManager {
             hero.setAnimation("idle");
             // Broken pot
             if (object.instVars.hp <= 0) {
+                this.runtime.callFunction("playSfx", 2);
                 hero.removeEventListener("animationend", animationendEL);
                 hero.setAnimation("walk");
                 object.setAnimation("broken");
@@ -243,8 +247,9 @@ export class LevelManager {
                     hero.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
                 };
                 hero.behaviors.MoveTo.addEventListener("arrived", this.waypointEL);
+            }
             // Attack again
-            } else if (object.instVars.hp > 0) {
+            if (this.heroWeaponDamage > 0 && object.instVars.hp > 0) {
                 hero.removeEventListener("animationend", animationendEL);
                 this.heroAttack(object, hero);
             }
@@ -386,6 +391,25 @@ export class LevelManager {
         totalGemCost.text = String(this.clayShopTotals.totalGemCostAmount);
     }
 
+    resetClayShop() {
+        const totalEarthen = this.runtime.objects.totalEarthen.getFirstInstance();
+        const totalStoneware = this.runtime.objects.totalStone.getFirstInstance();
+        const totalPorcelain = this.runtime.objects.totalPorcelain.getFirstInstance();
+        const totalGemCost = this.runtime.objects.totalGemCost.getFirstInstance();
+
+        this.clayShopTotals = {
+            [this.runtime.potManager.clayTypes.EARTHENWARE]: 0,
+            [this.runtime.potManager.clayTypes.STONEWARE]: 0,
+            [this.runtime.potManager.clayTypes.PORCELAIN]: 0,
+            totalGemCostAmount: 0,
+        };
+
+        totalEarthen.text = String(this.clayShopTotals[this.runtime.potManager.clayTypes.EARTHENWARE]);
+        totalStoneware.text = String(this.clayShopTotals[this.runtime.potManager.clayTypes.STONEWARE]);
+        totalPorcelain.text = String(this.clayShopTotals[this.runtime.potManager.clayTypes.PORCELAIN]);
+        totalGemCost.text = String(this.clayShopTotals.totalGemCostAmount);
+    }
+
     buyShop() {
         const clayTraderUI = this.runtime.layout.getLayer("clayTraderUI");
         this.runtime.callFunction("toggleClayTraderUIControls");
@@ -397,6 +421,7 @@ export class LevelManager {
         this.playerInventory[this.runtime.potManager.clayTypes.PORCELAIN] += this.clayShopTotals[this.runtime.potManager.clayTypes.PORCELAIN];
         this.playerGems -= this.clayShopTotals.totalGemCostAmount;
 
+        this.resetClayShop();
         this.levelState.playerBuyClay = false;
         this.runOnce = false;
         this.levelState.playerCraftPots = true;
@@ -486,6 +511,12 @@ export class LevelManager {
         newPot.behaviors.Tween.startTween("scale", [1, 1], potInfo.time, "linear");
         const craftTime = newPot.behaviors.Tween.startTween("opacity", 1, potInfo.time, "linear");
         await craftTime.finished;
+        this.tempPot = {
+            clayType: null,
+            potType: null,
+            size: null,
+            name: null,
+        };
         this.runtime.callFunction("toggleControls");
     }
 

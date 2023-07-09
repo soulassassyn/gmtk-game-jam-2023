@@ -304,7 +304,8 @@
 			"FXES",
 			"ClayTraderUIES",
 			"CraftingMenuES",
-			"StartMenuES"
+			"StartMenuES",
+			"AudioFN"
 		],
 		"subfolders": []
 	},

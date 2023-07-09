@@ -107,10 +107,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 173758611974620,
+									"sid": 908866322461012,
 									"parameters": {
 										"variable": "currentSelection",
-										"value": "uiPaperSquare.shopItem"
+										"value": "uiPaperSquare2.shopItem"
 									}
 								}
 							],
@@ -180,7 +180,7 @@
 						},
 						{
 							"type": "script",
-							"script": "runtime.levelManager.adjustInventoryAmount(localVars.tempClayType, -localVars.tempClayAmount);\nruntime.levelManager.potToCreate = null;"
+							"script": "runtime.levelManager.adjustInventoryAmount(localVars.tempClayType, -localVars.tempClayAmount);"
 						}
 					],
 					"sid": 793637874046314,
@@ -264,12 +264,98 @@
 					],
 					"actions": [
 						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 163856732222822,
+							"parameters": {
+								"variable": "isItemSelected",
+								"value": "false"
+							}
+						},
+						{
 							"type": "script",
 							"script": "runtime.levelManager.craftingMenu(false);"
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 960994527755113,
+							"parameters": {
+								"variable": "tempClayAmount",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 731154555063879,
+							"parameters": {
+								"variable": "tempClayType",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 897567225978440,
+							"parameters": {
+								"variable": "tempPotName",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 488857176674196,
+							"parameters": {
+								"variable": "tempSize",
+								"value": "\"\""
+							}
 						}
 					],
 					"sid": 434862894993544,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 296289196023422,
+									"parameters": {
+										"object": "uiPaperSquare2"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "uiPaperSquare2",
+									"sid": 426508062107626,
+									"parameters": {
+										"instance-variable": "isUnlocked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "uiPaperSquare2",
+									"sid": 401571011125901,
+									"parameters": {
+										"scale": "1"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "uiPaperSquare2",
+									"sid": 868590290161382,
+									"parameters": {
+										"instance-variable": "isHover",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 384267520844709
+						},
 						{
 							"eventType": "block",
 							"conditions": [

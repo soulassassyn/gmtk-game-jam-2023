@@ -536,9 +536,44 @@
 						{
 							"type": "script",
 							"script": "runtime.levelManager.buyShop();"
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 208067211873032,
+							"parameters": {
+								"variable": "isItemSelected",
+								"value": "false"
+							}
 						}
 					],
-					"sid": 356558266788543
+					"sid": 356558266788543,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 155347810433524,
+									"parameters": {
+										"object": "uiPaperSquare"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "uiPaperSquare",
+									"sid": 585668225354437,
+									"parameters": {
+										"scale": "1"
+									}
+								}
+							],
+							"sid": 807537442996930
+						}
+					]
 				}
 			],
 			"sid": 590345421002748

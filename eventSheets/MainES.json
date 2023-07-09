@@ -10,6 +10,10 @@
 			"includeSheet": "CraftingMenuES"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "AudioFN"
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "PlayerController",
@@ -329,6 +333,17 @@
 				{
 					"type": "script",
 					"script": "runtime.levelManager.levelState.heroAttack = true;"
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 406160816240266,
+					"parameters": {
+						"tag": "\"intro\"",
+						"db": "-100",
+						"duration": "3",
+						"ending": "stop"
+					}
 				}
 			],
 			"sid": 909057133797008
