@@ -574,12 +574,12 @@
 						"exportQuality": 0.8,
 						"imageSpriteId": 4777087,
 						"useCollisionPoly": true,
-						"duration": 1
+						"duration": 6
 					}
 				],
 				"sid": 805093628005256,
 				"name": "lose",
-				"isLooping": true,
+				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
