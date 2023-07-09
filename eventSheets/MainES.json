@@ -411,7 +411,8 @@
 					"script": "console.log(runtime.globalVars.currentSelection);"
 				}
 			],
-			"sid": 859080109183828
+			"sid": 859080109183828,
+			"disabled": true
 		},
 		{
 			"eventType": "block",

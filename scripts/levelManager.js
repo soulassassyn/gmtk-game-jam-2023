@@ -80,6 +80,10 @@ export class LevelManager {
             size: null,
             name: null,
         };
+
+        const countdown = this.runtime.objects.centerCountdown.getFirstInstance();
+        countdown.opacity = 1;
+
         this.runtime.globalVars.playerCraftPots = false;
         this.runtime.globalVars.currentSelection = "";
         this.runtime.globalVars.isItemSelected = false;
@@ -90,6 +94,8 @@ export class LevelManager {
         this.runtime.layout.getLayer("craftingMenu").isInteractive = false;
         this.runtime.layout.getLayer("clayTraderUI").isVisible = false;
         this.runtime.layout.getLayer("clayTraderUI").isInteractive = false;
+
+
     }
 
     update() {
@@ -129,10 +135,13 @@ export class LevelManager {
                 this.startTime -= this.runtime.dt;
                 this.craftingTimer();
                 if (this.startTime <= 0) {
-                    this.craftingMenu(false);
-                    console.log(this.clayShopTotals);
+                    // this.craftingMenu(false);
+                    const craftingMenu = this.runtime.layout.getLayer("craftingMenu");
+                    craftingMenu.isVisible = false;
+                    craftingMenu.isInteractive = false;
+                    
                     this.resetRound();
-                    console.log(this.clayShopTotals);
+                    
                     this.round++;
                     this.levelState.heroAttack = true;
                 }
@@ -452,6 +461,10 @@ export class LevelManager {
         countdown.text = "POT LEGEND!";
         tweenState = textSizeController.behaviors.Tween.startTween("opacity", 0, 1, "linear");
         await tweenState.finished;
+        textSizeController.width = textWidth;
+        textSizeController.height = textHeight;
+        countdown.sizePt = 500;
+        countdown.text = "3";
         this.runtime.callFunction("toggleControls");
         this.timerOn = true;
     }

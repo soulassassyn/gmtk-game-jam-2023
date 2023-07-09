@@ -5,133 +5,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "cursor-is-over-object",
-					"objectClass": "Mouse",
-					"sid": 436220972724233,
-					"parameters": {
-						"object": "uiPaperSquare"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 734853380947431,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-by-comparison",
-							"objectClass": "System",
-							"sid": 202265776941045,
-							"parameters": {
-								"object": "bgFloor2",
-								"expression": "bgFloor2.isMOHover",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position",
-							"objectClass": "bgFloor2",
-							"sid": 153037924148130,
-							"parameters": {
-								"x": "Mouse.X",
-								"y": "Mouse.Y"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "bgFloor2",
-							"sid": 143951363962907,
-							"parameters": {
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 147723165411715
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "uiPaperSquare",
-							"sid": 880162972576226,
-							"parameters": {
-								"object": "clay"
-							}
-						}
-					],
-					"actions": [
-						{
-							"type": "script",
-							"script": "const clay = runtime.objects.clay.getFirstPickedInstance();\nconst textInfo = runtime.objects.clayInfoText.getFirstInstance();\nconst uiPaper = runtime.objects.uiPaperSquare.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked) {\n\ttextInfo.text = runtime.potManager.clayInfo(clay.objectType.name);\n}"
-						}
-					],
-					"sid": 314410179804689
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "cursor-is-over-object",
-					"objectClass": "Mouse",
-					"sid": 479714082607170,
-					"parameters": {
-						"object": "uiPaperSquare"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [],
-			"sid": 833121179896452,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-by-comparison",
-							"objectClass": "System",
-							"sid": 706841991325177,
-							"parameters": {
-								"object": "bgFloor2",
-								"expression": "bgFloor2.isMOHover",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position",
-							"objectClass": "bgFloor2",
-							"sid": 466512978513227,
-							"parameters": {
-								"x": "0",
-								"y": "0"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "bgFloor2",
-							"sid": 179154539675715,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 764256332167783
-				}
-			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 739129547672772
@@ -180,6 +53,133 @@
 			"description": "",
 			"isActiveOnStart": false,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 424653560498818,
+							"parameters": {
+								"object": "uiPaperSquare"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 892852052303025,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 943761680649854,
+									"parameters": {
+										"object": "bgFloor2",
+										"expression": "bgFloor2.isMOHover",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "bgFloor2",
+									"sid": 475098608752695,
+									"parameters": {
+										"x": "Mouse.X",
+										"y": "Mouse.Y"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "bgFloor2",
+									"sid": 621005329831318,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 211576456606049
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "uiPaperSquare",
+									"sid": 435394835201707,
+									"parameters": {
+										"object": "clay"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "const clay = runtime.objects.clay.getFirstPickedInstance();\nconst textInfo = runtime.objects.clayInfoText.getFirstInstance();\nconst uiPaper = runtime.objects.uiPaperSquare.getFirstPickedInstance();\n\ntextInfo.text = runtime.potManager.clayInfo(clay.objectType.name);\n"
+								}
+							],
+							"sid": 770134906215786
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 597845945225920,
+							"parameters": {
+								"object": "uiPaperSquare"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 415789929920039,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 264813206494402,
+									"parameters": {
+										"object": "bgFloor2",
+										"expression": "bgFloor2.isMOHover",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "bgFloor2",
+									"sid": 499646866705119,
+									"parameters": {
+										"x": "0",
+										"y": "0"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "bgFloor2",
+									"sid": 500394906274267,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 358919088813695
+						}
+					]
+				},
 				{
 					"eventType": "block",
 					"conditions": [
