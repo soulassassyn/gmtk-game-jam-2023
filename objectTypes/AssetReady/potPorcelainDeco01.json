@@ -1,7 +1,7 @@
 {
-	"name": "potStoneware04",
+	"name": "potPorcelainDeco01",
 	"plugin-id": "Sprite",
-	"sid": 766737221689065,
+	"sid": 418718781412712,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 181,
-						"height": 165,
+						"width": 114,
+						"height": 235,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3025713,
+						"imageSpriteId": 2380556,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 618474557892766,
+				"sid": 916619802042437,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

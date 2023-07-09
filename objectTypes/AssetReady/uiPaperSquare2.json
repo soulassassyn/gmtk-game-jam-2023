@@ -1,0 +1,63 @@
+{
+	"name": "uiPaperSquare2",
+	"plugin-id": "Sprite",
+	"sid": 205870141820994,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "shopItem",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 339080436949033
+		},
+		{
+			"name": "isUnlocked",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 367823372912913
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 989382928866811
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 165,
+						"height": 194,
+						"originX": 0.46865671641791046,
+						"originY": 0.2233502538071066,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 163006,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 556544128371295,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 12
+			}
+		],
+		"subfolders": []
+	}
+}

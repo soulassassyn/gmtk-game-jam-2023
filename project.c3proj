@@ -149,18 +149,18 @@
 					"potEarthenwareDebris",
 					"potStonewareDebris",
 					"potPorcelainDebris",
-					"potPorcelain04",
+					"potPorcelainDeco01",
 					"potPorcelain03",
 					"potPorcelain02",
 					"potPorcelain01",
-					"potStoneware04",
-					"potStoneware03",
-					"potStoneware02",
-					"potStoneware01",
-					"potEarthenware04",
-					"potEarthenware03",
-					"potEarthenware02",
-					"potEarthenware01",
+					"potStonewareRe02",
+					"potStonewareDeco02",
+					"potStonewareRe01",
+					"potStonewareDeco01",
+					"potEarthenwareDeco02",
+					"potEarthenwareDeco01",
+					"potEarthenwareRe02",
+					"potEarthenwareRe01",
 					"kiln",
 					"enviroShopItem01",
 					"enviroShopItem04",
@@ -187,7 +187,8 @@
 					"Assets_0005s_0003_TopWall",
 					"Assets_0005s_0004_Wall",
 					"Assets_0005s_0005_Floor",
-					"uiArrow"
+					"uiArrow",
+					"uiPaperSquare2"
 				],
 				"subfolders": [
 					{
@@ -238,7 +239,7 @@
 					"buildTimer",
 					"centerCountdown",
 					"tutText",
-					"potSizeText"
+					"potDescriptionText"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -283,7 +284,8 @@
 		"items": [
 			"MainES",
 			"FXES",
-			"ClayTraderUIES"
+			"ClayTraderUIES",
+			"CraftingMenuES"
 		],
 		"subfolders": []
 	},

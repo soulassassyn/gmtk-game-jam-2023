@@ -2352,7 +2352,7 @@
 					}
 				},
 				{
-					"type": "potEarthenware01",
+					"type": "potEarthenwareRe01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2458,7 +2458,7 @@
 					}
 				},
 				{
-					"type": "potEarthenware02",
+					"type": "potEarthenwareRe02",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2521,7 +2521,7 @@
 					}
 				},
 				{
-					"type": "potEarthenware03",
+					"type": "potEarthenwareDeco01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2584,7 +2584,7 @@
 					}
 				},
 				{
-					"type": "potEarthenware04",
+					"type": "potEarthenwareDeco02",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2647,7 +2647,7 @@
 					}
 				},
 				{
-					"type": "potStoneware01",
+					"type": "potStonewareDeco01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2710,7 +2710,7 @@
 					}
 				},
 				{
-					"type": "potStoneware02",
+					"type": "potStonewareRe01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2773,7 +2773,7 @@
 					}
 				},
 				{
-					"type": "potStoneware03",
+					"type": "potStonewareDeco02",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -2836,7 +2836,7 @@
 					}
 				},
 				{
-					"type": "potStoneware04",
+					"type": "potStonewareRe02",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3088,7 +3088,7 @@
 					}
 				},
 				{
-					"type": "potPorcelain04",
+					"type": "potPorcelainDeco01",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",

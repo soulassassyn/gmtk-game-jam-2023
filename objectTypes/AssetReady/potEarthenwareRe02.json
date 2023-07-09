@@ -1,7 +1,7 @@
 {
-	"name": "potEarthenware01",
+	"name": "potEarthenwareRe02",
 	"plugin-id": "Sprite",
-	"sid": 259509308731945,
+	"sid": 214921687926028,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 176,
-						"height": 201,
+						"width": 107,
+						"height": 212,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8419002,
+						"imageSpriteId": 4558776,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 722061492575265,
+				"sid": 429487024087325,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

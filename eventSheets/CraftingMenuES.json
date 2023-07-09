@@ -1,0 +1,152 @@
+{
+	"name": "CraftingMenuES",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "CraftingMenuController",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 217047884143809,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "uiPaperSquare"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 722575522136248,
+							"parameters": {
+								"variable": "isItemSelected",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 374957045596257,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "uiPaperSquare",
+									"sid": 526683203441704,
+									"parameters": {
+										"scale": "1.2"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "uiPaperSquare",
+									"sid": 698592603835248,
+									"parameters": {
+										"instance-variable": "isHover",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 173758611974620,
+									"parameters": {
+										"variable": "currentSelection",
+										"value": "uiPaperSquare.shopItem"
+									}
+								}
+							],
+							"sid": 343834557509709
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 921148450238506,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 853586850642712,
+							"parameters": {
+								"variable": "isItemSelected",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 793637874046314,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-scale",
+									"objectClass": "uiPaperSquare",
+									"sid": 679024625731899,
+									"parameters": {
+										"scale": "1"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "uiPaperSquare",
+									"sid": 828613219102823,
+									"parameters": {
+										"instance-variable": "isHover",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 494127770333484
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 207093490533420,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "navCheckMark"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "runtime.levelManager.buyShop();"
+						}
+					],
+					"sid": 434862894993544
+				}
+			],
+			"sid": 589544827354029
+		}
+	],
+	"sid": 305048320470544
+}

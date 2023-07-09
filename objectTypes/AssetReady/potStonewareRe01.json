@@ -1,7 +1,7 @@
 {
-	"name": "potStoneware03",
+	"name": "potStonewareRe01",
 	"plugin-id": "Sprite",
-	"sid": 150134771346774,
+	"sid": 837518318621254,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 171,
-						"height": 279,
+						"width": 116,
+						"height": 149,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9192583,
+						"imageSpriteId": 2260077,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 934819228229059,
+				"sid": 630097297394559,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

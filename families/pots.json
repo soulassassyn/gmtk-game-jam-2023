@@ -37,17 +37,17 @@
 		}
 	],
 	"members": [
-		"potEarthenware01",
-		"potEarthenware02",
-		"potEarthenware03",
-		"potEarthenware04",
-		"potStoneware01",
-		"potStoneware02",
-		"potStoneware03",
-		"potStoneware04",
+		"potEarthenwareRe01",
+		"potEarthenwareRe02",
+		"potEarthenwareDeco01",
+		"potEarthenwareDeco02",
+		"potStonewareDeco01",
+		"potStonewareRe01",
+		"potStonewareDeco02",
+		"potStonewareRe02",
 		"potPorcelain01",
 		"potPorcelain02",
 		"potPorcelain03",
-		"potPorcelain04"
+		"potPorcelainDeco01"
 	]
 }
