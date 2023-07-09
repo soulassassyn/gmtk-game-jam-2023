@@ -409,6 +409,86 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "Victory01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 459795068735389,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "GemDrop01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 381318750139459,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Click01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 643789489273937,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "NewSwordUpgrade01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 750721312993657,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PurchaseItem.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 311622300348634,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PlacePotSuccess01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 655179507688854,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "LevelUp01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 167309679341454,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Victory02.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 942369362024328,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "PlacePotSuccess02.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 613429859949484,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "GemPickUp01.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 430214180733688,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
