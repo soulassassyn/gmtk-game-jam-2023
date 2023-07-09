@@ -122,7 +122,8 @@
 			"Browser",
 			"camera",
 			"VSCodePlugin",
-			"textSizeController"
+			"textSizeController",
+			"interactionZone"
 		],
 		"subfolders": [
 			{
@@ -185,7 +186,8 @@
 					"Assets_0005s_0002_SmallRug",
 					"Assets_0005s_0003_TopWall",
 					"Assets_0005s_0004_Wall",
-					"Assets_0005s_0005_Floor"
+					"Assets_0005s_0005_Floor",
+					"uiArrow"
 				],
 				"subfolders": [
 					{
@@ -234,7 +236,8 @@
 					"totalPlayerGems",
 					"totalText",
 					"buildTimer",
-					"centerCountdown"
+					"centerCountdown",
+					"tutText"
 				],
 				"subfolders": [],
 				"name": "Text"

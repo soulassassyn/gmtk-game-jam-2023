@@ -23,6 +23,11 @@
 			"behaviorId": "Tween",
 			"name": "Tween",
 			"sid": 491086104999886
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine2",
+			"sid": 558330051271567
 		}
 	],
 	"effectTypes": [
@@ -34,6 +39,7 @@
 	"members": [
 		"navCheckMark",
 		"navArrow",
-		"uiPaperSquare"
+		"uiPaperSquare",
+		"uiArrow"
 	]
 }

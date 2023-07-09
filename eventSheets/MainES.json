@@ -263,6 +263,15 @@
 							}
 						},
 						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 835916620064571,
+							"parameters": {
+								"layer": "\"UI\"",
+								"interactive": false
+							}
+						},
+						{
 							"id": "set-layer-visible",
 							"objectClass": "System",
 							"sid": 995004394719946,
@@ -316,11 +325,17 @@
 			"actions": [
 				{
 					"type": "script",
-					"script": "runtime.levelManager.levelState.heroAttack = true;"
+					"script": "runtime.levelManager.levelState.heroAttack = true;",
+					"disabled": true
 				},
 				{
 					"callFunction": "camShake",
-					"sid": 728160457083428
+					"sid": 728160457083428,
+					"disabled": true
+				},
+				{
+					"type": "script",
+					"script": "runtime.levelManager.levelState.playerCraftPots = true;\nruntime.levelManager.runOnce = false;"
 				}
 			],
 			"sid": 859080109183828
@@ -364,6 +379,462 @@
 						}
 					],
 					"sid": 904345376869780
+				}
+			]
+		},
+		{
+			"functionName": "toggleControls",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 752906320599880,
+					"parameters": {
+						"group-name": "\"PlayerController\"",
+						"state": "toggle-active"
+					}
+				}
+			],
+			"sid": 255607531903351
+		},
+		{
+			"functionName": "toggleClayTraderUIControls",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 735182656240212,
+					"parameters": {
+						"group-name": "\"ClayTraderUIController\"",
+						"state": "toggle-active"
+					}
+				}
+			],
+			"sid": 790601827132884
+		},
+		{
+			"eventType": "variable",
+			"name": "sweepTut",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 449620147229007
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "playerCharacter",
+					"sid": 897908943468782,
+					"parameters": {
+						"object": "uiArrow"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 942969935217896,
+					"parameters": {
+						"layer": "\"UI\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "uiArrow",
+					"sid": 604926688832965
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 919441104263525,
+					"parameters": {
+						"variable": "sweepTut",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 830876998681044,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-comparison",
+							"objectClass": "System",
+							"sid": 423807950238991,
+							"parameters": {
+								"object": "Assets_0001s_0007_UISmallBoard",
+								"expression": "Assets_0001s_0007_UISmallBoard.tutBar",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-child",
+							"objectClass": "playerCharacter",
+							"sid": 346138795650100,
+							"parameters": {
+								"child": "Assets_0001s_0007_UISmallBoard",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": true,
+								"transform-h": true,
+								"transform-a": true,
+								"transform-o": false,
+								"transform-z-elevation": true,
+								"transform-visibility": false,
+								"destroy-with-parent": true
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Assets_0001s_0007_UISmallBoard",
+							"sid": 635857129890756,
+							"parameters": {
+								"x": "playerCharacter.X",
+								"y": "playerCharacter.Y - 175"
+							}
+						}
+					],
+					"sid": 531644226518210
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "playerCharacter",
+					"sid": 791117186849957,
+					"parameters": {
+						"object": "placementTile"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "placementTile",
+					"sid": 948881187143399,
+					"parameters": {
+						"instance-variable": "isOccupied"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-parameter",
+					"objectClass": "placementTile",
+					"sid": 579239458581478,
+					"parameters": {
+						"effect": "\"AdjustHSL\"",
+						"parameter-index": "2",
+						"value": "110"
+					}
+				}
+			],
+			"sid": 581851037200322,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 755008031241137,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [],
+					"sid": 782946226005007
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "playerCharacter",
+					"sid": 798829782041877,
+					"parameters": {
+						"object": "pots"
+					}
+				},
+				{
+					"id": "is-enabled",
+					"objectClass": "pots",
+					"sid": 836060532195894,
+					"behaviorType": "Solid",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-parameter",
+					"objectClass": "pots",
+					"sid": 664853068187085,
+					"parameters": {
+						"effect": "\"AdjustHSL\"",
+						"parameter-index": "2",
+						"value": "110"
+					}
+				}
+			],
+			"sid": 788314811813017,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 718919308495517,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "playerCharacter",
+							"sid": 882549420449344,
+							"parameters": {
+								"animation": "\"sweep\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 718278635488762,
+							"parameters": {
+								"group-name": "\"PlayerController\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 163960711085313,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 409401057524671,
+									"parameters": {
+										"variable": "sweepTut"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 615204939648815
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 322745816419119,
+									"parameters": {
+										"object": "Assets_0001s_0007_UISmallBoard",
+										"expression": "Assets_0001s_0007_UISmallBoard.tutBar",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "remove-child",
+									"objectClass": "playerCharacter",
+									"sid": 983786926718313,
+									"parameters": {
+										"child": "Assets_0001s_0007_UISmallBoard"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Assets_0001s_0007_UISmallBoard",
+									"sid": 215339292182886
+								}
+							],
+							"sid": 928163899205107
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "playerCharacter",
+					"sid": 824422628219267,
+					"parameters": {
+						"object": "placementTile"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-parameter",
+					"objectClass": "placementTile",
+					"sid": 456587064984541,
+					"parameters": {
+						"effect": "\"AdjustHSL\"",
+						"parameter-index": "2",
+						"value": "100"
+					}
+				}
+			],
+			"sid": 824812505969970
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "playerCharacter",
+					"sid": 559960928527913,
+					"parameters": {
+						"object": "pots"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-parameter",
+					"objectClass": "pots",
+					"sid": 300464307471207,
+					"parameters": {
+						"effect": "\"AdjustHSL\"",
+						"parameter-index": "2",
+						"value": "100"
+					}
+				}
+			],
+			"sid": 587000739422194
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "playerCharacter",
+					"sid": 491748519767012,
+					"parameters": {
+						"animation": "\"sweep\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "playerCharacter",
+					"sid": 230249686080543,
+					"parameters": {
+						"animation": "\"idle\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 800766050176361,
+					"parameters": {
+						"group-name": "\"PlayerController\"",
+						"state": "activated"
+					}
+				}
+			],
+			"sid": 908900219034916,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "playerCharacter",
+							"sid": 367408482557387,
+							"parameters": {
+								"object": "pots"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "pots",
+							"sid": 791969393353267
+						}
+					],
+					"sid": 803080968364843
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "pots",
+							"sid": 381993146174611,
+							"parameters": {
+								"object": "placementTile"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "placementTile",
+							"sid": 720684721253316,
+							"parameters": {
+								"instance-variable": "isOccupied",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "placementTile",
+							"sid": 440939717344294,
+							"parameters": {
+								"instance-variable": "potUid",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 638335036072246
 				}
 			]
 		}

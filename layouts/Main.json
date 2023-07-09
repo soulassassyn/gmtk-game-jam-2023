@@ -77,8 +77,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 918,
-						"y": 619,
+						"x": 927,
+						"y": 618,
 						"width": 923,
 						"height": 338,
 						"originX": 0.5,
@@ -2748,6 +2748,16 @@
 						"potUid": 181
 					},
 					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 1391,
 						"y": 370,
@@ -2782,8 +2792,18 @@
 						"potUid": 0
 					},
 					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
-						"x": 1795,
+						"x": 1800,
 						"y": 463,
 						"width": 159,
 						"height": 146,
@@ -2816,8 +2836,18 @@
 						"potUid": 0
 					},
 					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
-						"x": 1799,
+						"x": 1800,
 						"y": 620,
 						"width": 159,
 						"height": 146,
@@ -2850,9 +2880,19 @@
 						"potUid": 0
 					},
 					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
-						"x": 1510,
-						"y": 950,
+						"x": 1470,
+						"y": 945,
 						"width": 159,
 						"height": 146,
 						"originX": 0.5031446540880503,
@@ -2884,9 +2924,19 @@
 						"potUid": 179
 					},
 					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
-						"x": 1312,
-						"y": 954,
+						"x": 1262,
+						"y": 945,
 						"width": 159,
 						"height": 146,
 						"originX": 0.5031446540880503,
@@ -2918,9 +2968,19 @@
 						"potUid": 0
 					},
 					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
-						"x": 1701,
-						"y": 946,
+						"x": 1681,
+						"y": 945,
 						"width": 159,
 						"height": 146,
 						"originX": 0.5031446540880503,
@@ -2952,8 +3012,18 @@
 						"potUid": 180
 					},
 					"behaviors": {},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
-						"x": 1799,
+						"x": 1800,
 						"y": 777,
 						"width": 159,
 						"height": 146,
@@ -3141,7 +3211,7 @@
 					"type": "potEarthenware04",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "broken",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3165,23 +3235,29 @@
 								"enabled": false,
 								"live-preview": false
 							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
 						}
 					},
 					"effects": {
 						"AdjustHSL": {
-							"isEnabled": false,
+							"isEnabled": true,
 							"parameters": {
-								"hue": 0.5,
-								"saturation": 0.6,
-								"luminosity": 0.8
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
 							}
 						}
 					},
 					"world": {
-						"x": 1313,
-						"y": 1003,
-						"width": 158,
-						"height": 144,
+						"x": 1263,
+						"y": 994,
+						"width": 182,
+						"height": 82,
 						"originX": 0.5,
 						"originY": 1,
 						"color": [
@@ -3198,7 +3274,7 @@
 					"type": "potEarthenware04",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "broken",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3222,23 +3298,29 @@
 								"enabled": false,
 								"live-preview": false
 							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
 						}
 					},
 					"effects": {
 						"AdjustHSL": {
-							"isEnabled": false,
+							"isEnabled": true,
 							"parameters": {
-								"hue": 0.5,
-								"saturation": 0.6,
-								"luminosity": 0.8
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
 							}
 						}
 					},
 					"world": {
-						"x": 1804,
+						"x": 1805,
 						"y": 823,
-						"width": 158,
-						"height": 144,
+						"width": 182,
+						"height": 82,
 						"originX": 0.5,
 						"originY": 1,
 						"color": [
@@ -3279,15 +3361,21 @@
 								"enabled": false,
 								"live-preview": false
 							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
 						}
 					},
 					"effects": {
 						"AdjustHSL": {
-							"isEnabled": false,
+							"isEnabled": true,
 							"parameters": {
-								"hue": 0.5,
-								"saturation": 0.6,
-								"luminosity": 0.8
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
 							}
 						}
 					},
@@ -3448,7 +3536,9 @@
 						"live-preview": false
 					},
 					"uid": 164,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"tutBar": false
+					},
 					"behaviors": {},
 					"world": {
 						"x": 929,
@@ -3494,7 +3584,7 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 927,
+						"x": 930,
 						"y": 127,
 						"width": 304,
 						"height": 133,
@@ -3513,7 +3603,7 @@
 				{
 					"type": "textSizeController",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -3542,7 +3632,7 @@
 									"h": true,
 									"a": true,
 									"o": true,
-									"v": true,
+									"v": false,
 									"d": true,
 									"sm": "normal"
 								}
@@ -3601,8 +3691,8 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							0.8,
-							0.2784313725490196,
+							0.6196078431372549,
+							0.21568627450980393,
 							0,
 							1
 						],
@@ -3619,6 +3709,216 @@
 					"sceneGraphData": {
 						"parent-uid": 183,
 						"uid": 184,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": true,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 960,
+						"y": 540,
+						"width": 1893,
+						"height": 627,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "uiArrow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "down",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 185,
+					"instanceVariables": {
+						"isHover": false,
+						"isOpacity": false,
+						"direction": ""
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 1,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 15,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL2": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
+					"world": {
+						"x": 1265,
+						"y": 900,
+						"width": 123.9065326317738,
+						"height": 98.24017944376351,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Assets_0001s_0007_UISmallBoard",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 186,
+					"instanceVariables": {
+						"tutBar": true
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 186,
+						"children": [
+							{
+								"uid": 187,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": true,
+									"v": true,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 927,
+						"y": -87,
+						"width": 290.3295145156332,
+						"height": 93.389978424275,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "tutText",
+					"properties": {
+						"text": "Press the 'E' key",
+						"enable-bbcode": true,
+						"font": "Asphalt BlackCondensed",
+						"size": 30,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							0.8392156862745098,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 187,
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 186,
+						"uid": 187,
 						"flags": {
 							"x": true,
 							"y": true,
@@ -3645,10 +3945,10 @@
 						}
 					},
 					"world": {
-						"x": 960,
-						"y": 540,
-						"width": 1893,
-						"height": 627,
+						"x": 928,
+						"y": -90,
+						"width": 275,
+						"height": 64,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

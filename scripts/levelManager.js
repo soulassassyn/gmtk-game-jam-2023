@@ -207,17 +207,7 @@ export class LevelManager {
     }
 
     playerBuyClay() {
-        // const clayTrader = this.runtime.objects.clayTrader.getFirstInstance();
-        // const welcomeMat = this.runtime.objects.welcomeMat.getFirstInstance();
-        // const [x, y] = this.runtime.objects.shopCounter.getFirstInstance().getImagePoint(1);
-        // clayTrader.behaviors.MoveTo.moveToPosition(welcomeMat.x, welcomeMat.y, false); 
-        // clayTrader.behaviors.MoveTo.moveToPosition(x, y, false);
-        // clayTrader.behaviors.MoveTo.maxSpeed = 700;
-        // this.waypointEL = e => {
-        //     clayTrader.behaviors.MoveTo.maxSpeed = 0;
-        //     clayTrader.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
-        // }
-        // clayTrader.behaviors.MoveTo.addEventListener("arrived", this.waypointEL);
+        this.runtime.callFunction("toggleClayTraderUIControls");
         const cinematicStandIn = this.runtime.objects.cinematicStandIn.getFirstInstance(); // Replace this with actual cinematic object
         cinematicStandIn.setAnimation("cinematic");
         let clayTraderUI = this.runtime.layout.getLayer("clayTraderUI");
@@ -291,13 +281,40 @@ export class LevelManager {
 
     playerCraftPots() {
         console.log("Crafting pots");
+        const UI = this.runtime.layout.getLayer("UI");
+        UI.isVisible = true;
+        UI.isInteractive = true;
+        this.countdown();
     }
 
-    countdown() {
+    async countdown() {
         const countdown = this.runtime.objects.centerCountdown.getFirstInstance();
         const textSizeController = this.runtime.objects.textSizeController.getFirstInstance();
+        const textWidth = textSizeController.width;
+        const textHeight = textSizeController.height;
+        this.runtime.callFunction("toggleClayTraderUIControls");
+        this.runtime.callFunction("toggleControls");
 
-    
+        countdown.text = "3";
+        let tweenState = textSizeController.behaviors.Tween.startTween("scale", [0.1, 0.1], 1, "linear");
+        await tweenState.finished;
+        textSizeController.width = textWidth;
+        textSizeController.height = textHeight;
+        countdown.text = "2";
+        tweenState = textSizeController.behaviors.Tween.startTween("scale", [0.1, 0.1], 1, "linear");
+        await tweenState.finished;
+        textSizeController.width = textWidth;
+        textSizeController.height = textHeight;
+        countdown.text = "1";
+        tweenState = textSizeController.behaviors.Tween.startTween("scale", [0.1, 0.1], 1, "linear");
+        await tweenState.finished;
+        textSizeController.width = textWidth;
+        textSizeController.height = textHeight;
+        countdown.sizePt = 200;
+        countdown.text = "CRAFT!";
+        tweenState = textSizeController.behaviors.Tween.startTween("opacity", 0, 1, "linear");
+        await tweenState.finished;
+        this.runtime.callFunction("toggleControls");
     }
 
     advanceState() {

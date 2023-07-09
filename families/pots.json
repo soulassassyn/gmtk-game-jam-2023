@@ -23,6 +23,11 @@
 			"behaviorId": "Sin",
 			"name": "Sine",
 			"sid": 932647212171028
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 195247678459031
 		}
 	],
 	"effectTypes": [
@@ -32,9 +37,6 @@
 		}
 	],
 	"members": [
-		"small",
-		"medium",
-		"large",
 		"potEarthenware01",
 		"potEarthenware02",
 		"potEarthenware03",

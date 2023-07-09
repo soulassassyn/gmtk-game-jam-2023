@@ -329,7 +329,9 @@
 						"live-preview": false
 					},
 					"uid": 35,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"tutBar": false
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": null,
@@ -442,6 +444,20 @@
 						"Tween": {
 							"properties": {
 								"enabled": true
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						},
 						"Sine": {
@@ -796,6 +812,20 @@
 							"properties": {
 								"enabled": true
 							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
 						}
 					},
 					"effects": {
@@ -954,6 +984,20 @@
 						"Tween": {
 							"properties": {
 								"enabled": true
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						},
 						"Sine": {
@@ -1154,6 +1198,20 @@
 								"enabled": true
 							}
 						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
 						"Sine": {
 							"properties": {
 								"movement": "angle",
@@ -1350,6 +1408,20 @@
 						"Tween": {
 							"properties": {
 								"enabled": true
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						},
 						"Sine": {
@@ -1793,6 +1865,20 @@
 							"properties": {
 								"enabled": true
 							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
 						}
 					},
 					"effects": {
@@ -1869,6 +1955,20 @@
 						"Tween": {
 							"properties": {
 								"enabled": true
+							}
+						},
+						"Sine2": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
 							}
 						}
 					},
