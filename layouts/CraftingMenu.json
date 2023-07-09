@@ -4218,6 +4218,49 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "buildTimer",
+					"properties": {
+						"text": "1:00",
+						"enable-bbcode": true,
+						"font": "Asphalt BlackCondensed",
+						"size": 90,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							0.8392156862745098,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 242,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1404,
+						"y": 950,
+						"width": 304,
+						"height": 133,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 839421406059101,

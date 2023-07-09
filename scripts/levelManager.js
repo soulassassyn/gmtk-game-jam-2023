@@ -33,6 +33,7 @@ export class LevelManager {
             [this.runtime.potManager.clayTypes.PORCELAIN]: 0,
         };
 
+        this.potToCreate = null;
         this.playerGems = 0;
         this.heroGems = 0;
     }
@@ -222,6 +223,7 @@ export class LevelManager {
     }
 
     playerBuyClay() {
+        console.log("playerBuyClay")
         this.runtime.callFunction("toggleClayTraderUIControls");
         const cinematicStandIn = this.runtime.objects.cinematics.getFirstInstance(); // Replace this with actual cinematic object
         cinematicStandIn.setAnimation("merchantEntrance");
@@ -281,6 +283,7 @@ export class LevelManager {
 
     buyShop() {
         const clayTraderUI = this.runtime.layout.getLayer("clayTraderUI");
+        this.runtime.callFunction("toggleClayTraderUIControls");
         clayTraderUI.isVisible = false;
         clayTraderUI.isInteractive = false;
 
@@ -307,7 +310,7 @@ export class LevelManager {
         const textSizeController = this.runtime.objects.textSizeController.getFirstInstance();
         const textWidth = textSizeController.width;
         const textHeight = textSizeController.height;
-        this.runtime.callFunction("toggleClayTraderUIControls");
+        
         this.runtime.callFunction("toggleControls");
 
         countdown.text = "3";
@@ -341,7 +344,10 @@ export class LevelManager {
 
         const timeString = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 
-        this.runtime.objects.buildTimer.getFirstInstance().text = timeString;
+        const timers = this.runtime.objects.buildTimer.getAllInstances();
+        for (const timer of timers) {
+            timer.text = timeString;
+        }
     }
 
     craftingMenu(on = true) {
@@ -349,6 +355,7 @@ export class LevelManager {
             this.runtime.callFunction("toggleCraftingMenuController");
             this.runtime.callFunction("toggleControls");
             const craftingMenu = this.runtime.layout.getLayer("craftingMenu");
+            this.setInventoryText();
             craftingMenu.isVisible = true;
             craftingMenu.isInteractive = true;
         } else {
@@ -359,6 +366,16 @@ export class LevelManager {
             craftingMenu.isInteractive = false;
         }
     };
+
+    setInventoryText() {
+        const totalEarthen = this.runtime.objects.totalEarthen2.getFirstInstance();
+        const totalStoneware = this.runtime.objects.totalStone2.getFirstInstance();
+        const totalPorcelain = this.runtime.objects.totalPorcelain2.getFirstInstance();
+
+        totalEarthen.text = String(this.playerInventory[this.runtime.potManager.clayTypes.EARTHENWARE]);
+        totalStoneware.text = String(this.playerInventory[this.runtime.potManager.clayTypes.STONEWARE]);
+        totalPorcelain.text = String(this.playerInventory[this.runtime.potManager.clayTypes.PORCELAIN]);
+    }
 
     adjustInventoryAmount(clayType, change) {
         const totalEarthen = this.runtime.objects.totalEarthen2.getFirstInstance();

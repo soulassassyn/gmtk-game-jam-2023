@@ -6,7 +6,7 @@
 			"disabled": false,
 			"title": "CraftingMenuController",
 			"description": "",
-			"isActiveOnStart": true,
+			"isActiveOnStart": false,
 			"children": [
 				{
 					"eventType": "variable",
@@ -14,7 +14,7 @@
 					"type": "string",
 					"initialValue": "",
 					"comment": "",
-					"isStatic": false,
+					"isStatic": true,
 					"isConstant": false,
 					"sid": 847753677516966
 				},
@@ -24,9 +24,19 @@
 					"type": "number",
 					"initialValue": "0",
 					"comment": "",
-					"isStatic": false,
+					"isStatic": true,
 					"isConstant": false,
 					"sid": 137549481953780
+				},
+				{
+					"eventType": "variable",
+					"name": "tempPotName",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": true,
+					"isConstant": false,
+					"sid": 848310432293851
 				},
 				{
 					"eventType": "block",
@@ -111,7 +121,7 @@
 							"actions": [
 								{
 									"type": "script",
-									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst uiPaper = runtime.objects.uiPaperSquare2.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked) {\n\tconst potValues = runtime.potManager.createPot(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\n\tlocalVars.tempClayType = pot.instVars.clayType;\n\tlocalVars.tempClayAmount = potValues.cost;\n\truntime.levelManager.adjustInventoryAmount(pot.instVars.clayType, -potValues.cost);\n}"
+									"script": "const pot = runtime.objects.pots.getFirstPickedInstance();\nconst uiPaper = runtime.objects.uiPaperSquare2.getFirstPickedInstance();\n\nif (uiPaper.instVars.isUnlocked) {\n\tconst potValues = runtime.potManager.createPot(pot.instVars.potType, pot.instVars.clayType, pot.instVars.size);\n\tlocalVars.tempClayType = pot.instVars.clayType;\n\tlocalVars.tempClayAmount = potValues.cost;\n\tlocalVars.tempPotName = pot.objectType.name;\n\truntime.levelManager.potToCreate = pot.objectType.name;\n\truntime.levelManager.adjustInventoryAmount(pot.instVars.clayType, -potValues.cost);\n}"
 								}
 							],
 							"sid": 617784054091819
@@ -138,6 +148,14 @@
 								"object": "navCheckMark"
 							},
 							"isInverted": true
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 551900571189821,
+							"parameters": {
+								"variable": "isItemSelected"
+							}
 						}
 					],
 					"actions": [
@@ -152,7 +170,7 @@
 						},
 						{
 							"type": "script",
-							"script": "runtime.levelManager.adjustInventoryAmount(localVars.tempClayType, localVars.tempClayAmount);"
+							"script": "console.log(localVars.tempClayType);\nconsole.log(localVars.tempClayAmount);\nconsole.log(localVars.tempPotName);\n\nruntime.levelManager.adjustInventoryAmount(localVars.tempClayType, localVars.tempClayAmount);"
 						}
 					],
 					"sid": 793637874046314,
@@ -196,6 +214,26 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 178100117740444,
+							"parameters": {
+								"key": 27
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "script",
+							"script": "runtime.levelManager.craftingMenu(false);"
+						}
+					],
+					"sid": 906377892449566
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "on-object-clicked",
 							"objectClass": "Mouse",
 							"sid": 207093490533420,
@@ -203,6 +241,14 @@
 								"mouse-button": "left",
 								"click-type": "clicked",
 								"object-clicked": "navCheckMark"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 998104857914510,
+							"parameters": {
+								"variable": "isItemSelected"
 							}
 						}
 					],

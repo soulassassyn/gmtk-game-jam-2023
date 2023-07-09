@@ -288,6 +288,15 @@
 								"layer": "\"UI\"",
 								"interactive": false
 							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 466840996600409,
+							"parameters": {
+								"layer": "\"cinematics\"",
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 424281586956841
@@ -369,7 +378,8 @@
 				},
 				{
 					"type": "script",
-					"script": "runtime.levelManager.levelState.playerBuyClay = true;\nruntime.levelManager.playerGems = 30;\nruntime.levelManager.runOnce = false;"
+					"script": "runtime.levelManager.levelState.playerBuyClay = true;\nruntime.levelManager.playerGems = 30;\nruntime.levelManager.runOnce = false;",
+					"disabled": true
 				},
 				{
 					"callFunction": "camShake",
@@ -378,11 +388,31 @@
 				},
 				{
 					"type": "script",
-					"script": "runtime.levelManager.levelState.playerCraftPots = true;\nruntime.levelManager.runOnce = false;",
-					"disabled": true
+					"script": "runtime.levelManager.levelState.playerCraftPots = true;\nruntime.levelManager.playerInventory.Earthenware = 30;\nruntime.levelManager.runOnce = false;"
 				}
 			],
 			"sid": 859080109183828
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 918053535500492,
+					"parameters": {
+						"key": 71
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "console.log(runtime.levelManager.playerInventory);"
+				}
+			],
+			"sid": 439198577296274,
+			"disabled": true
 		},
 		{
 			"functionName": "camShake",
@@ -463,7 +493,7 @@
 				{
 					"id": "set-group-active",
 					"objectClass": "System",
-					"sid": 735182656240212,
+					"sid": 246050869458233,
 					"parameters": {
 						"group-name": "\"ClayTraderUIController\"",
 						"state": "toggle-active"
@@ -473,7 +503,7 @@
 			"sid": 790601827132884
 		},
 		{
-			"functionName": "toggleCraftingMenuControls",
+			"functionName": "toggleCraftingMenuController",
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
@@ -661,7 +691,58 @@
 							"script": "runtime.levelManager.craftingMenu();"
 						}
 					],
-					"sid": 782946226005007
+					"sid": 782946226005007,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 376358315988796,
+									"parameters": {
+										"variable": "sweepTut"
+									}
+								},
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 988817039454889,
+									"parameters": {
+										"object": "Assets_0001s_0007_UISmallBoard",
+										"expression": "Assets_0001s_0007_UISmallBoard.tutBar",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "remove-child",
+									"objectClass": "playerCharacter",
+									"sid": 507267357277363,
+									"parameters": {
+										"child": "Assets_0001s_0007_UISmallBoard"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Assets_0001s_0007_UISmallBoard",
+									"sid": 557823402942925
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 434848811610742,
+									"parameters": {
+										"variable": "sweepTut",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 710508154978996
+						}
+					]
 				}
 			]
 		},
@@ -794,18 +875,11 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 409401057524671,
+									"sid": 168849521250518,
 									"parameters": {
 										"variable": "sweepTut"
 									}
-								}
-							],
-							"actions": [],
-							"sid": 615204939648815
-						},
-						{
-							"eventType": "block",
-							"conditions": [
+								},
 								{
 									"id": "pick-by-comparison",
 									"objectClass": "System",
@@ -831,6 +905,15 @@
 									"id": "destroy",
 									"objectClass": "Assets_0001s_0007_UISmallBoard",
 									"sid": 215339292182886
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 212517568563408,
+									"parameters": {
+										"variable": "sweepTut",
+										"value": "false"
+									}
 								}
 							],
 							"sid": 928163899205107

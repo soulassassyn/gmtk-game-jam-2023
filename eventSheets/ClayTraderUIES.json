@@ -136,7 +136,7 @@
 			"disabled": false,
 			"title": "ClayTraderUIController",
 			"description": "",
-			"isActiveOnStart": true,
+			"isActiveOnStart": false,
 			"children": [
 				{
 					"eventType": "block",

@@ -193,7 +193,7 @@
 						"exportQuality": 0.8,
 						"imageSpriteId": 5572427,
 						"useCollisionPoly": true,
-						"duration": 4
+						"duration": 8
 					}
 				],
 				"sid": 643333093105306,
@@ -202,7 +202,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 2
+				"speed": 4
 			},
 			{
 				"frames": [
