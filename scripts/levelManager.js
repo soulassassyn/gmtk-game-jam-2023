@@ -72,6 +72,7 @@ export class LevelManager {
 
             if (this.timerOn) {
                 this.startTime -= this.runtime.dt;
+                this.craftingTimer();
             }
         }
     }
@@ -260,7 +261,7 @@ export class LevelManager {
         }
         this.clayShopTotals[clayType] += change;
 
-        // Ensure the total doesn't go below zero
+        // Make sure the total doesn't go below zero
         this.clayShopTotals[clayType] = Math.max(this.clayShopTotals[clayType], 0);
         this.clayShopTotals.totalGemCostAmount = Math.max(this.clayShopTotals.totalGemCostAmount, 0);
 
@@ -318,7 +319,7 @@ export class LevelManager {
         textSizeController.width = textWidth;
         textSizeController.height = textHeight;
         countdown.sizePt = 200;
-        countdown.text = "CRAFT!";
+        countdown.text = "POT LEGEND!";
         tweenState = textSizeController.behaviors.Tween.startTween("opacity", 0, 1, "linear");
         await tweenState.finished;
         this.runtime.callFunction("toggleControls");
@@ -326,19 +327,13 @@ export class LevelManager {
     }
 
     craftingTimer() {
-        const buildTimer = this.runtime.objects.buildTimer.getFirstInstance();
-
-        // Ensure startTime doesn't go below zero
         this.startTime = Math.max(this.startTime, 0);
 
-        // Calculate minutes and seconds
         const minutes = Math.floor(this.startTime / 60);
         const seconds = Math.floor(this.startTime % 60);
 
-        // Format time as MM:SS
         const timeString = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 
-        // Update buildTimer.text
         this.runtime.objects.buildTimer.getFirstInstance().text = timeString;
     }
 
