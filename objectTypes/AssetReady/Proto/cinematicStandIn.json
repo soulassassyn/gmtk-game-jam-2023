@@ -1,30 +1,36 @@
 {
-	"name": "Assets_0001s_0008_UILargeBoard",
+	"name": "cinematicStandIn",
 	"plugin-id": "Sprite",
-	"sid": 406128713762907,
+	"sid": 458506832587266,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 849941534266775
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 926,
-						"height": 991,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 1920,
+						"height": 1080,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8414564,
+						"imageSpriteId": 3669914,
 						"useCollisionPoly": true,
-						"duration": 1
+						"duration": 10
 					}
 				],
-				"sid": 757827496034750,
-				"name": "full",
+				"sid": 976172258582184,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -34,32 +40,20 @@
 			{
 				"frames": [
 					{
-						"width": 928,
-						"height": 546,
-						"originX": 0.5,
-						"originY": 0.5265567765567766,
+						"width": 1920,
+						"height": 1080,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2323419,
-						"collisionPoly": {
-							"points": [
-								0.0010775862068965517,
-								0,
-								0.9989224137931034,
-								0,
-								0.9989224137931034,
-								1,
-								0.0010775862068965517,
-								1
-							]
-						},
+						"imageSpriteId": 9283889,
 						"useCollisionPoly": true,
-						"duration": 1
+						"duration": 10
 					}
 				],
-				"sid": 368539388444088,
-				"name": "half",
+				"sid": 654743265540983,
+				"name": "cinematic",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

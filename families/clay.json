@@ -1,0 +1,24 @@
+{
+	"name": "clay",
+	"plugin-id": "Sprite",
+	"sid": 148620484066764,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 212802389528356
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	],
+	"members": [
+		"clayStoneware",
+		"clayEarthenware",
+		"clayPorcelain"
+	]
+}

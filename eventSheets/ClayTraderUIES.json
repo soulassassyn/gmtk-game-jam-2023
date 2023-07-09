@@ -1,0 +1,297 @@
+{
+	"name": "ClayTraderUIES",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 436220972724233,
+					"parameters": {
+						"object": "uiPaperSquare"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 734853380947431,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "uiPaperSquare",
+							"sid": 183723609553548,
+							"parameters": {
+								"instance-variable": "shopItem",
+								"comparison": 0,
+								"value": "\"Earthenware\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 123559212172738
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "uiPaperSquare",
+							"sid": 888351532924625,
+							"parameters": {
+								"instance-variable": "shopItem",
+								"comparison": 0,
+								"value": "\"Stoneware\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 659677101783554
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "uiPaperSquare",
+							"sid": 936664501516859,
+							"parameters": {
+								"instance-variable": "shopItem",
+								"comparison": 0,
+								"value": "\"Porcelain\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 104397163695526
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "uiPaperSquare",
+							"sid": 953500306999634,
+							"parameters": {
+								"instance-variable": "shopItem",
+								"comparison": 0,
+								"value": "\"KilnUpgrade\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 686858530379623
+				}
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "isItemSelected",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 401437540148067
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 527149012263932,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "uiPaperSquare"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 252028746971671,
+					"parameters": {
+						"variable": "isItemSelected",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 516723005619236,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-scale",
+							"objectClass": "uiPaperSquare",
+							"sid": 143616048996588,
+							"parameters": {
+								"scale": "1.2"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "uiPaperSquare",
+							"sid": 834906337537484,
+							"parameters": {
+								"instance-variable": "isHover",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 347300441193999
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 499056115258232,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 112972685034589,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-scale",
+							"objectClass": "uiPaperSquare",
+							"sid": 387941245949010,
+							"parameters": {
+								"scale": "1"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "uiPaperSquare",
+							"sid": 187117832134568,
+							"parameters": {
+								"instance-variable": "isHover",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 231341964376289
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 202380081872907,
+					"parameters": {
+						"variable": "isItemSelected"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 708663825244856,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 225552343982472,
+							"parameters": {
+								"object": "navArrow"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "navArrow",
+							"sid": 237801719315780,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "navArrow",
+							"sid": 602986187558084,
+							"parameters": {
+								"instance-variable": "isHover",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 229681649856347
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 395328295681522,
+					"parameters": {
+						"variable": "isItemSelected"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 505823493038254,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 162397916225536,
+							"parameters": {
+								"object": "navArrow"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "navArrow",
+							"sid": 359819791924496,
+							"parameters": {
+								"opacity": "25"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "navArrow",
+							"sid": 943161358591628,
+							"parameters": {
+								"instance-variable": "isHover",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 723662792004668
+				}
+			]
+		}
+	],
+	"sid": 934511148761981
+}

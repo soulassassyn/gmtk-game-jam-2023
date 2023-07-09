@@ -1,29 +1,34 @@
 {
-	"name": "Assets_0001s_0006_UIItemDisplay",
+	"name": "grandpa_old",
 	"plugin-id": "Sprite",
-	"sid": 267623198586248,
+	"sid": 570477514976461,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL"
+		}
+	],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 335,
-						"height": 394,
-						"originX": 0.5164179104477612,
-						"originY": 0.5609137055837563,
+						"width": 150,
+						"height": 186,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 786916,
+						"imageSpriteId": 8281517,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 334853491451647,
+				"sid": 160465650809858,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

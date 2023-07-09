@@ -1,29 +1,35 @@
 {
-	"name": "Assets_0001s_0001_UIPorcClay",
+	"name": "uiPaperLong",
 	"plugin-id": "Sprite",
-	"sid": 142897235130360,
+	"sid": 266033129169563,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 778920728735630
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 198,
-						"height": 174,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 876,
+						"height": 341,
+						"originX": 0.5079908675799086,
+						"originY": 0.1935483870967742,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8879331,
+						"imageSpriteId": 2716511,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 793062609540396,
+				"sid": 405726907124570,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

@@ -292,7 +292,7 @@
 							]
 						},
 						"useCollisionPoly": true,
-						"duration": 1
+						"duration": 10
 					}
 				],
 				"sid": 196621384931152,

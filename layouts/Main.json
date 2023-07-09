@@ -1369,7 +1369,7 @@
 					}
 				},
 				{
-					"type": "Assets_0002s_0002_CharGrandpaMcgowan",
+					"type": "grandpa",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "idle",
@@ -1379,7 +1379,22 @@
 					},
 					"uid": 157,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "height",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0.25,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 4,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 204,
 						"y": 255,
@@ -1418,7 +1433,7 @@
 					},
 					"world": {
 						"x": 235,
-						"y": 279,
+						"y": 299,
 						"width": 400,
 						"height": 261,
 						"originX": 0.5,
@@ -2571,6 +2586,20 @@
 					"uid": 161,
 					"instanceVariables": {},
 					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "height",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0.25,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 4,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
 						"MoveTo": {
 							"properties": {
 								"max-speed": 700,
@@ -3004,6 +3033,20 @@
 					"uid": 37,
 					"instanceVariables": {},
 					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "height",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0.25,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 4,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
 						"8Direction": {
 							"properties": {
 								"max-speed": 700,
@@ -3051,6 +3094,20 @@
 					"uid": 158,
 					"instanceVariables": {},
 					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "height",
+								"wave": "sine",
+								"period": 2,
+								"period-random": 0.25,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 4,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
 						"MoveTo": {
 							"properties": {
 								"max-speed": 700,
@@ -3274,6 +3331,39 @@
 			"subLayers": [],
 			"instances": [],
 			"sid": 859737263092312,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "cinematics",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 600977041613156,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,

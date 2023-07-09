@@ -376,7 +376,7 @@
 					}
 				},
 				{
-					"type": "grandpa",
+					"type": "grandpa_old",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3342,6 +3342,20 @@
 					"uid": 102,
 					"instanceVariables": {},
 					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
 						"8Direction": {
 							"properties": {
 								"max-speed": 200,
@@ -3378,7 +3392,7 @@
 					}
 				},
 				{
-					"type": "Assets_0002s_0002_CharGrandpaMcgowan",
+					"type": "grandpa",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "idle",
@@ -3388,7 +3402,22 @@
 					},
 					"uid": 103,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 2721,
 						"y": 998,
@@ -3418,6 +3447,20 @@
 					"uid": 104,
 					"instanceVariables": {},
 					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
 						"MoveTo": {
 							"properties": {
 								"max-speed": 200,
@@ -3459,6 +3502,20 @@
 					"uid": 105,
 					"instanceVariables": {},
 					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
 						"MoveTo": {
 							"properties": {
 								"max-speed": 200,
@@ -3521,7 +3578,7 @@
 					"type": "Assets_0001s_0008_UILargeBoard",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "half",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -3532,10 +3589,10 @@
 					"world": {
 						"x": 12556,
 						"y": 2794,
-						"width": 926,
-						"height": 991,
+						"width": 928,
+						"height": 546,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.5265567765567766,
 						"color": [
 							1,
 							1,
@@ -3576,7 +3633,7 @@
 					}
 				},
 				{
-					"type": "Assets_0001s_0006_UIItemDisplay",
+					"type": "uiPaperSquare",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3585,15 +3642,49 @@
 						"live-preview": false
 					},
 					"uid": 109,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"isHover": false,
+						"isOpacity": false,
+						"shopItem": ""
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 13397,
 						"y": 2525,
 						"width": 335,
 						"height": 394,
-						"originX": 0.5164179104477612,
-						"originY": 0.5609137055837563,
+						"originX": 0.46865671641791046,
+						"originY": 0.2233502538071066,
 						"color": [
 							1,
 							1,
@@ -3605,7 +3696,7 @@
 					}
 				},
 				{
-					"type": "Assets_0001s_0005_UIItemDisplayLarge",
+					"type": "uiPaperLong",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3615,14 +3706,29 @@
 					},
 					"uid": 110,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 14205,
 						"y": 2432,
 						"width": 876,
 						"height": 341,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5079908675799086,
+						"originY": 0.1935483870967742,
 						"color": [
 							1,
 							1,
@@ -3634,17 +3740,27 @@
 					}
 				},
 				{
-					"type": "Assets_0001s_0004_UIArrow",
+					"type": "navArrow",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Default",
+						"initial-animation": "right",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
 					"uid": 111,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"isHover": false,
+						"isOpacity": false,
+						"direction": ""
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 13342,
 						"y": 2888,
@@ -3663,7 +3779,7 @@
 					}
 				},
 				{
-					"type": "Assets_0001s_0003_UICheck",
+					"type": "navCheckMark",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3672,8 +3788,17 @@
 						"live-preview": false
 					},
 					"uid": 112,
-					"instanceVariables": {},
-					"behaviors": {},
+					"instanceVariables": {
+						"isHover": false,
+						"isOpacity": false
+					},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 13517,
 						"y": 2868,
@@ -3692,7 +3817,7 @@
 					}
 				},
 				{
-					"type": "Assets_0001s_0002_UIStone",
+					"type": "clayStoneware",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3702,7 +3827,32 @@
 					},
 					"uid": 113,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 14250,
 						"y": 2788,
@@ -3721,7 +3871,7 @@
 					}
 				},
 				{
-					"type": "Assets_0001s_0001_UIPorcClay",
+					"type": "clayPorcelain",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3731,7 +3881,32 @@
 					},
 					"uid": 114,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 14486,
 						"y": 2788,
@@ -3750,7 +3925,7 @@
 					}
 				},
 				{
-					"type": "Assets_0001s_0000_UIEarthClay",
+					"type": "clayEarthenware",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -3760,7 +3935,32 @@
 					},
 					"uid": 115,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "horizontal",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 50,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 13955,
 						"y": 2815,
@@ -3768,6 +3968,41 @@
 						"height": 178,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "cinematicStandIn",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 171,
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 15162,
+						"y": 7128,
+						"width": 1920,
+						"height": 1080,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

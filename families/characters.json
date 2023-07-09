@@ -1,0 +1,20 @@
+{
+	"name": "characters",
+	"plugin-id": "Sprite",
+	"sid": 544137429940472,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 714649699357989
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"grandpa",
+		"heroCharacter",
+		"playerCharacter",
+		"clayTrader"
+	]
+}

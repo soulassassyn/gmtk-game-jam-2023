@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0001s_0005_UIItemDisplayLarge",
+	"name": "clayStoneware",
 	"plugin-id": "Sprite",
-	"sid": 266033129169563,
+	"sid": 209445018689874,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 876,
-						"height": 341,
+						"width": 162,
+						"height": 229,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2716511,
+						"imageSpriteId": 916261,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 405726907124570,
+				"sid": 248416635249891,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

@@ -1,7 +1,7 @@
 {
-	"name": "Assets_0001s_0004_UIArrow",
+	"name": "navCheckMark",
 	"plugin-id": "Sprite",
-	"sid": 223978248762195,
+	"sid": 203578890497754,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 111,
-						"height": 140,
+						"width": 110,
+						"height": 130,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7405791,
+						"imageSpriteId": 2461579,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 393011960976932,
+				"sid": 601193847764096,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

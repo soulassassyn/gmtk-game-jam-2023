@@ -33,6 +33,15 @@
 							"parameters": {
 								"control": "up"
 							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "playerCharacter",
+							"sid": 818545556449062,
+							"parameters": {
+								"animation": "\"walk\"",
+								"from": "beginning"
+							}
 						}
 					],
 					"sid": 227872794327212
@@ -57,6 +66,15 @@
 							"behaviorType": "8Direction",
 							"parameters": {
 								"control": "down"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "playerCharacter",
+							"sid": 682335434100937,
+							"parameters": {
+								"animation": "\"walk\"",
+								"from": "beginning"
 							}
 						}
 					],
@@ -83,6 +101,15 @@
 							"parameters": {
 								"control": "left"
 							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "playerCharacter",
+							"sid": 147655325865234,
+							"parameters": {
+								"animation": "\"walk\"",
+								"from": "beginning"
+							}
 						}
 					],
 					"sid": 237945387024186
@@ -108,9 +135,82 @@
 							"parameters": {
 								"control": "right"
 							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "playerCharacter",
+							"sid": 537436431683160,
+							"parameters": {
+								"animation": "\"walk\"",
+								"from": "beginning"
+							}
 						}
 					],
 					"sid": 801405877109425
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 831139425521214,
+							"disabled": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 813054697994482,
+							"parameters": {
+								"key": 87
+							},
+							"isInverted": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 826836202191431,
+							"parameters": {
+								"key": 83
+							},
+							"isInverted": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 199782564860816,
+							"parameters": {
+								"key": 65
+							},
+							"isInverted": true
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 545775267226178,
+							"parameters": {
+								"key": 68
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "playerCharacter",
+							"sid": 587366950249191,
+							"disabled": true,
+							"parameters": {
+								"animation": "\"idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"type": "script",
+							"script": "if (!runtime.levelManager.levelState.heroAttack) {\n\tconst player = runtime.objects.playerCharacter.getFirstInstance();\n\tplayer.setAnimation(\"idle\");\n}"
+						}
+					],
+					"sid": 753027179298598
 				}
 			],
 			"sid": 166320559319883
@@ -143,10 +243,28 @@
 						{
 							"id": "set-layer-interactive",
 							"objectClass": "System",
-							"sid": 910581026800883,
+							"sid": 770021333938583,
 							"parameters": {
 								"layer": "\"clayTraderUI\"",
 								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 151581589188307,
+							"parameters": {
+								"layer": "\"UI\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 995004394719946,
+							"parameters": {
+								"layer": "\"cinematics\"",
+								"visibility": "invisible"
 							}
 						}
 					],

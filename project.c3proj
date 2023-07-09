@@ -126,19 +126,19 @@
 		"subfolders": [
 			{
 				"items": [
-					"Assets_0001s_0000_UIEarthClay",
-					"Assets_0001s_0001_UIPorcClay",
-					"Assets_0001s_0002_UIStone",
-					"Assets_0001s_0003_UICheck",
-					"Assets_0001s_0004_UIArrow",
-					"Assets_0001s_0005_UIItemDisplayLarge",
-					"Assets_0001s_0006_UIItemDisplay",
+					"clayEarthenware",
+					"clayPorcelain",
+					"clayStoneware",
+					"navCheckMark",
+					"navArrow",
+					"uiPaperLong",
+					"uiPaperSquare",
 					"Assets_0001s_0007_UISmallBoard",
 					"Assets_0001s_0008_UILargeBoard",
 					"Assets_0001s_0009_FadeBlack",
 					"heroCharacter",
 					"clayTrader",
-					"Assets_0002s_0002_CharGrandpaMcgowan",
+					"grandpa",
 					"playerCharacter",
 					"placementTile_new",
 					"Assets_0003s_0000s_0000_MagicMark",
@@ -197,7 +197,7 @@
 							"Proto01_0002s_0002_ui",
 							"Proto01_0002s_0003_ui",
 							"heroCharacter_old",
-							"grandpa",
+							"grandpa_old",
 							"playerCharacter_old",
 							"clayTrader_old",
 							"placementTile",
@@ -207,7 +207,8 @@
 							"kiln_old",
 							"welcomeMat_old",
 							"Proto01_0004s_0008_prop",
-							"shopCounter_old"
+							"shopCounter_old",
+							"cinematicStandIn"
 						],
 						"subfolders": [],
 						"name": "Proto"
@@ -224,7 +225,11 @@
 			},
 			{
 				"items": [
-					"AssetTitles"
+					"AssetTitles",
+					"totalEarthen",
+					"totalStone",
+					"totalPorcelain",
+					"totalGems"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -247,7 +252,10 @@
 			"FX_Family",
 			"pots",
 			"furniture",
-			"FX_Interactive_Environment"
+			"FX_Interactive_Environment",
+			"characters",
+			"nav",
+			"clay"
 		],
 		"subfolders": []
 	},
@@ -256,14 +264,16 @@
 			"Main",
 			"Assets",
 			"ArtPlayground",
-			"ClayTraderUI"
+			"ClayTraderUI",
+			"Cinematics"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"MainES",
-			"FXES"
+			"FXES",
+			"ClayTraderUIES"
 		],
 		"subfolders": []
 	},
@@ -298,6 +308,14 @@
 					"name": "levelManager.js",
 					"type": "text/javascript",
 					"sid": 459331467685755,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mouseHover.js",
+					"type": "text/javascript",
+					"sid": 553644458558282,
 					"script-info": {
 						"purpose": "none"
 					}

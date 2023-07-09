@@ -60,6 +60,7 @@ export class LevelManager {
         const welcomeMat = this.runtime.objects.welcomeMat.getFirstInstance();
         const placementTiles = this.runtime.objects.placementTile.getAllInstances();
         const kiln = this.runtime.objects.kiln.getFirstInstance();
+        hero.setAnimation("walk");
 
         // Sort placement tiles by attack order
         placementTiles.sort((a, b) => a.instVars.attackOrder - b.instVars.attackOrder);
@@ -110,6 +111,7 @@ export class LevelManager {
             // Broken pot
             if (object.instVars.hp <= 0) {
                 hero.removeEventListener("animationend", animationendEL);
+                hero.setAnimation("walk");
                 object.setAnimation("broken");
                 this.heroGems += object.instVars.gems;
                 hero.behaviors.MoveTo.maxSpeed = 700;
@@ -118,7 +120,7 @@ export class LevelManager {
             if (this.heroWeaponDamage === 0) {
                 hero.removeEventListener("animationend", animationendEL);
                 hero.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
-                hero.setAnimation("idle");
+                hero.setAnimation("walk");
                 this.levelState.heroAttack = false;
                 object.behaviors.Sine.isEnabled = false;
                 this.waypointCount = 0;
@@ -141,15 +143,21 @@ export class LevelManager {
     }
 
     environmentDamage(on = true) {
+        const grandpa = this.runtime.objects.grandpa.getFirstInstance();
+        const playerCharacter = this.runtime.objects.playerCharacter.getFirstInstance();
         const enviroObjects = this.runtime.objects.FX_Interactive_Environment.getAllInstances();
         if (on) {
             this.runtime.callFunction("camShake");
+            grandpa.setAnimation("scared");
+            playerCharacter.setAnimation("scared");
             for (const object of enviroObjects) {
                 object.behaviors.Sine.isEnabled = true;
                 object.behaviors.Sine2.isEnabled = true;
                 object.behaviors.Sine3.isEnabled = true;
             }
         } else {
+            grandpa.setAnimation("idle");
+            playerCharacter.setAnimation("idle");
             for (const object of enviroObjects) {
                 object.behaviors.Sine.isEnabled = false;
                 object.behaviors.Sine2.isEnabled = false;
@@ -162,34 +170,52 @@ export class LevelManager {
         const hero = this.runtime.objects.heroCharacter.getFirstInstance();
         hero.setAnimation("buySword");
         const animationendEL = e => {
-            hero.setAnimation("idle");
+            hero.setAnimation("walk");
             this.levelState.heroBuyWeapon = false;
             this.heroWeaponDamage = Math.floor(this.heroGems / 2);
             this.playerGems = this.heroGems;
             this.heroGems = 0;
-            this.levelState.playerBuyClay = true;
-
+            
             // Hero leaves the shop
             const welcomeMat = this.runtime.objects.welcomeMat.getFirstInstance();
             hero.behaviors.MoveTo.moveToPosition(welcomeMat.x, welcomeMat.y, false); 
             hero.behaviors.MoveTo.moveToPosition(905, 1351, false);
             hero.removeEventListener("animationend", animationendEL);
+            
+            this.waypointEL = e => {
+                this.runOnce = false;
+                this.levelState.playerBuyClay = true;
+                hero.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
+            }
+            hero.behaviors.MoveTo.addEventListener("arrived", this.waypointEL);
         };
         hero.addEventListener("animationend", animationendEL);
     }
 
     playerBuyClay() {
-        const clayTrader = this.runtime.objects.clayTrader.getFirstInstance();
-        const welcomeMat = this.runtime.objects.welcomeMat.getFirstInstance();
-        const [x, y] = this.runtime.objects.shopCounter.getFirstInstance().getImagePoint(1);
-        clayTrader.behaviors.MoveTo.moveToPosition(welcomeMat.x, welcomeMat.y, false); 
-        clayTrader.behaviors.MoveTo.moveToPosition(x, y, false);
-        clayTrader.behaviors.MoveTo.maxSpeed = 700;
-        this.waypointEL = e => {
-            clayTrader.behaviors.MoveTo.maxSpeed = 0;
-            clayTrader.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
-        }
-        clayTrader.behaviors.MoveTo.addEventListener("arrived", this.waypointEL);
+        // const clayTrader = this.runtime.objects.clayTrader.getFirstInstance();
+        // const welcomeMat = this.runtime.objects.welcomeMat.getFirstInstance();
+        // const [x, y] = this.runtime.objects.shopCounter.getFirstInstance().getImagePoint(1);
+        // clayTrader.behaviors.MoveTo.moveToPosition(welcomeMat.x, welcomeMat.y, false); 
+        // clayTrader.behaviors.MoveTo.moveToPosition(x, y, false);
+        // clayTrader.behaviors.MoveTo.maxSpeed = 700;
+        // this.waypointEL = e => {
+        //     clayTrader.behaviors.MoveTo.maxSpeed = 0;
+        //     clayTrader.behaviors.MoveTo.removeEventListener("arrived", this.waypointEL);
+        // }
+        // clayTrader.behaviors.MoveTo.addEventListener("arrived", this.waypointEL);
+        const cinematicStandIn = this.runtime.objects.cinematicStandIn.getFirstInstance(); // Replace this with actual cinematic object
+        cinematicStandIn.setAnimation("cinematic");
+        let clayTraderUI = this.runtime.layout.getLayer("clayTraderUI");
+        let cinematic = this.runtime.layout.getLayer("cinematics");
+        cinematic.isVisible = true;
+        const animationendEL = e => {
+            cinematic.isVisible = false;
+            clayTraderUI.isVisible = true;
+            clayTraderUI.isInteractive = true;
+            cinematicStandIn.removeEventListener("animationend", animationendEL);
+        };
+        cinematicStandIn.addEventListener("animationend", animationendEL);
     }
 
     playerCraftPots() {

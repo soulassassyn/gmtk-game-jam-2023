@@ -3,6 +3,7 @@
 
 import { PotManager } from "./potManager.js";
 import { LevelManager } from "./levelManager.js";
+import { MouseHover } from "./mouseHover.js";
 
 runOnStartup(async runtime =>
 {
@@ -23,6 +24,9 @@ async function OnBeforeProjectStart(runtime)
 	// Code to run just before 'On start of layout' on
 	// the first layout. Loading has finished and initial
 	// instances are created and available to use here.
+
+	const mhNav = new MouseHover(runtime, "nav", 1.1, 1);
+	runtime.mhNav = mhNav;
 
 	runtime.addEventListener("tick", () => Tick(runtime));
 }
