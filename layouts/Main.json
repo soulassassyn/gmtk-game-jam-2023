@@ -17,7 +17,13 @@
 					},
 					"uid": 116,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						}
+					},
 					"world": {
 						"x": 0,
 						"y": 0,

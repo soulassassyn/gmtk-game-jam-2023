@@ -239,7 +239,8 @@
 					"buildTimer",
 					"centerCountdown",
 					"tutText",
-					"potDescriptionText"
+					"potDescriptionText",
+					"potInfoText"
 				],
 				"subfolders": [],
 				"name": "Text"
