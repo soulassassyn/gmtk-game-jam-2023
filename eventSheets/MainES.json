@@ -52,7 +52,34 @@
 							}
 						}
 					],
-					"sid": 227872794327212
+					"sid": 227872794327212,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-children",
+									"objectClass": "playerCharacter",
+									"sid": 569190078315559,
+									"parameters": {
+										"child": "FX_ALL",
+										"which": "own"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "FX_ALL",
+									"sid": 262177952626732,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 393971535487293
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -86,7 +113,34 @@
 							}
 						}
 					],
-					"sid": 914075540827130
+					"sid": 914075540827130,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-children",
+									"objectClass": "playerCharacter",
+									"sid": 821609049223893,
+									"parameters": {
+										"child": "FX_ALL",
+										"which": "own"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "FX_ALL",
+									"sid": 150988573954485,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 321102969011223
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -120,7 +174,34 @@
 							}
 						}
 					],
-					"sid": 237945387024186
+					"sid": 237945387024186,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-children",
+									"objectClass": "playerCharacter",
+									"sid": 870446746886743,
+									"parameters": {
+										"child": "FX_ALL",
+										"which": "own"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "FX_ALL",
+									"sid": 380460093239127,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 616315098004693
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -154,7 +235,34 @@
 							}
 						}
 					],
-					"sid": 801405877109425
+					"sid": 801405877109425,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-children",
+									"objectClass": "playerCharacter",
+									"sid": 422002518735535,
+									"parameters": {
+										"child": "FX_ALL",
+										"which": "own"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "FX_ALL",
+									"sid": 220013312729051,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 417725034199382
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -218,7 +326,34 @@
 							"script": "if (!runtime.levelManager.levelState.heroAttack) {\n\tconst player = runtime.objects.playerCharacter.getFirstInstance();\n\tplayer.setAnimation(\"idle\");\n}"
 						}
 					],
-					"sid": 753027179298598
+					"sid": 753027179298598,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-children",
+									"objectClass": "playerCharacter",
+									"sid": 154358892840186,
+									"parameters": {
+										"child": "FX_ALL",
+										"which": "own"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "FX_ALL",
+									"sid": 915307274520658,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 539480110369441
+						}
+					]
 				}
 			],
 			"sid": 166320559319883

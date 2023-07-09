@@ -211,6 +211,18 @@
 								"variable": "isItemSelected",
 								"value": "true"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 221771467604216,
+							"parameters": {
+								"audio-file": "PurchaseItem",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 327007438567748,

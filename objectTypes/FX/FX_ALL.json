@@ -358,7 +358,7 @@
 				],
 				"sid": 369565729523302,
 				"name": "Smoke",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,

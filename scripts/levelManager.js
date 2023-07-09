@@ -99,9 +99,20 @@ export class LevelManager {
     }
 
     update() {
-        
-        if (this.levelState.victory || this.levelState.lose) {
+        if (this.kilnHealth <= 0) {
+            this.levelState.lose = true;
+            let cinematic = this.runtime.layout.getLayer("cinematics");
+            cinematic.isVisible = true;
+            const loseCinematic = this.runtime.objects.cinematics.getFirstInstance();
+            loseCinematic.setAnimation("lose");
+        }
 
+        if (this.round === 5) {
+            this.levelState.victory = true;
+            let cinematic = this.runtime.layout.getLayer("cinematics");
+            cinematic.isVisible = true;
+            const victoryCinematic = this.runtime.objects.cinematics.getFirstInstance();
+            victoryCinematic.setAnimation("victory");
         }
 
         if (this.levelState.heroAttack) {
@@ -513,6 +524,7 @@ export class LevelManager {
         newPot.behaviors.Tween.startTween("scale", [1, 1], potInfo.time, "linear");
         const craftTime = newPot.behaviors.Tween.startTween("opacity", 1, potInfo.time, "linear");
         await craftTime.finished;
+        this.runtime.callFunction("playSfx", 3);
         this.tempPot = {
             clayType: null,
             potType: null,

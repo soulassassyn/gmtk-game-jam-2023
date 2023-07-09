@@ -111,6 +111,36 @@
 						}
 					],
 					"sid": 757302287999720
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 384396532837652,
+							"parameters": {
+								"variable": "sfx",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 813220617664854,
+							"parameters": {
+								"audio-file": "PlacePotSuccess01",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 245069760791832
 				}
 			]
 		}
