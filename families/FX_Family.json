@@ -6,6 +6,7 @@
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
-		"FX_Misc"
+		"FX_Misc",
+		"FX_ALL"
 	]
 }

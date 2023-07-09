@@ -123,7 +123,12 @@
 			"camera",
 			"VSCodePlugin",
 			"textSizeController",
-			"interactionZone"
+			"interactionZone",
+			"Transition",
+			"FX01_0004_UIStonecopy",
+			"Title_0002_BG",
+			"Title_0001_Start",
+			"Title_0000_Title"
 		],
 		"subfolders": [
 			{
@@ -222,7 +227,8 @@
 			},
 			{
 				"items": [
-					"FX_Misc"
+					"FX_Misc",
+					"FX_ALL"
 				],
 				"subfolders": [],
 				"name": "FX"
