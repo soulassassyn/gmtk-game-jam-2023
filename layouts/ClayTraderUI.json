@@ -407,10 +407,10 @@
 						}
 					},
 					"world": {
-						"x": 1443,
-						"y": 887,
-						"width": 743,
-						"height": 239,
+						"x": 1436,
+						"y": 882,
+						"width": 810.2725069782717,
+						"height": 260.63947398089766,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -460,6 +460,14 @@
 						}
 					},
 					"effects": {
+						"AdjustHSL2": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						},
 						"AdjustHSL": {
 							"isEnabled": true,
 							"parameters": {
@@ -790,6 +798,16 @@
 							}
 						}
 					},
+					"effects": {
+						"AdjustHSL2": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 35,
 						"uid": 48,
@@ -819,7 +837,7 @@
 						}
 					},
 					"world": {
-						"x": 1714,
+						"x": 1737,
 						"y": 883,
 						"width": 110,
 						"height": 130,
@@ -954,6 +972,14 @@
 						}
 					},
 					"effects": {
+						"AdjustHSL2": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						},
 						"AdjustHSL": {
 							"isEnabled": true,
 							"parameters": {
@@ -1144,6 +1170,14 @@
 						}
 					},
 					"effects": {
+						"AdjustHSL2": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						},
 						"AdjustHSL": {
 							"isEnabled": true,
 							"parameters": {
@@ -1334,6 +1368,14 @@
 						}
 					},
 					"effects": {
+						"AdjustHSL2": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						},
 						"AdjustHSL": {
 							"isEnabled": true,
 							"parameters": {
@@ -1551,10 +1593,10 @@
 						}
 					},
 					"world": {
-						"x": 1124,
-						"y": 235,
-						"width": 99.00509375176863,
-						"height": 78.67369057060185,
+						"x": 1129.1340486757445,
+						"y": 239.07973510840415,
+						"width": 109.27319110325773,
+						"height": 86.83316078741015,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1633,10 +1675,10 @@
 						}
 					},
 					"world": {
-						"x": 1628,
-						"y": 220,
-						"width": 80.33472953958677,
-						"height": 70.5971865650914,
+						"x": 1632.8368986620544,
+						"y": 224.25060791513874,
+						"width": 90.00852686369562,
+						"height": 79.09840239536888,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1715,10 +1757,10 @@
 						}
 					},
 					"world": {
-						"x": 1375,
-						"y": 228,
-						"width": 64.19259590757886,
-						"height": 90.741385573059,
+						"x": 1378.7678121831084,
+						"y": 233.32610487612223,
+						"width": 71.72822027379546,
+						"height": 101.39359532530345,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -1753,6 +1795,16 @@
 							}
 						}
 					},
+					"effects": {
+						"AdjustHSL2": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 35,
 						"uid": 47,
@@ -1782,8 +1834,8 @@
 						}
 					},
 					"world": {
-						"x": 1419,
-						"y": 877,
+						"x": 1326,
+						"y": 880,
 						"width": 140,
 						"height": 111,
 						"originX": 0.5,
@@ -1820,6 +1872,16 @@
 							}
 						}
 					},
+					"effects": {
+						"AdjustHSL2": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 35,
 						"uid": 170,
@@ -1849,8 +1911,8 @@
 						}
 					},
 					"world": {
-						"x": 1202,
-						"y": 885,
+						"x": 1142,
+						"y": 879,
 						"width": 140,
 						"height": 111,
 						"originX": 0.5,
@@ -1871,7 +1933,7 @@
 						"text": "0",
 						"enable-bbcode": true,
 						"font": "Asphalt BlackCondensed",
-						"size": 60,
+						"size": 75,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -1889,7 +1951,9 @@
 						"read-aloud": false
 					},
 					"uid": 173,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"amount": 0
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 46,
@@ -1920,9 +1984,9 @@
 						}
 					},
 					"world": {
-						"x": 1243,
+						"x": 1250.5,
 						"y": 233,
-						"width": 123,
+						"width": 138,
 						"height": 124,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -1942,7 +2006,7 @@
 						"text": "0",
 						"enable-bbcode": true,
 						"font": "Asphalt BlackCondensed",
-						"size": 60,
+						"size": 75,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -1960,7 +2024,9 @@
 						"read-aloud": false
 					},
 					"uid": 174,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"amount": 0
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 46,
@@ -1991,9 +2057,9 @@
 						}
 					},
 					"world": {
-						"x": 1419,
-						"y": 227,
-						"width": 126,
+						"x": 1416,
+						"y": 231,
+						"width": 141,
 						"height": 101,
 						"originX": 0,
 						"originY": 0.5,
@@ -2013,7 +2079,7 @@
 						"text": "0",
 						"enable-bbcode": true,
 						"font": "Asphalt BlackCondensed",
-						"size": 60,
+						"size": 75,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -2031,7 +2097,9 @@
 						"read-aloud": false
 					},
 					"uid": 175,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"amount": 0
+					},
 					"behaviors": {},
 					"sceneGraphData": {
 						"parent-uid": 46,
@@ -2062,9 +2130,9 @@
 						}
 					},
 					"world": {
-						"x": 1729,
-						"y": 224,
-						"width": 112,
+						"x": 1745,
+						"y": 227,
+						"width": 127,
 						"height": 108,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -2079,9 +2147,9 @@
 					}
 				},
 				{
-					"type": "totalGems",
+					"type": "totalGemCost",
 					"properties": {
-						"text": "30",
+						"text": "0",
 						"enable-bbcode": true,
 						"font": "Asphalt BlackCondensed",
 						"size": 60,
@@ -2105,11 +2173,147 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1694.5,
-						"y": 468,
-						"width": 197,
-						"height": 106,
+						"x": 1771,
+						"y": 464,
+						"width": 223,
+						"height": 92,
 						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "totalPlayerGems",
+					"properties": {
+						"text": "9999",
+						"enable-bbcode": true,
+						"font": "Asphalt BlackCondensed",
+						"size": 70,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							0.8392156862745098,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 177,
+					"instanceVariables": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Sine": {
+							"properties": {
+								"movement": "opacity",
+								"wave": "sine",
+								"period": 0.2,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 100,
+								"magnitude-random": 0,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 1538,
+						"y": 883,
+						"width": 199,
+						"height": 92,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "totalText",
+					"properties": {
+						"text": "Total: ",
+						"enable-bbcode": true,
+						"font": "Asphalt BlackCondensed",
+						"size": 60,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							0.8392156862745098,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "left",
+						"read-aloud": false
+					},
+					"uid": 178,
+					"instanceVariables": {
+						"amount": 0
+					},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 178,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": false,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 2.220446049250313e-16,
+							"transformH": 2.220446049250313e-16,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 1493,
+						"y": 460,
+						"width": 205,
+						"height": 101,
+						"originX": 0,
 						"originY": 0.5,
 						"color": [
 							1,

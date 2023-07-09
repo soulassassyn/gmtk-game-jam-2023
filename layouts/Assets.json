@@ -3669,6 +3669,14 @@
 						}
 					},
 					"effects": {
+						"AdjustHSL2": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						},
 						"AdjustHSL": {
 							"isEnabled": true,
 							"parameters": {
@@ -3761,6 +3769,16 @@
 							}
 						}
 					},
+					"effects": {
+						"AdjustHSL2": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
+							}
+						}
+					},
 					"world": {
 						"x": 13342,
 						"y": 2888,
@@ -3796,6 +3814,16 @@
 						"Tween": {
 							"properties": {
 								"enabled": true
+							}
+						}
+					},
+					"effects": {
+						"AdjustHSL2": {
+							"isEnabled": true,
+							"parameters": {
+								"hue": 0,
+								"saturation": 1,
+								"luminosity": 1
 							}
 						}
 					},

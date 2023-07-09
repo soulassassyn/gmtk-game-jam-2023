@@ -1,5 +1,5 @@
 {
-	"name": "totalGems",
+	"name": "totalGemCost",
 	"plugin-id": "Text",
 	"sid": 982551511060988,
 	"isGlobal": false,

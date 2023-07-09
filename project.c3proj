@@ -229,7 +229,9 @@
 					"totalEarthen",
 					"totalStone",
 					"totalPorcelain",
-					"totalGems"
+					"totalGemCost",
+					"totalPlayerGems",
+					"totalText"
 				],
 				"subfolders": [],
 				"name": "Text"

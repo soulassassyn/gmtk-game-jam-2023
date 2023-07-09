@@ -87,6 +87,31 @@
 			]
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 739129547672772
+				}
+			],
+			"actions": [],
+			"sid": 722978853806642,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "script",
+							"script": "const playerTotal = runtime.objects.totalPlayerGems.getFirstInstance();\n\nplayerTotal.text = String(runtime.levelManager.playerGems);"
+						}
+					],
+					"sid": 298715311390376
+				}
+			]
+		},
+		{
 			"eventType": "variable",
 			"name": "isItemSelected",
 			"type": "boolean",
@@ -202,9 +227,43 @@
 					"children": [
 						{
 							"eventType": "block",
-							"conditions": [],
-							"actions": [],
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "navArrow",
+									"sid": 929304555751488,
+									"parameters": {
+										"animation": "\"up\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "const clayType = runtime.globalVars.currentSelection;\nruntime.levelManager.adjustClayShopAmount(clayType, 1)"
+								}
+							],
 							"sid": 877341031225980
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "navArrow",
+									"sid": 102462526988039,
+									"parameters": {
+										"animation": "\"down\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "script",
+									"script": "const clayType = runtime.globalVars.currentSelection;\nruntime.levelManager.adjustClayShopAmount(clayType, -1)"
+								}
+							],
+							"sid": 186026630443995
 						}
 					]
 				},

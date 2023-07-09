@@ -14,6 +14,12 @@ export class PotManager {
             PORCELAIN: 'Porcelain',
         };
 
+        this.clayCosts = {
+            EARTHENWARE: 5,
+            STONEWARE: 10,
+            PORCELAIN: 20,
+        };
+
         this.sizes = {
             SMALL: 'Small',
             MEDIUM: 'Medium',

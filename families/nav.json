@@ -25,7 +25,12 @@
 			"sid": 491086104999886
 		}
 	],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "hsladjust",
+			"name": "AdjustHSL2"
+		}
+	],
 	"members": [
 		"navCheckMark",
 		"navArrow",

@@ -1,7 +1,7 @@
 {
-	"name": "totalEarthen",
+	"name": "totalText",
 	"plugin-id": "Text",
-	"sid": 543255415805388,
+	"sid": 670667229734527,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
@@ -9,7 +9,7 @@
 			"type": "number",
 			"desc": "",
 			"show": true,
-			"sid": 927418508393628
+			"sid": 565089690394123
 		}
 	],
 	"behaviorTypes": [],

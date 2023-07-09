@@ -1,0 +1,20 @@
+{
+	"name": "totalPlayerGems",
+	"plugin-id": "Text",
+	"sid": 624369778075941,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 333742832275531
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 304948616516284
+		}
+	],
+	"effectTypes": []
+}

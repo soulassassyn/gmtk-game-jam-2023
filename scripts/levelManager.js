@@ -8,6 +8,7 @@ export class LevelManager {
         this.waypointCount = 0;
         this.waypointEL = null;
         this.heroAttackAnimationLength = 0.5;
+
         this.levelState = {
             heroAttack: false,
             heroBuyWeapon: false,
@@ -16,6 +17,14 @@ export class LevelManager {
             victory: false,
             lose: false,
         }
+
+        this.clayShopTotals = {
+            [this.runtime.potManager.clayTypes.EARTHENWARE]: 0,
+            [this.runtime.potManager.clayTypes.STONEWARE]: 0,
+            [this.runtime.potManager.clayTypes.PORCELAIN]: 0,
+            totalGemCostAmount: 0,
+        }
+
         this.playerInventory = {
             clay: {
                 [this.runtime.potManager.clayTypes.EARTHENWARE]: 0,
@@ -24,7 +33,7 @@ export class LevelManager {
             },
             pots: [],
         };
-        this.playerGems = 0;
+        this.playerGems = 20;
         this.heroGems = 0;
     }
 
@@ -216,6 +225,49 @@ export class LevelManager {
             cinematicStandIn.removeEventListener("animationend", animationendEL);
         };
         cinematicStandIn.addEventListener("animationend", animationendEL);
+    }
+
+    async adjustClayShopAmount(clayType, change) {
+        const totalEarthen = this.runtime.objects.totalEarthen.getFirstInstance();
+        const totalStoneware = this.runtime.objects.totalStone.getFirstInstance();
+        const totalPorcelain = this.runtime.objects.totalPorcelain.getFirstInstance();
+        const totalGemCost = this.runtime.objects.totalGemCost.getFirstInstance();
+        const tempCostCheck = this.clayShopTotals.totalGemCostAmount
+        let clayCost;
+
+        if (clayType === this.runtime.potManager.clayTypes.EARTHENWARE) {
+            clayCost = this.runtime.potManager.clayCosts.EARTHENWARE;
+        } else if (clayType === this.runtime.potManager.clayTypes.STONEWARE) {
+            clayCost = this.runtime.potManager.clayCosts.STONEWARE;
+        } else if (clayType === this.runtime.potManager.clayTypes.PORCELAIN) {
+            clayCost = this.runtime.potManager.clayCosts.PORCELAIN;
+        }
+
+        // Adjust the total amount and cost
+        this.clayShopTotals.totalGemCostAmount += change * clayCost;
+        if (this.clayShopTotals.totalGemCostAmount > this.playerGems) {
+            this.clayShopTotals.totalGemCostAmount = tempCostCheck;
+            const totalPlayerGems = this.runtime.objects.totalPlayerGems.getFirstInstance();
+            const tweenState = totalPlayerGems.behaviors.Tween.startTween("opacity", 0, 0.2, "linear", { repeatCount: 5 });
+            await tweenState.finished;
+            totalPlayerGems.opacity = 1;
+            return;
+        }
+        this.clayShopTotals[clayType] += change;
+
+        // Ensure the total doesn't go below zero
+        this.clayShopTotals[clayType] = Math.max(this.clayShopTotals[clayType], 0);
+        this.clayShopTotals.totalGemCostAmount = Math.max(this.clayShopTotals.totalGemCostAmount, 0);
+
+        // Update the text of the clay objects
+        totalEarthen.text = String(this.clayShopTotals[this.runtime.potManager.clayTypes.EARTHENWARE]);
+        totalStoneware.text = String(this.clayShopTotals[this.runtime.potManager.clayTypes.STONEWARE]);
+        totalPorcelain.text = String(this.clayShopTotals[this.runtime.potManager.clayTypes.PORCELAIN]);
+        totalGemCost.text = String(this.clayShopTotals.totalGemCostAmount);
+    }
+
+    adjustClayAmount(clayType, amount) {
+        
     }
 
     playerCraftPots() {
