@@ -103,15 +103,6 @@
 										"instance-variable": "isHover",
 										"value": "false"
 									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 908866322461012,
-									"parameters": {
-										"variable": "currentSelection",
-										"value": "uiPaperSquare2.shopItem"
-									}
 								}
 							],
 							"sid": 343834557509709

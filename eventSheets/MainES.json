@@ -403,11 +403,15 @@
 				},
 				{
 					"type": "script",
-					"script": "runtime.levelManager.levelState.playerCraftPots = true;\nruntime.levelManager.playerInventory.Earthenware = 30;\nruntime.levelManager.runOnce = false;"
+					"script": "runtime.levelManager.levelState.playerCraftPots = true;\nruntime.levelManager.playerInventory.Earthenware = 30;\nruntime.levelManager.runOnce = false;",
+					"disabled": true
+				},
+				{
+					"type": "script",
+					"script": "console.log(runtime.globalVars.currentSelection);"
 				}
 			],
-			"sid": 859080109183828,
-			"disabled": true
+			"sid": 859080109183828
 		},
 		{
 			"eventType": "block",

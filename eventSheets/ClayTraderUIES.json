@@ -187,7 +187,7 @@
 			"eventType": "variable",
 			"name": "currentSelection",
 			"type": "string",
-			"initialValue": "null",
+			"initialValue": "",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -310,7 +310,7 @@
 							"actions": [
 								{
 									"type": "script",
-									"script": "const clayType = runtime.globalVars.currentSelection;\nruntime.levelManager.adjustClayShopAmount(clayType, 1)"
+									"script": "const clayType = runtime.globalVars.currentSelection;\nconsole.log(clayType);\nruntime.levelManager.adjustClayShopAmount(clayType, 1)"
 								}
 							],
 							"sid": 877341031225980

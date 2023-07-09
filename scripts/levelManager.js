@@ -85,6 +85,8 @@ export class LevelManager {
             name: null,
         };
         this.runtime.globalVars.playerCraftPots = false;
+        this.runtime.globalVars.currentSelection = "";
+        this.runtime.globalVars.isItemSelected = false;
 
         this.runtime.layout.getLayer("UI").isVisible = false;
         this.runtime.layout.getLayer("UI").isInteractive = false;
