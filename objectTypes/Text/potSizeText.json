@@ -1,0 +1,17 @@
+{
+	"name": "potSizeText",
+	"plugin-id": "Text",
+	"sid": 238046228757629,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "amount",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 442793917834280
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

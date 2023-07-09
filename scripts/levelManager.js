@@ -280,7 +280,7 @@ export class LevelManager {
     }
 
     playerCraftPots() {
-        console.log("Crafting pots");
+        this.runtime.globalVars.playerCraftPots = true;
         const UI = this.runtime.layout.getLayer("UI");
         UI.isVisible = true;
         UI.isInteractive = true;
@@ -316,6 +316,10 @@ export class LevelManager {
         await tweenState.finished;
         this.runtime.callFunction("toggleControls");
     }
+
+    craftingMenu() {
+
+    };
 
     advanceState() {
         

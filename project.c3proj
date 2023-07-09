@@ -237,7 +237,8 @@
 					"totalText",
 					"buildTimer",
 					"centerCountdown",
-					"tutText"
+					"tutText",
+					"potSizeText"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -273,7 +274,8 @@
 			"Assets",
 			"ArtPlayground",
 			"ClayTraderUI",
-			"Cinematics"
+			"Cinematics",
+			"CraftingMenu"
 		],
 		"subfolders": []
 	},

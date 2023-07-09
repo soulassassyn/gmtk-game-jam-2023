@@ -439,6 +439,16 @@
 			"sid": 449620147229007
 		},
 		{
+			"eventType": "variable",
+			"name": "playerCraftPots",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 605685980090184
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -542,6 +552,14 @@
 						"instance-variable": "isOccupied"
 					},
 					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 508755848640320,
+					"parameters": {
+						"variable": "playerCraftPots"
+					}
 				}
 			],
 			"actions": [
@@ -592,6 +610,14 @@
 					"sid": 836060532195894,
 					"behaviorType": "Solid",
 					"isInverted": true
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 945406490829438,
+					"parameters": {
+						"variable": "playerCraftPots"
+					}
 				}
 			],
 			"actions": [
@@ -809,6 +835,14 @@
 							"id": "is-overlapping-another-object",
 							"objectClass": "pots",
 							"sid": 381993146174611,
+							"parameters": {
+								"object": "placementTile"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "playerCharacter",
+							"sid": 483593896605266,
 							"parameters": {
 								"object": "placementTile"
 							}
