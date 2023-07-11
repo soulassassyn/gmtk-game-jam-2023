@@ -141,6 +141,201 @@
 						}
 					],
 					"sid": 245069760791832
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 727769797763817,
+							"parameters": {
+								"variable": "sfx",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 404100744146835,
+							"parameters": {
+								"audio-file": "LunkGrunt02",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 445729046816715
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 357167503695723,
+							"parameters": {
+								"variable": "sfx",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 500700943694231,
+							"parameters": {
+								"audio-file": "Victory01",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 635436906935290
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 679807511201446,
+							"parameters": {
+								"variable": "sfx",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 556999561584361,
+							"parameters": {
+								"audio-file": "Bell01",
+								"loop": "not-looping",
+								"volume": "-6",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 284537710620568
+				}
+			]
+		},
+		{
+			"functionName": "playMusic",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "track",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 521671721210389
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 835129423672757,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 492669565198888,
+							"parameters": {
+								"variable": "track",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 738800243223028,
+							"parameters": {
+								"audio-file": "battle-of-the-dragons-8037",
+								"loop": "not-looping",
+								"volume": "-6",
+								"stereo-pan": "0",
+								"tag-optional": "\"craft\""
+							}
+						}
+					],
+					"sid": 901014423538296
+				}
+			]
+		},
+		{
+			"functionName": "stopMusic",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "track",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 545070043922281
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 154745790515666,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 361901007130066,
+							"parameters": {
+								"variable": "track",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 562859537048642,
+							"parameters": {
+								"tag": "\"craft\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "stop"
+							}
+						}
+					],
+					"sid": 341058485719635
 				}
 			]
 		}

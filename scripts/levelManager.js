@@ -100,7 +100,14 @@ export class LevelManager {
 
     update() {
         if (this.kilnHealth <= 0) {
-            this.levelState.lose = true;
+            this.levelState = {
+                heroAttack: false,
+                heroBuyWeapon: false,
+                playerBuyClay: false,
+                playerCraftPots: false,
+                victory: false,
+                lose: true,
+            };
             let cinematic = this.runtime.layout.getLayer("cinematics");
             cinematic.isVisible = true;
             const loseCinematic = this.runtime.objects.cinematics.getFirstInstance();
@@ -108,7 +115,14 @@ export class LevelManager {
         }
 
         if (this.round === 5) {
-            this.levelState.victory = true;
+            this.levelState = {
+                heroAttack: false,
+                heroBuyWeapon: false,
+                playerBuyClay: false,
+                playerCraftPots: false,
+                victory: true,
+                lose: false,
+            };
             let cinematic = this.runtime.layout.getLayer("cinematics");
             cinematic.isVisible = true;
             const victoryCinematic = this.runtime.objects.cinematics.getFirstInstance();
@@ -150,6 +164,7 @@ export class LevelManager {
                     const craftingMenu = this.runtime.layout.getLayer("craftingMenu");
                     craftingMenu.isVisible = false;
                     craftingMenu.isInteractive = false;
+                    this.runtime.callFunction("stopMusic", 0);
                     
                     this.resetRound();
                     
@@ -246,6 +261,7 @@ export class LevelManager {
                 const animationendEL2 = e => {
                     cinematic.isVisible = false;
                     hero.timeScale = 1;
+                    this.runtime.callFunction("playSfx", 4);
                     heroSwordBreakCinematic.removeEventListener("animationend", animationendEL2);
                 };
                 heroSwordBreakCinematic.addEventListener("animationend", animationendEL2);
@@ -317,6 +333,7 @@ export class LevelManager {
         swordPower.behaviors.Tween.startTween("opacity", 0, 3, "linear");
         
         hero.setAnimation("buySword");
+        this.runtime.callFunction("playSfx", 5);
         const animationendEL = e => {
             hero.setAnimation("walk");
             this.levelState.heroBuyWeapon = false;
@@ -350,6 +367,7 @@ export class LevelManager {
         let clayTraderUI = this.runtime.layout.getLayer("clayTraderUI");
         let cinematic = this.runtime.layout.getLayer("cinematics");
         cinematic.isVisible = true;
+        this.runtime.callFunction("playSfx", 6);
         const animationendEL = e => {
             cinematic.isVisible = false;
             clayTraderUI.isVisible = true;
@@ -450,6 +468,7 @@ export class LevelManager {
         const textSizeController = this.runtime.objects.textSizeController.getFirstInstance();
         const textWidth = textSizeController.width;
         const textHeight = textSizeController.height;
+        this.runtime.callFunction("playMusic", 0);
         
         this.runtime.callFunction("toggleControls");
 
@@ -518,6 +537,8 @@ export class LevelManager {
         const newPot = this.runtime.objects[this.tempPot.name].createInstance("interactive", placementTile.x, placementTile.y);
         placementTile.instVars.potUid = newPot.uid;
         newPot.behaviors.Solid.isEnabled = true;
+        newPot.instVars.hp = potInfo.hp;
+        newPot.instVars.gems = potInfo.gems;
         newPot.setAnimation("idle");
         newPot.y += newPot.height / 4;
         newPot.opacity = 0.25

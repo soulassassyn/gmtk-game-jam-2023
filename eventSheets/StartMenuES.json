@@ -5,6 +5,31 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 870756241783072
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 864072276354223,
+					"parameters": {
+						"audio-file": "the-epic-trailer-12955",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"epic\""
+					}
+				}
+			],
+			"sid": 349568877127479
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-object-clicked",
 					"objectClass": "Mouse",
 					"sid": 191718401748427,
@@ -102,6 +127,17 @@
 					"parameters": {
 						"layer": "\"cinematics\"",
 						"visibility": "visible"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 795516607864617,
+					"parameters": {
+						"tag": "\"epic\"",
+						"db": "-100",
+						"duration": "2",
+						"ending": "stop"
 					}
 				},
 				{

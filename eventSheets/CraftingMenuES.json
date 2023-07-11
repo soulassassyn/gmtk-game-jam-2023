@@ -39,6 +39,18 @@
 								"variable": "isItemSelected",
 								"value": "true"
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 964442286291908,
+							"parameters": {
+								"audio-file": "Click01",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 374957045596257,
@@ -262,6 +274,18 @@
 						{
 							"type": "script",
 							"script": "runtime.levelManager.craftingMenu(false);"
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 940556189379008,
+							"parameters": {
+								"audio-file": "GemPickUp01",
+								"loop": "not-looping",
+								"volume": "-6",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 434862894993544,

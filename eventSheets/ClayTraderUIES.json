@@ -215,9 +215,9 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 221771467604216,
+							"sid": 746539119414071,
 							"parameters": {
-								"audio-file": "PurchaseItem",
+								"audio-file": "Click01",
 								"loop": "not-looping",
 								"volume": "0",
 								"stereo-pan": "0",
@@ -284,7 +284,20 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 377490552403090,
+							"parameters": {
+								"audio-file": "Click01",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
 					"sid": 767344429404294,
 					"children": [
 						{
@@ -526,6 +539,18 @@
 							"parameters": {
 								"variable": "isItemSelected",
 								"value": "false"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 781607548774040,
+							"parameters": {
+								"audio-file": "GemPickUp01",
+								"loop": "not-looping",
+								"volume": "-6",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
