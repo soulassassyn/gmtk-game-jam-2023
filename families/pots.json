@@ -37,6 +37,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 809894305531604
+		},
+		{
+			"name": "cost",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 522232542122677
 		}
 	],
 	"behaviorTypes": [

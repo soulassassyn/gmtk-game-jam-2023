@@ -1179,6 +1179,15 @@
 						"animation": "\"idle\"",
 						"from": "beginning"
 					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 219882250318597,
+					"parameters": {
+						"group-name": "\"PlayerController\"",
+						"state": "activated"
+					}
 				}
 			],
 			"sid": 908900219034916,
@@ -1203,57 +1212,56 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 803080968364843,
+					"children": [
 						{
-							"id": "destroy",
-							"objectClass": "pots",
-							"sid": 791969393353267
-						}
-					],
-					"sid": 803080968364843
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "playerCharacter",
-							"sid": 483593896605266,
-							"parameters": {
-								"object": "placementTile"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "placementTile",
-							"sid": 720684721253316,
-							"parameters": {
-								"instance-variable": "isOccupied",
-								"value": "false"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "pots",
+									"sid": 826522046296473,
+									"parameters": {
+										"object": "placementTile"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "placementTile",
+									"sid": 185404449542276,
+									"parameters": {
+										"instance-variable": "isOccupied",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "placementTile",
+									"sid": 723648650270304,
+									"parameters": {
+										"instance-variable": "potUid",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 459279016553073
 						},
 						{
-							"id": "set-instvar-value",
-							"objectClass": "placementTile",
-							"sid": 440939717344294,
-							"parameters": {
-								"instance-variable": "potUid",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-group-active",
-							"objectClass": "System",
-							"sid": 353455342835858,
-							"parameters": {
-								"group-name": "\"PlayerController\"",
-								"state": "activated"
-							}
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "pots",
+									"sid": 513420696974485
+								}
+							],
+							"sid": 593920998646741
 						}
-					],
-					"sid": 638335036072246
+					]
 				}
 			]
 		}

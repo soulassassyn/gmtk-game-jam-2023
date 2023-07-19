@@ -29,12 +29,12 @@ export class PotManager {
         this.basePotStats = {
             [this.potTypes.DECORATIVE]: {
                 [this.clayTypes.EARTHENWARE]: { hp: 2, gems: 10, heat: 2, time: 2, cost: 1, },
-                [this.clayTypes.STONEWARE]: { hp: 3, gems: 15, heat: 5, time: 3, cost: 1, },
+                [this.clayTypes.STONEWARE]: { hp: 3, gems: 20, heat: 5, time: 3, cost: 1, },
                 [this.clayTypes.PORCELAIN]: { hp: 1, gems: 20, heat: 7, time: 8, cost: 1, },
             },
             [this.potTypes.REINFORCED]: {
-                [this.clayTypes.EARTHENWARE]: { hp: 3, gems: 5, heat: 2, time: 3, cost: 2, },
-                [this.clayTypes.STONEWARE]: { hp: 5, gems: 10, heat: 7, time: 5, cost: 2, },
+                [this.clayTypes.EARTHENWARE]: { hp: 4, gems: 5, heat: 2, time: 3, cost: 1, },
+                [this.clayTypes.STONEWARE]: { hp: 6, gems: 10, heat: 7, time: 5, cost: 1, },
                 // No porcelain for reinforced
             },
             [this.potTypes.MAGIC]: {
@@ -89,5 +89,3 @@ export class PotManager {
         return info;
     }
 }
-
-// const myPot = createPot(potTypes.DECORATIVE, clayTypes.EARTHENWARE, sizes.SMALL);

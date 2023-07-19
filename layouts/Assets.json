@@ -2375,7 +2375,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -2489,7 +2490,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -2560,7 +2562,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -2631,7 +2634,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -2702,7 +2706,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -2773,7 +2778,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -2844,7 +2850,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -2915,7 +2922,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -2986,7 +2994,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -3057,7 +3066,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -3128,7 +3138,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -3199,7 +3210,8 @@
 						"gems": 10,
 						"potType": "",
 						"clayType": "",
-						"size": ""
+						"size": "",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {

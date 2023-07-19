@@ -1211,7 +1211,8 @@
 						"gems": 10,
 						"potType": "Decorative",
 						"clayType": "Earthenware",
-						"size": "Small"
+						"size": "Small",
+						"cost": 1
 					},
 					"behaviors": {
 						"Sine": {
@@ -1834,7 +1835,8 @@
 						"gems": 20,
 						"potType": "Decorative",
 						"clayType": "Earthenware",
-						"size": "Medium"
+						"size": "Medium",
+						"cost": 2
 					},
 					"behaviors": {
 						"Sine": {
@@ -1933,7 +1935,8 @@
 						"gems": 15,
 						"potType": "Decorative",
 						"clayType": "Stoneware",
-						"size": "Small"
+						"size": "Small",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -2032,7 +2035,8 @@
 						"gems": 30,
 						"potType": "Decorative",
 						"clayType": "Stoneware",
-						"size": "Medium"
+						"size": "Medium",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -2131,7 +2135,8 @@
 						"gems": 20,
 						"potType": "Decorative",
 						"clayType": "Porcelain",
-						"size": "Small"
+						"size": "Small",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -3143,11 +3148,12 @@
 					},
 					"uid": 217,
 					"instanceVariables": {
-						"hp": 3,
+						"hp": 4,
 						"gems": 5,
 						"potType": "Reinforced",
 						"clayType": "Earthenware",
-						"size": "Small"
+						"size": "Small",
+						"cost": 1
 					},
 					"behaviors": {
 						"Sine": {
@@ -3246,7 +3252,8 @@
 						"gems": 10,
 						"potType": "Reinforced",
 						"clayType": "Stoneware",
-						"size": "Medium"
+						"size": "Medium",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -3345,7 +3352,8 @@
 						"gems": 10,
 						"potType": "Reinforced",
 						"clayType": "Stoneware",
-						"size": "Small"
+						"size": "Small",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -3444,7 +3452,8 @@
 						"gems": 10,
 						"potType": "Reinforced",
 						"clayType": "Earthenware",
-						"size": "Medium"
+						"size": "Medium",
+						"cost": 2
 					},
 					"behaviors": {
 						"Sine": {
@@ -3543,7 +3552,8 @@
 						"gems": 20,
 						"potType": "Magic",
 						"clayType": "Porcelain",
-						"size": "Small"
+						"size": "Small",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -3642,7 +3652,8 @@
 						"gems": 30,
 						"potType": "Magic",
 						"clayType": "Porcelain",
-						"size": "Small"
+						"size": "Small",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -3741,7 +3752,8 @@
 						"gems": 40,
 						"potType": "Magic",
 						"clayType": "Porcelain",
-						"size": "Small"
+						"size": "Small",
+						"cost": 0
 					},
 					"behaviors": {
 						"Sine": {
@@ -4047,7 +4059,7 @@
 						"x": 1378,
 						"y": 725,
 						"width": 98.33860387791881,
-						"height": 89.81213533359059,
+						"height": 89.8121353335906,
 						"originX": 0.41040462427745666,
 						"originY": 0.5,
 						"color": [

@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 34402,
+	"savedWithRelease": 35000,
 	"name": "gmtk2023",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -129,7 +129,8 @@
 			"Title_0002_BG",
 			"Title_0001_Start",
 			"Title_0000_Title",
-			"Gem"
+			"Gem",
+			"healthBar"
 		],
 		"subfolders": [
 			{
@@ -741,7 +742,8 @@
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
 		"autoReloadScriptsOnPreview": false,
-		"exportFileStructure": "folders"
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
 	},
 	"viewportWidth": 1920,
 	"viewportHeight": 1080,

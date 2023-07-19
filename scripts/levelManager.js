@@ -99,6 +99,10 @@ export class LevelManager {
     }
 
     update() {
+        const healthBar = this.runtime.objects.healthBar.getFirstInstance();
+        healthBar.width = (250 / 10) * this.kilnHealth;
+        console.log(this.kilnHealth);
+
         if (this.kilnHealth <= 0) {
             this.levelState = {
                 heroAttack: false,
@@ -230,6 +234,9 @@ export class LevelManager {
         object.behaviors.Sine.isEnabled = true;
         const animationendEL = e => {
             object.instVars.hp -= 1;
+            if (object === this.runtime.objects.kiln.getFirstInstance()) {
+                this.kilnHealth = object.instVars.hp;
+            }
             this.heroWeaponDamage--;
             this.environmentDamage(false);
             object.behaviors.Sine.isEnabled = false;
